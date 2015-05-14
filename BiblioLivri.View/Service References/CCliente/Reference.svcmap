@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="464e221c-b846-4083-9648-69a428f1b2bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CCliente.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CCliente.disco" MetadataType="Disco" ID="1982116a-f414-4876-aac9-b80a5a0f6ec7" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?disco" />
+    <MetadataFile FileName="CCliente.wsdl" MetadataType="Wsdl" ID="89145853-a635-4c83-a7a3-fd1cf8022d91" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?wsdl" />
+    <MetadataFile FileName="CCliente.xsd" MetadataType="Schema" ID="b3e4c920-7495-416e-bfb0-5fe3d71d7434" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd0" />
+    <MetadataFile FileName="CCliente1.xsd" MetadataType="Schema" ID="ec26a681-a126-4e11-930f-cb4e9b78c3ff" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd1" />
+    <MetadataFile FileName="CCliente2.xsd" MetadataType="Schema" ID="309cde31-e2cb-45af-b5b2-8b63af2060f8" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
