@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace BiblioLivri.Model
 {
-    public partial class TBCliente
+    public partial class TBLivro
     {
-        public static void Incluir(TBCliente oCliente)
+        public static void Incluir(TBLivro oLivro)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBClientes.InsertOnSubmit(oCliente);
-                    odb.SubmitChanges();   
+                    odb.TBLivros.InsertOnSubmit(oLivro);
+                    odb.SubmitChanges();
                 }
                 catch (Exception ex)
                 {
                     throw ex;
-                   
+
                 }
                 finally
                 {
@@ -28,36 +28,16 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Alterar(TBCliente oCliente)
+        public static void Alterar(TBLivro oLivro)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBClientes.Attach(oCliente, true);
+                    odb.TBLivros.Attach(oLivro, true);
                     odb.SubmitChanges();
                 }
-                catch(Exception ex)
-                {
-                throw ex;
-                }
-                finally
-                {
-                odb.Dispose();
-                }
-            }
-        }
-        public static void Excluir(TBCliente oCliente)
-        {
-            using (DataContext odb = new DataContext())
-            {
-                try
-                {
-                    odb.TBClientes.Attach(oCliente);
-                    odb.TBClientes.DeleteOnSubmit(oCliente);
-                    odb.SubmitChanges();
-                }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -67,17 +47,17 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static TBCliente SelecionaPK(int codigo)
+        public static void Excluir(TBLivro oLivro)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    var Elem = from p in odb.TBClientes where p.id_cliente == codigo select p;
-                    TBCliente oRetorno = Elem.First() ?? null;
-                    return oRetorno;
+                    odb.TBLivros.Attach(oLivro);
+                    odb.TBLivros.DeleteOnSubmit(oLivro);
+                    odb.SubmitChanges();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -87,14 +67,14 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static List<TBCliente> SelecionaTodos()
+        public static TBLivro SelecionaPK(int codigo)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    var Elem = from p in odb.TBClientes select p;
-                    List<TBCliente> oRetorno = Elem.ToList();
+                    var Elem = from p in odb.TBLivros where p.id_Livro == codigo select p;
+                    TBLivro oRetorno = Elem.First() ?? null;
                     return oRetorno;
                 }
                 catch (Exception ex)
@@ -107,16 +87,36 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static bool ValidaCPF(string CPF)
+        public static List<TBLivro> SelecionaTodos()
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                  var Elem = (from p in odb.TBClientes where CPF == p.CliCPF select p).FirstOrDefault();
-                  return (Elem == null);
+                    var Elem = from p in odb.TBLivros select p;
+                    List<TBLivro> oRetorno = Elem.ToList();
+                    return oRetorno;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
+        }
+        public static bool ValidaISBN(string ISBN)
+        {
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    var Elem = (from p in odb.TBLivros where ISBN == p.LiISBN select p).FirstOrDefault();
+                    return (Elem == null);
+                }
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -127,4 +127,5 @@ namespace BiblioLivri.Model
             }
         }
     }
+
 }

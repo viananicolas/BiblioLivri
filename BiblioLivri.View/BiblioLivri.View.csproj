@@ -67,6 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CLivro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +109,19 @@
     <None Include="Service References\CCliente\CCliente2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CLivro\BiblioLivri.View.CLivro.TBLivro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CLivro\CLivro.wsdl" />
+    <None Include="Service References\CLivro\CLivro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivro\CLivro1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivro\CLivro2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -113,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CCliente\" />
+    <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CCliente\CCliente.disco" />
@@ -125,6 +144,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CCliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\CLivro.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

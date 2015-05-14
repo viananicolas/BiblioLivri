@@ -36,5 +36,9 @@ namespace BiblioLivri.Control
            
            return Model.TBCliente.SelecionaTodos();
         }
+        public bool ValidaCPF(string CPF)
+        {
+            return Model.TBCliente.ValidaCPF(CPF);
+        }
     }
 }

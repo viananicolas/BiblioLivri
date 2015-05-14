@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioLivri.View", "BiblioLivri.View\BiblioLivri.View.csproj", "{4ABCA385-BA69-4A37-BB2D-B18FEA445C18}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA409C42-1FE0-436D-B6BB-0358AC600AE2} = {FA409C42-1FE0-436D-B6BB-0358AC600AE2}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioLivri.Model", "BiblioLivri.Model\BiblioLivri.Model.csproj", "{739F2B50-B37C-47BF-9884-28FDF09EF7CF}"
 EndProject

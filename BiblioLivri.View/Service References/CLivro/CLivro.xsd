@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:26772/CCliente.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" />
+  <xs:import schemaLocation="http://localhost:26772/CLivro.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" />
   <xs:element name="Incluir">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oCliente" nillable="true" type="q1:TBCliente" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oLivro" nillable="true" type="q1:TBLivro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -16,7 +16,7 @@
   <xs:element name="Alterar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oCliente" nillable="true" type="q2:TBCliente" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oLivro" nillable="true" type="q2:TBLivro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -28,7 +28,7 @@
   <xs:element name="Excluir">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oCliente" nillable="true" type="q3:TBCliente" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="oLivro" nillable="true" type="q3:TBLivro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -47,7 +47,7 @@
   <xs:element name="SelecionaPKResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="SelecionaPKResult" nillable="true" type="q4:TBCliente" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="SelecionaPKResult" nillable="true" type="q4:TBLivro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -59,21 +59,21 @@
   <xs:element name="SelecionaTodosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="SelecionaTodosResult" nillable="true" type="q5:ArrayOfTBCliente" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="SelecionaTodosResult" nillable="true" type="q5:ArrayOfTBLivro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ValidaCPF">
+  <xs:element name="ValidaISBN">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ValidaCPFResponse">
+  <xs:element name="ValidaISBNResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ValidaCPFResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ValidaISBNResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

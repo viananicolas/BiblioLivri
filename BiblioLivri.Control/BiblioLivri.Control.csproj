@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CCliente.svc" />
+    <Content Include="CLivro.svc" />
     <Content Include="Properties\DataSources\BiblioLivri.Model.TBCliente.datasource" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -69,7 +70,11 @@
     <Compile Include="CCliente.svc.cs">
       <DependentUpon>CCliente.svc</DependentUpon>
     </Compile>
+    <Compile Include="CLivro.svc.cs">
+      <DependentUpon>CLivro.svc</DependentUpon>
+    </Compile>
     <Compile Include="ICCliente.cs" />
+    <Compile Include="ICLivro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

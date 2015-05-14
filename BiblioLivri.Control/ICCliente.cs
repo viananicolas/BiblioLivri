@@ -22,5 +22,7 @@ namespace BiblioLivri.Control
         TBCliente SelecionaPK(int codigo);
         [OperationContract]
         List<TBCliente> SelecionaTodos();
+        [OperationContract]
+        bool ValidaCPF(string CPF);
     }
 }

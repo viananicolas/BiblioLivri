@@ -37,6 +37,12 @@
   <wsdl:message name="ICCliente_SelecionaTodos_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelecionaTodosResponse" />
   </wsdl:message>
+  <wsdl:message name="ICCliente_ValidaCPF_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaCPF" />
+  </wsdl:message>
+  <wsdl:message name="ICCliente_ValidaCPF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaCPFResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICCliente">
     <wsdl:operation name="Incluir">
       <wsdl:input wsaw:Action="http://tempuri.org/ICCliente/Incluir" message="tns:ICCliente_Incluir_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="SelecionaTodos">
       <wsdl:input wsaw:Action="http://tempuri.org/ICCliente/SelecionaTodos" message="tns:ICCliente_SelecionaTodos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICCliente/SelecionaTodosResponse" message="tns:ICCliente_SelecionaTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaCPF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICCliente/ValidaCPF" message="tns:ICCliente_ValidaCPF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICCliente/ValidaCPFResponse" message="tns:ICCliente_ValidaCPF_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICCliente" type="tns:ICCliente">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelecionaTodos">
       <soap:operation soapAction="http://tempuri.org/ICCliente/SelecionaTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaCPF">
+      <soap:operation soapAction="http://tempuri.org/ICCliente/ValidaCPF" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
