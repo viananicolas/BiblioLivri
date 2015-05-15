@@ -19,7 +19,16 @@ namespace BiblioLivri.View
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-
+           
+            CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
+            oProxy.Open();
+            CCliente.TBCliente[] testes = oProxy.SelecionaTodos();
+            dtgClientes.DataSource = null;
+            dtgClientes.DataSource = testes;
+            dtgClientes.Refresh();
+            oProxy.Close();
+                
+           
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -29,7 +38,6 @@ namespace BiblioLivri.View
                 CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
                 CCliente.TBCliente oCliente = new CCliente.TBCliente();
                 oCliente.CliCelular = txtCelular.Text.Trim();
-                // oCliente.id_cliente = Convert.ToInt32(txtID.Text.Trim());
                 oCliente.CliCEP = txtCEP.Text.Trim();
                 oCliente.CliCidade = txtCidade.Text;
                 oCliente.CliComplemento = txtComplemento.Text.Trim();

@@ -16,48 +16,14 @@
       <Column Name="CliNumero" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="CliComplemento" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="CliCPF" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Association Name="TBCliente_TBEmprestimoFilme" Member="TBEmprestimoFilmes" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoFilme" />
-      <Association Name="TBCliente_TBEmprestimoLivro" Member="TBEmprestimoLivros" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoLivro" />
-      <Association Name="TBCliente_TBEmprestimoRevista" Member="TBEmprestimoRevistas" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoRevista" />
-      <Association Name="TBCliente_TBVendaFilme" Member="TBVendaFilmes" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaFilme" />
-      <Association Name="TBCliente_TBVendaLivro" Member="TBVendaLivros" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaLivro" />
-      <Association Name="TBCliente_TBVendaLivro1" Member="TBVendaLivros1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaLivro" />
-      <Association Name="TBCliente_TBVendaRevista" Member="TBVendaRevistas" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaRevista" />
     </Type>
   </Table>
   <Table Name="dbo.TBAutor" Member="TBAutors">
     <Type Name="TBAutor">
-      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="AuNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="AuSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="AuNacionalidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="TBAutor_TBFilme" Member="TBFilmes" ThisKey="id_Autor" OtherKey="id_Diretor" Type="TBFilme" />
-      <Association Name="TBAutor_TBLivro" Member="TBLivros" ThisKey="id_Autor" OtherKey="id_Autor" Type="TBLivro" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBCliente" Member="TBCliente1s">
-    <Type Name="TBCliente1">
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CliSaldo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="CliNome" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
-      <Column Name="CliSobrenome" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="CliCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CliEstado" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
-      <Column Name="CliPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CliCEP" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="CliCelular" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
-      <Column Name="CliTelefone" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="CliEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CliNumero" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="CliComplemento" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="CliCPF" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
-      <Association Name="TBCliente1_TBEmprestimoFilme" Member="TBEmprestimoFilmes" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoFilme" />
-      <Association Name="TBCliente1_TBEmprestimoLivro" Member="TBEmprestimoLivros" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoLivro" />
-      <Association Name="TBCliente1_TBEmprestimoRevista" Member="TBEmprestimoRevistas" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBEmprestimoRevista" />
-      <Association Name="TBCliente1_TBVendaFilme" Member="TBVendaFilmes" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaFilme" />
-      <Association Name="TBCliente1_TBVendaLivro" Member="TBVendaLivros" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaLivro" />
-      <Association Name="TBCliente1_TBVendaLivro1" Member="TBVendaLivros1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaLivro" />
-      <Association Name="TBCliente1_TBVendaRevista" Member="TBVendaRevistas" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBVendaRevista" />
+      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuNacionalidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBDevolucao" Member="TBDevolucaos">
@@ -71,9 +37,8 @@
   </Table>
   <Table Name="dbo.TBEditora" Member="TBEditoras">
     <Type Name="TBEditora">
-      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="EdNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="TBEditora_TBLivro" Member="TBLivros" ThisKey="id_Editora" OtherKey="id_Editora" Type="TBLivro" />
+      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EdNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBEmprestimoFilme" Member="TBEmprestimoFilmes">
@@ -83,8 +48,6 @@
       <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBEmprestimoFilme_TBItensEmprestimoFilme" Member="TBItensEmprestimoFilmes" ThisKey="num_Emprestimo_Filme" OtherKey="num_Emprestimo_Filme" Type="TBItensEmprestimoFilme" />
-      <Association Name="TBCliente_TBEmprestimoFilme" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBEmprestimoFilme" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
       <Association Name="TBFuncionario_TBEmprestimoFilme" Member="TBFuncionario" ThisKey="id_atendente" OtherKey="id_funcionario" Type="TBFuncionario" IsForeignKey="true" />
     </Type>
   </Table>
@@ -95,8 +58,6 @@
       <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBEmprestimoLivro_TBItensEmprestimoLivro" Member="TBItensEmprestimoLivros" ThisKey="num_Emprestimo_Livro" OtherKey="num_Emprestimo_Livro" Type="TBItensEmprestimoLivro" />
-      <Association Name="TBCliente_TBEmprestimoLivro" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBEmprestimoLivro" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
       <Association Name="TBFuncionario_TBEmprestimoLivro" Member="TBFuncionario" ThisKey="id_atendente" OtherKey="id_funcionario" Type="TBFuncionario" IsForeignKey="true" />
     </Type>
   </Table>
@@ -107,8 +68,6 @@
       <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TBEmprestimoRevista_TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas" ThisKey="num_Emprestimo_Revista" OtherKey="num_Emprestimo_Revista" Type="TBItensEmprestimoRevista" />
-      <Association Name="TBCliente_TBEmprestimoRevista" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBEmprestimoRevista" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
       <Association Name="TBFuncionario_TBEmprestimoRevista" Member="TBFuncionario" ThisKey="id_atendente" OtherKey="id_funcionario" Type="TBFuncionario" IsForeignKey="true" />
     </Type>
   </Table>
@@ -124,9 +83,6 @@
       <Column Name="FilAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
       <Column Name="FilIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="FilPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="TBFilme_TBItensEmprestimoFilme" Member="TBItensEmprestimoFilmes" ThisKey="id_Filme" OtherKey="id_Acervo" Type="TBItensEmprestimoFilme" />
-      <Association Name="TBFilme_TBItensVendaFilme" Member="TBItensVendaFilmes" ThisKey="id_Filme" OtherKey="id_Acervo" Type="TBItensVendaFilme" />
-      <Association Name="TBAutor_TBFilme" Member="TBAutor" ThisKey="id_Diretor" OtherKey="id_Autor" Type="TBAutor" IsForeignKey="true" />
       <Association Name="TBGenero_TBFilme" Member="TBGenero" ThisKey="id_Genero" OtherKey="id_genero" Type="TBGenero" IsForeignKey="true" />
       <Association Name="TBMidia_TBFilme" Member="TBMidia" ThisKey="id_Midia" OtherKey="id_Midia" Type="TBMidia" IsForeignKey="true" />
     </Type>
@@ -192,7 +148,6 @@
       <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBEmprestimoFilme_TBItensEmprestimoFilme" Member="TBEmprestimoFilme" ThisKey="num_Emprestimo_Filme" OtherKey="num_Emprestimo_Filme" Type="TBEmprestimoFilme" IsForeignKey="true" />
-      <Association Name="TBFilme_TBItensEmprestimoFilme" Member="TBFilme" ThisKey="id_Acervo" OtherKey="id_Filme" Type="TBFilme" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBItensEmprestimoLivro" Member="TBItensEmprestimoLivros">
@@ -202,7 +157,6 @@
       <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBEmprestimoLivro_TBItensEmprestimoLivro" Member="TBEmprestimoLivro" ThisKey="num_Emprestimo_Livro" OtherKey="num_Emprestimo_Livro" Type="TBEmprestimoLivro" IsForeignKey="true" />
-      <Association Name="TBLivro_TBItensEmprestimoLivro" Member="TBLivro" ThisKey="id_Acervo" OtherKey="id_Livro" Type="TBLivro" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas">
@@ -221,7 +175,6 @@
       <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBFilme_TBItensVendaFilme" Member="TBFilme" ThisKey="id_Acervo" OtherKey="id_Filme" Type="TBFilme" IsForeignKey="true" />
       <Association Name="TBVendaFilme_TBItensVendaFilme" Member="TBVendaFilme" ThisKey="num_Venda_Filme" OtherKey="num_Venda_Filme" Type="TBVendaFilme" IsForeignKey="true" />
     </Type>
   </Table>
@@ -231,7 +184,6 @@
       <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBLivro_TBItensVendaLivro" Member="TBLivro" ThisKey="id_Acervo" OtherKey="id_Livro" Type="TBLivro" IsForeignKey="true" />
       <Association Name="TBVendaLivro_TBItensVendaLivro" Member="TBVendaLivro" ThisKey="num_Venda_Livro" OtherKey="num_Venda_Livro" Type="TBVendaLivro" IsForeignKey="true" />
     </Type>
   </Table>
@@ -247,22 +199,18 @@
   </Table>
   <Table Name="dbo.TBLivro" Member="TBLivros">
     <Type Name="TBLivro">
-      <Column Name="id_Livro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="LiISBN" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="id_CoAutor" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="LiCDU" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="id_Livro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiISBN" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_CoAutor" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LiCDU" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="LiNumPaginas" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
-      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="LiTitulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="LiAno" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
-      <Column Name="LiPais" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="LiIdioma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="TBLivro_TBItensEmprestimoLivro" Member="TBItensEmprestimoLivros" ThisKey="id_Livro" OtherKey="id_Acervo" Type="TBItensEmprestimoLivro" />
-      <Association Name="TBLivro_TBItensVendaLivro" Member="TBItensVendaLivros" ThisKey="id_Livro" OtherKey="id_Acervo" Type="TBItensVendaLivro" />
-      <Association Name="TBAutor_TBLivro" Member="TBAutor" ThisKey="id_Autor" OtherKey="id_Autor" Type="TBAutor" IsForeignKey="true" />
-      <Association Name="TBEditora_TBLivro" Member="TBEditora" ThisKey="id_Editora" OtherKey="id_Editora" Type="TBEditora" IsForeignKey="true" />
+      <Column Name="LiNumPaginas" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiTitulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LiAno" Type="System.String" DbType="VarChar(4)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LiPais" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LiIdioma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBMidia" Member="TBMidias">
@@ -294,8 +242,6 @@
       <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBVendaFilme_TBItensVendaFilme" Member="TBItensVendaFilmes" ThisKey="num_Venda_Filme" OtherKey="num_Venda_Filme" Type="TBItensVendaFilme" />
-      <Association Name="TBCliente_TBVendaFilme" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBVendaFilme" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBVendaLivro" Member="TBVendaLivros">
@@ -304,10 +250,6 @@
       <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBVendaLivro_TBItensVendaLivro" Member="TBItensVendaLivros" ThisKey="num_Venda_Livro" OtherKey="num_Venda_Livro" Type="TBItensVendaLivro" />
-      <Association Name="TBCliente_TBVendaLivro" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBVendaLivro" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
-      <Association Name="TBCliente_TBVendaLivro1" Member="TBCliente2" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBVendaLivro1" Member="TBCliente11" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
       <Association Name="TBFuncionario_TBVendaLivro" Member="TBFuncionario" ThisKey="id_atendente" OtherKey="id_funcionario" Type="TBFuncionario" IsForeignKey="true" />
     </Type>
   </Table>
@@ -317,8 +259,6 @@
       <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBVendaRevista_TBItensVendaRevista" Member="TBItensVendaRevistas" ThisKey="num_Venda_Revista" OtherKey="num_Venda_Revista" Type="TBItensVendaRevista" />
-      <Association Name="TBCliente_TBVendaRevista" Member="TBCliente" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente" IsForeignKey="true" />
-      <Association Name="TBCliente1_TBVendaRevista" Member="TBCliente1" ThisKey="id_cliente" OtherKey="id_cliente" Type="TBCliente1" IsForeignKey="true" />
       <Association Name="TBFuncionario_TBVendaRevista" Member="TBFuncionario" ThisKey="id_atendente" OtherKey="id_funcionario" Type="TBFuncionario" IsForeignKey="true" />
     </Type>
   </Table>

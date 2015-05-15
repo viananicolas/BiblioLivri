@@ -99,31 +99,31 @@
             this.toolStripSeparator1,
             this.fornecedoresToolStripMenuItem});
             this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.pessoasToolStripMenuItem.Text = "Pessoas";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // acervoToolStripMenuItem
@@ -133,25 +133,25 @@
             this.livrosToolStripMenuItem,
             this.periódicosToolStripMenuItem});
             this.acervoToolStripMenuItem.Name = "acervoToolStripMenuItem";
-            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.acervoToolStripMenuItem.Text = "Acervo";
             // 
             // filmesToolStripMenuItem
             // 
             this.filmesToolStripMenuItem.Name = "filmesToolStripMenuItem";
-            this.filmesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.filmesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.filmesToolStripMenuItem.Text = "Filmes";
             // 
             // livrosToolStripMenuItem
             // 
             this.livrosToolStripMenuItem.Name = "livrosToolStripMenuItem";
-            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.livrosToolStripMenuItem.Text = "Livros";
             // 
             // periódicosToolStripMenuItem
             // 
             this.periódicosToolStripMenuItem.Name = "periódicosToolStripMenuItem";
-            this.periódicosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.periódicosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.periódicosToolStripMenuItem.Text = "Periódicos";
             // 
             // outrosToolStripMenuItem
@@ -162,7 +162,7 @@
             this.autorDiretorToolStripMenuItem,
             this.editorasToolStripMenuItem});
             this.outrosToolStripMenuItem.Name = "outrosToolStripMenuItem";
-            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.outrosToolStripMenuItem.Text = "Outros";
             // 
             // gênerosToolStripMenuItem
@@ -203,24 +203,25 @@
             // empréstimoToolStripMenuItem
             // 
             this.empréstimoToolStripMenuItem.Name = "empréstimoToolStripMenuItem";
-            this.empréstimoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.empréstimoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.empréstimoToolStripMenuItem.Text = "Empréstimo";
+            this.empréstimoToolStripMenuItem.Click += new System.EventHandler(this.empréstimoToolStripMenuItem_Click);
             // 
             // vendaToolStripMenuItem
             // 
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.vendaToolStripMenuItem.Text = "Venda";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // devoluçãoToolStripMenuItem
             // 
             this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.devoluçãoToolStripMenuItem.Text = "Devolução";
             // 
             // consultaToolStripMenuItem

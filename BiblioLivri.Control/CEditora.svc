@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BiblioLivri.Control.CEditora" CodeBehind="CEditora.svc.cs" %>

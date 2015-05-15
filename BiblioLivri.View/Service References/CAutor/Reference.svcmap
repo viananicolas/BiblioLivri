@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fb48a159-8afd-48db-b5db-9d56ab4a552c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CAutor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CAutor.xsd" MetadataType="Schema" ID="d959d29f-11d2-4cbe-a052-abea03eb5407" SourceId="1" SourceUrl="http://localhost:26772/CAutor.svc?xsd=xsd1" />
+    <MetadataFile FileName="CAutor.disco" MetadataType="Disco" ID="f8c8b129-2fbc-49c3-89e9-e8586687d47b" SourceId="1" SourceUrl="http://localhost:26772/CAutor.svc?disco" />
+    <MetadataFile FileName="CAutor1.xsd" MetadataType="Schema" ID="f2b0b8a1-c24b-4d63-aa93-2d7e26bc5389" SourceId="1" SourceUrl="http://localhost:26772/CAutor.svc?xsd=xsd2" />
+    <MetadataFile FileName="CAutor.wsdl" MetadataType="Wsdl" ID="9441475a-7d99-46ff-a9ca-f1146fb82a76" SourceId="1" SourceUrl="http://localhost:26772/CAutor.svc?wsdl" />
+    <MetadataFile FileName="CAutor2.xsd" MetadataType="Schema" ID="3953f84b-790a-49bf-b169-c56d9db8c17e" SourceId="1" SourceUrl="http://localhost:26772/CAutor.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

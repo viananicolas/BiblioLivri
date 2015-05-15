@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,9 +59,15 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.dtgClientes = new System.Windows.Forms.DataGridView();
+            this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -343,11 +350,36 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "Email:";
             // 
+            // dtgClientes
+            // 
+            this.dtgClientes.AllowUserToAddRows = false;
+            this.dtgClientes.AllowUserToDeleteRows = false;
+            this.dtgClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgClientes.Location = new System.Drawing.Point(6, 25);
+            this.dtgClientes.Name = "dtgClientes";
+            this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgClientes.Size = new System.Drawing.Size(835, 244);
+            this.dtgClientes.TabIndex = 13;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dtgClientes);
+            this.groupBox4.Location = new System.Drawing.Point(12, 351);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(847, 275);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Todos os clientes:";
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 382);
+            this.ClientSize = new System.Drawing.Size(890, 624);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSalvar);
@@ -362,6 +394,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -398,5 +433,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dtgClientes;
+        private System.Windows.Forms.BindingSource tBClienteBindingSource;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

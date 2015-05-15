@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c57d0f8d-4173-4d54-adbf-f51036d77bf1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8678802e-127b-462c-aef9-297567f0c6ce" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26772/CLivro.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CLivro.xsd" MetadataType="Schema" ID="e323139a-10af-4762-9f17-36623ec9bb14" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd0" />
-    <MetadataFile FileName="CLivro.wsdl" MetadataType="Wsdl" ID="5ab698dc-e4f0-4afb-a120-b527216b0df1" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?wsdl" />
-    <MetadataFile FileName="CLivro1.xsd" MetadataType="Schema" ID="e2a68675-0e35-4db8-b7fc-3831f05a757d" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd2" />
-    <MetadataFile FileName="CLivro.disco" MetadataType="Disco" ID="e11597ba-6240-4add-ac92-a0a81add4c9b" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?disco" />
-    <MetadataFile FileName="CLivro2.xsd" MetadataType="Schema" ID="386f17a8-8783-4d29-a371-019575dc7c9a" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd1" />
+    <MetadataFile FileName="CLivro.xsd" MetadataType="Schema" ID="0adfd69f-7f4d-4ed8-b261-9ac90d72021c" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd0" />
+    <MetadataFile FileName="CLivro.wsdl" MetadataType="Wsdl" ID="ef764283-3aee-4cbf-9845-4c4a597c0142" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?wsdl" />
+    <MetadataFile FileName="CLivro1.xsd" MetadataType="Schema" ID="845e833d-ebb0-4a48-9be2-2cb70746ce13" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd2" />
+    <MetadataFile FileName="CLivro.disco" MetadataType="Disco" ID="af4b83ff-8da8-40a7-98b2-0045e3b34297" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?disco" />
+    <MetadataFile FileName="CLivro2.xsd" MetadataType="Schema" ID="77392574-1e35-4618-9644-8066855d8eb8" SourceId="1" SourceUrl="http://localhost:26772/CLivro.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

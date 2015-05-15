@@ -23,5 +23,12 @@ namespace BiblioLivri.View
             frmcliente.MdiParent = this;
             frmcliente.Show();
         }
+
+        private void empréstimoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmprestimo frmemprestimo = new FrmEmprestimo();
+            frmemprestimo.MdiParent = this;
+            frmemprestimo.Show();
+        }
     }
 }

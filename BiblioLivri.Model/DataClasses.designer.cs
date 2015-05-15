@@ -36,9 +36,6 @@ namespace BiblioLivri.Model
     partial void InsertTBAutor(TBAutor instance);
     partial void UpdateTBAutor(TBAutor instance);
     partial void DeleteTBAutor(TBAutor instance);
-    partial void InsertTBCliente1(TBCliente1 instance);
-    partial void UpdateTBCliente1(TBCliente1 instance);
-    partial void DeleteTBCliente1(TBCliente1 instance);
     partial void InsertTBDevolucao(TBDevolucao instance);
     partial void UpdateTBDevolucao(TBDevolucao instance);
     partial void DeleteTBDevolucao(TBDevolucao instance);
@@ -150,14 +147,6 @@ namespace BiblioLivri.Model
 			get
 			{
 				return this.GetTable<TBAutor>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBCliente1> TBCliente1s
-		{
-			get
-			{
-				return this.GetTable<TBCliente1>();
 			}
 		}
 		
@@ -372,20 +361,6 @@ namespace BiblioLivri.Model
 		
 		private string _CliCPF;
 		
-		private EntitySet<TBEmprestimoFilme> _TBEmprestimoFilmes;
-		
-		private EntitySet<TBEmprestimoLivro> _TBEmprestimoLivros;
-		
-		private EntitySet<TBEmprestimoRevista> _TBEmprestimoRevistas;
-		
-		private EntitySet<TBVendaFilme> _TBVendaFilmes;
-		
-		private EntitySet<TBVendaLivro> _TBVendaLivros;
-		
-		private EntitySet<TBVendaLivro> _TBVendaLivros1;
-		
-		private EntitySet<TBVendaRevista> _TBVendaRevistas;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -422,13 +397,6 @@ namespace BiblioLivri.Model
 		
 		public TBCliente()
 		{
-			this._TBEmprestimoFilmes = new EntitySet<TBEmprestimoFilme>(new Action<TBEmprestimoFilme>(this.attach_TBEmprestimoFilmes), new Action<TBEmprestimoFilme>(this.detach_TBEmprestimoFilmes));
-			this._TBEmprestimoLivros = new EntitySet<TBEmprestimoLivro>(new Action<TBEmprestimoLivro>(this.attach_TBEmprestimoLivros), new Action<TBEmprestimoLivro>(this.detach_TBEmprestimoLivros));
-			this._TBEmprestimoRevistas = new EntitySet<TBEmprestimoRevista>(new Action<TBEmprestimoRevista>(this.attach_TBEmprestimoRevistas), new Action<TBEmprestimoRevista>(this.detach_TBEmprestimoRevistas));
-			this._TBVendaFilmes = new EntitySet<TBVendaFilme>(new Action<TBVendaFilme>(this.attach_TBVendaFilmes), new Action<TBVendaFilme>(this.detach_TBVendaFilmes));
-			this._TBVendaLivros = new EntitySet<TBVendaLivro>(new Action<TBVendaLivro>(this.attach_TBVendaLivros), new Action<TBVendaLivro>(this.detach_TBVendaLivros));
-			this._TBVendaLivros1 = new EntitySet<TBVendaLivro>(new Action<TBVendaLivro>(this.attach_TBVendaLivros1), new Action<TBVendaLivro>(this.detach_TBVendaLivros1));
-			this._TBVendaRevistas = new EntitySet<TBVendaRevista>(new Action<TBVendaRevista>(this.attach_TBVendaRevistas), new Action<TBVendaRevista>(this.detach_TBVendaRevistas));
 			OnCreated();
 		}
 		
@@ -712,97 +680,6 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoFilme", Storage="_TBEmprestimoFilmes", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoFilme> TBEmprestimoFilmes
-		{
-			get
-			{
-				return this._TBEmprestimoFilmes;
-			}
-			set
-			{
-				this._TBEmprestimoFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoLivro", Storage="_TBEmprestimoLivros", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoLivro> TBEmprestimoLivros
-		{
-			get
-			{
-				return this._TBEmprestimoLivros;
-			}
-			set
-			{
-				this._TBEmprestimoLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoRevista", Storage="_TBEmprestimoRevistas", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoRevista> TBEmprestimoRevistas
-		{
-			get
-			{
-				return this._TBEmprestimoRevistas;
-			}
-			set
-			{
-				this._TBEmprestimoRevistas.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaFilme", Storage="_TBVendaFilmes", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaFilme> TBVendaFilmes
-		{
-			get
-			{
-				return this._TBVendaFilmes;
-			}
-			set
-			{
-				this._TBVendaFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaLivro", Storage="_TBVendaLivros", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaLivro> TBVendaLivros
-		{
-			get
-			{
-				return this._TBVendaLivros;
-			}
-			set
-			{
-				this._TBVendaLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaLivro1", Storage="_TBVendaLivros1", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaLivro> TBVendaLivros1
-		{
-			get
-			{
-				return this._TBVendaLivros1;
-			}
-			set
-			{
-				this._TBVendaLivros1.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaRevista", Storage="_TBVendaRevistas", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaRevista> TBVendaRevistas
-		{
-			get
-			{
-				return this._TBVendaRevistas;
-			}
-			set
-			{
-				this._TBVendaRevistas.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -822,90 +699,6 @@ namespace BiblioLivri.Model
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_TBEmprestimoFilmes(TBEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBEmprestimoFilmes(TBEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
-		
-		private void attach_TBEmprestimoLivros(TBEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBEmprestimoLivros(TBEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
-		
-		private void attach_TBEmprestimoRevistas(TBEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBEmprestimoRevistas(TBEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
-		
-		private void attach_TBVendaFilmes(TBVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBVendaFilmes(TBVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
-		
-		private void attach_TBVendaLivros(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBVendaLivros(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
-		
-		private void attach_TBVendaLivros1(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente2 = this;
-		}
-		
-		private void detach_TBVendaLivros1(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente2 = null;
-		}
-		
-		private void attach_TBVendaRevistas(TBVendaRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = this;
-		}
-		
-		private void detach_TBVendaRevistas(TBVendaRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBAutor")]
@@ -921,10 +714,6 @@ namespace BiblioLivri.Model
 		private string _AuSobrenome;
 		
 		private string _AuNacionalidade;
-		
-		private EntitySet<TBFilme> _TBFilmes;
-		
-		private EntitySet<TBLivro> _TBLivros;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -942,12 +731,10 @@ namespace BiblioLivri.Model
 		
 		public TBAutor()
 		{
-			this._TBFilmes = new EntitySet<TBFilme>(new Action<TBFilme>(this.attach_TBFilmes), new Action<TBFilme>(this.detach_TBFilmes));
-			this._TBLivros = new EntitySet<TBLivro>(new Action<TBLivro>(this.attach_TBLivros), new Action<TBLivro>(this.detach_TBLivros));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public int id_Autor
 		{
 			get
@@ -967,7 +754,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuNome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuNome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string AuNome
 		{
 			get
@@ -987,7 +774,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuSobrenome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuSobrenome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string AuSobrenome
 		{
 			get
@@ -1007,7 +794,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuNacionalidade", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AuNacionalidade", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string AuNacionalidade
 		{
 			get
@@ -1027,32 +814,6 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBAutor_TBFilme", Storage="_TBFilmes", ThisKey="id_Autor", OtherKey="id_Diretor")]
-		public EntitySet<TBFilme> TBFilmes
-		{
-			get
-			{
-				return this._TBFilmes;
-			}
-			set
-			{
-				this._TBFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBAutor_TBLivro", Storage="_TBLivros", ThisKey="id_Autor", OtherKey="id_Autor")]
-		public EntitySet<TBLivro> TBLivros
-		{
-			get
-			{
-				return this._TBLivros;
-			}
-			set
-			{
-				this._TBLivros.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1071,600 +832,6 @@ namespace BiblioLivri.Model
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_TBFilmes(TBFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBAutor = this;
-		}
-		
-		private void detach_TBFilmes(TBFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBAutor = null;
-		}
-		
-		private void attach_TBLivros(TBLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBAutor = this;
-		}
-		
-		private void detach_TBLivros(TBLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBAutor = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBCliente")]
-	public partial class TBCliente1 : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_cliente;
-		
-		private double _CliSaldo;
-		
-		private string _CliNome;
-		
-		private string _CliSobrenome;
-		
-		private string _CliCidade;
-		
-		private string _CliEstado;
-		
-		private string _CliPais;
-		
-		private string _CliCEP;
-		
-		private string _CliCelular;
-		
-		private string _CliTelefone;
-		
-		private string _CliEmail;
-		
-		private string _CliNumero;
-		
-		private string _CliComplemento;
-		
-		private string _CliCPF;
-		
-		private EntitySet<TBEmprestimoFilme> _TBEmprestimoFilmes;
-		
-		private EntitySet<TBEmprestimoLivro> _TBEmprestimoLivros;
-		
-		private EntitySet<TBEmprestimoRevista> _TBEmprestimoRevistas;
-		
-		private EntitySet<TBVendaFilme> _TBVendaFilmes;
-		
-		private EntitySet<TBVendaLivro> _TBVendaLivros;
-		
-		private EntitySet<TBVendaLivro> _TBVendaLivros1;
-		
-		private EntitySet<TBVendaRevista> _TBVendaRevistas;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void OnCliSaldoChanging(double value);
-    partial void OnCliSaldoChanged();
-    partial void OnCliNomeChanging(string value);
-    partial void OnCliNomeChanged();
-    partial void OnCliSobrenomeChanging(string value);
-    partial void OnCliSobrenomeChanged();
-    partial void OnCliCidadeChanging(string value);
-    partial void OnCliCidadeChanged();
-    partial void OnCliEstadoChanging(string value);
-    partial void OnCliEstadoChanged();
-    partial void OnCliPaisChanging(string value);
-    partial void OnCliPaisChanged();
-    partial void OnCliCEPChanging(string value);
-    partial void OnCliCEPChanged();
-    partial void OnCliCelularChanging(string value);
-    partial void OnCliCelularChanged();
-    partial void OnCliTelefoneChanging(string value);
-    partial void OnCliTelefoneChanged();
-    partial void OnCliEmailChanging(string value);
-    partial void OnCliEmailChanged();
-    partial void OnCliNumeroChanging(string value);
-    partial void OnCliNumeroChanged();
-    partial void OnCliComplementoChanging(string value);
-    partial void OnCliComplementoChanged();
-    partial void OnCliCPFChanging(string value);
-    partial void OnCliCPFChanged();
-    #endregion
-		
-		public TBCliente1()
-		{
-			this._TBEmprestimoFilmes = new EntitySet<TBEmprestimoFilme>(new Action<TBEmprestimoFilme>(this.attach_TBEmprestimoFilmes), new Action<TBEmprestimoFilme>(this.detach_TBEmprestimoFilmes));
-			this._TBEmprestimoLivros = new EntitySet<TBEmprestimoLivro>(new Action<TBEmprestimoLivro>(this.attach_TBEmprestimoLivros), new Action<TBEmprestimoLivro>(this.detach_TBEmprestimoLivros));
-			this._TBEmprestimoRevistas = new EntitySet<TBEmprestimoRevista>(new Action<TBEmprestimoRevista>(this.attach_TBEmprestimoRevistas), new Action<TBEmprestimoRevista>(this.detach_TBEmprestimoRevistas));
-			this._TBVendaFilmes = new EntitySet<TBVendaFilme>(new Action<TBVendaFilme>(this.attach_TBVendaFilmes), new Action<TBVendaFilme>(this.detach_TBVendaFilmes));
-			this._TBVendaLivros = new EntitySet<TBVendaLivro>(new Action<TBVendaLivro>(this.attach_TBVendaLivros), new Action<TBVendaLivro>(this.detach_TBVendaLivros));
-			this._TBVendaLivros1 = new EntitySet<TBVendaLivro>(new Action<TBVendaLivro>(this.attach_TBVendaLivros1), new Action<TBVendaLivro>(this.detach_TBVendaLivros1));
-			this._TBVendaRevistas = new EntitySet<TBVendaRevista>(new Action<TBVendaRevista>(this.attach_TBVendaRevistas), new Action<TBVendaRevista>(this.detach_TBVendaRevistas));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliSaldo", DbType="Float NOT NULL")]
-		public double CliSaldo
-		{
-			get
-			{
-				return this._CliSaldo;
-			}
-			set
-			{
-				if ((this._CliSaldo != value))
-				{
-					this.OnCliSaldoChanging(value);
-					this.SendPropertyChanging();
-					this._CliSaldo = value;
-					this.SendPropertyChanged("CliSaldo");
-					this.OnCliSaldoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNome", DbType="VarChar(70) NOT NULL", CanBeNull=false)]
-		public string CliNome
-		{
-			get
-			{
-				return this._CliNome;
-			}
-			set
-			{
-				if ((this._CliNome != value))
-				{
-					this.OnCliNomeChanging(value);
-					this.SendPropertyChanging();
-					this._CliNome = value;
-					this.SendPropertyChanged("CliNome");
-					this.OnCliNomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliSobrenome", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string CliSobrenome
-		{
-			get
-			{
-				return this._CliSobrenome;
-			}
-			set
-			{
-				if ((this._CliSobrenome != value))
-				{
-					this.OnCliSobrenomeChanging(value);
-					this.SendPropertyChanging();
-					this._CliSobrenome = value;
-					this.SendPropertyChanged("CliSobrenome");
-					this.OnCliSobrenomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string CliCidade
-		{
-			get
-			{
-				return this._CliCidade;
-			}
-			set
-			{
-				if ((this._CliCidade != value))
-				{
-					this.OnCliCidadeChanging(value);
-					this.SendPropertyChanging();
-					this._CliCidade = value;
-					this.SendPropertyChanged("CliCidade");
-					this.OnCliCidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEstado", DbType="NChar(2) NOT NULL", CanBeNull=false)]
-		public string CliEstado
-		{
-			get
-			{
-				return this._CliEstado;
-			}
-			set
-			{
-				if ((this._CliEstado != value))
-				{
-					this.OnCliEstadoChanging(value);
-					this.SendPropertyChanging();
-					this._CliEstado = value;
-					this.SendPropertyChanged("CliEstado");
-					this.OnCliEstadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliPais", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string CliPais
-		{
-			get
-			{
-				return this._CliPais;
-			}
-			set
-			{
-				if ((this._CliPais != value))
-				{
-					this.OnCliPaisChanging(value);
-					this.SendPropertyChanging();
-					this._CliPais = value;
-					this.SendPropertyChanged("CliPais");
-					this.OnCliPaisChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCEP", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string CliCEP
-		{
-			get
-			{
-				return this._CliCEP;
-			}
-			set
-			{
-				if ((this._CliCEP != value))
-				{
-					this.OnCliCEPChanging(value);
-					this.SendPropertyChanging();
-					this._CliCEP = value;
-					this.SendPropertyChanged("CliCEP");
-					this.OnCliCEPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCelular", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string CliCelular
-		{
-			get
-			{
-				return this._CliCelular;
-			}
-			set
-			{
-				if ((this._CliCelular != value))
-				{
-					this.OnCliCelularChanging(value);
-					this.SendPropertyChanging();
-					this._CliCelular = value;
-					this.SendPropertyChanged("CliCelular");
-					this.OnCliCelularChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliTelefone", DbType="NVarChar(10)")]
-		public string CliTelefone
-		{
-			get
-			{
-				return this._CliTelefone;
-			}
-			set
-			{
-				if ((this._CliTelefone != value))
-				{
-					this.OnCliTelefoneChanging(value);
-					this.SendPropertyChanging();
-					this._CliTelefone = value;
-					this.SendPropertyChanged("CliTelefone");
-					this.OnCliTelefoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEmail", DbType="NVarChar(50)")]
-		public string CliEmail
-		{
-			get
-			{
-				return this._CliEmail;
-			}
-			set
-			{
-				if ((this._CliEmail != value))
-				{
-					this.OnCliEmailChanging(value);
-					this.SendPropertyChanging();
-					this._CliEmail = value;
-					this.SendPropertyChanged("CliEmail");
-					this.OnCliEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNumero", DbType="NVarChar(10)")]
-		public string CliNumero
-		{
-			get
-			{
-				return this._CliNumero;
-			}
-			set
-			{
-				if ((this._CliNumero != value))
-				{
-					this.OnCliNumeroChanging(value);
-					this.SendPropertyChanging();
-					this._CliNumero = value;
-					this.SendPropertyChanged("CliNumero");
-					this.OnCliNumeroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliComplemento", DbType="NVarChar(15)")]
-		public string CliComplemento
-		{
-			get
-			{
-				return this._CliComplemento;
-			}
-			set
-			{
-				if ((this._CliComplemento != value))
-				{
-					this.OnCliComplementoChanging(value);
-					this.SendPropertyChanging();
-					this._CliComplemento = value;
-					this.SendPropertyChanged("CliComplemento");
-					this.OnCliComplementoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCPF", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string CliCPF
-		{
-			get
-			{
-				return this._CliCPF;
-			}
-			set
-			{
-				if ((this._CliCPF != value))
-				{
-					this.OnCliCPFChanging(value);
-					this.SendPropertyChanging();
-					this._CliCPF = value;
-					this.SendPropertyChanged("CliCPF");
-					this.OnCliCPFChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoFilme", Storage="_TBEmprestimoFilmes", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoFilme> TBEmprestimoFilmes
-		{
-			get
-			{
-				return this._TBEmprestimoFilmes;
-			}
-			set
-			{
-				this._TBEmprestimoFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoLivro", Storage="_TBEmprestimoLivros", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoLivro> TBEmprestimoLivros
-		{
-			get
-			{
-				return this._TBEmprestimoLivros;
-			}
-			set
-			{
-				this._TBEmprestimoLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoRevista", Storage="_TBEmprestimoRevistas", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBEmprestimoRevista> TBEmprestimoRevistas
-		{
-			get
-			{
-				return this._TBEmprestimoRevistas;
-			}
-			set
-			{
-				this._TBEmprestimoRevistas.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaFilme", Storage="_TBVendaFilmes", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaFilme> TBVendaFilmes
-		{
-			get
-			{
-				return this._TBVendaFilmes;
-			}
-			set
-			{
-				this._TBVendaFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaLivro", Storage="_TBVendaLivros", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaLivro> TBVendaLivros
-		{
-			get
-			{
-				return this._TBVendaLivros;
-			}
-			set
-			{
-				this._TBVendaLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaLivro1", Storage="_TBVendaLivros1", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaLivro> TBVendaLivros1
-		{
-			get
-			{
-				return this._TBVendaLivros1;
-			}
-			set
-			{
-				this._TBVendaLivros1.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaRevista", Storage="_TBVendaRevistas", ThisKey="id_cliente", OtherKey="id_cliente")]
-		public EntitySet<TBVendaRevista> TBVendaRevistas
-		{
-			get
-			{
-				return this._TBVendaRevistas;
-			}
-			set
-			{
-				this._TBVendaRevistas.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBEmprestimoFilmes(TBEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBEmprestimoFilmes(TBEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
-		}
-		
-		private void attach_TBEmprestimoLivros(TBEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBEmprestimoLivros(TBEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
-		}
-		
-		private void attach_TBEmprestimoRevistas(TBEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBEmprestimoRevistas(TBEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
-		}
-		
-		private void attach_TBVendaFilmes(TBVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBVendaFilmes(TBVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
-		}
-		
-		private void attach_TBVendaLivros(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBVendaLivros(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
-		}
-		
-		private void attach_TBVendaLivros1(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente11 = this;
-		}
-		
-		private void detach_TBVendaLivros1(TBVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente11 = null;
-		}
-		
-		private void attach_TBVendaRevistas(TBVendaRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = this;
-		}
-		
-		private void detach_TBVendaRevistas(TBVendaRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBCliente1 = null;
 		}
 	}
 	
@@ -1836,8 +1003,6 @@ namespace BiblioLivri.Model
 		
 		private string _EdNome;
 		
-		private EntitySet<TBLivro> _TBLivros;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1850,11 +1015,10 @@ namespace BiblioLivri.Model
 		
 		public TBEditora()
 		{
-			this._TBLivros = new EntitySet<TBLivro>(new Action<TBLivro>(this.attach_TBLivros), new Action<TBLivro>(this.detach_TBLivros));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Editora", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Editora", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public int id_Editora
 		{
 			get
@@ -1874,7 +1038,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdNome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdNome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string EdNome
 		{
 			get
@@ -1891,19 +1055,6 @@ namespace BiblioLivri.Model
 					this.SendPropertyChanged("EdNome");
 					this.OnEdNomeChanged();
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEditora_TBLivro", Storage="_TBLivros", ThisKey="id_Editora", OtherKey="id_Editora")]
-		public EntitySet<TBLivro> TBLivros
-		{
-			get
-			{
-				return this._TBLivros;
-			}
-			set
-			{
-				this._TBLivros.Assign(value);
 			}
 		}
 		
@@ -1926,18 +1077,6 @@ namespace BiblioLivri.Model
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_TBLivros(TBLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEditora = this;
-		}
-		
-		private void detach_TBLivros(TBLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEditora = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBEmprestimoFilme")]
@@ -1955,10 +1094,6 @@ namespace BiblioLivri.Model
 		private int _id_atendente;
 		
 		private EntitySet<TBItensEmprestimoFilme> _TBItensEmprestimoFilmes;
-		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
 		
 		private EntityRef<TBFuncionario> _TBFuncionario;
 		
@@ -1979,8 +1114,6 @@ namespace BiblioLivri.Model
 		public TBEmprestimoFilme()
 		{
 			this._TBItensEmprestimoFilmes = new EntitySet<TBItensEmprestimoFilme>(new Action<TBItensEmprestimoFilme>(this.attach_TBItensEmprestimoFilmes), new Action<TBItensEmprestimoFilme>(this.detach_TBItensEmprestimoFilmes));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
 			this._TBFuncionario = default(EntityRef<TBFuncionario>);
 			OnCreated();
 		}
@@ -2016,10 +1149,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -2083,74 +1212,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensEmprestimoFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoFilme", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBEmprestimoFilmes.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoFilmes.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoFilme", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBEmprestimoFilmes.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoFilmes.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
 			}
 		}
 		
@@ -2237,10 +1298,6 @@ namespace BiblioLivri.Model
 		
 		private EntitySet<TBItensEmprestimoLivro> _TBItensEmprestimoLivros;
 		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
-		
 		private EntityRef<TBFuncionario> _TBFuncionario;
 		
     #region Extensibility Method Definitions
@@ -2260,8 +1317,6 @@ namespace BiblioLivri.Model
 		public TBEmprestimoLivro()
 		{
 			this._TBItensEmprestimoLivros = new EntitySet<TBItensEmprestimoLivro>(new Action<TBItensEmprestimoLivro>(this.attach_TBItensEmprestimoLivros), new Action<TBItensEmprestimoLivro>(this.detach_TBItensEmprestimoLivros));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
 			this._TBFuncionario = default(EntityRef<TBFuncionario>);
 			OnCreated();
 		}
@@ -2297,10 +1352,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -2364,74 +1415,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensEmprestimoLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoLivro", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBEmprestimoLivros.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoLivros.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoLivro", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBEmprestimoLivros.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoLivros.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
 			}
 		}
 		
@@ -2518,10 +1501,6 @@ namespace BiblioLivri.Model
 		
 		private EntitySet<TBItensEmprestimoRevista> _TBItensEmprestimoRevistas;
 		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
-		
 		private EntityRef<TBFuncionario> _TBFuncionario;
 		
     #region Extensibility Method Definitions
@@ -2541,8 +1520,6 @@ namespace BiblioLivri.Model
 		public TBEmprestimoRevista()
 		{
 			this._TBItensEmprestimoRevistas = new EntitySet<TBItensEmprestimoRevista>(new Action<TBItensEmprestimoRevista>(this.attach_TBItensEmprestimoRevistas), new Action<TBItensEmprestimoRevista>(this.detach_TBItensEmprestimoRevistas));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
 			this._TBFuncionario = default(EntityRef<TBFuncionario>);
 			OnCreated();
 		}
@@ -2578,10 +1555,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -2645,74 +1618,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensEmprestimoRevistas.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBEmprestimoRevista", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBEmprestimoRevistas.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoRevistas.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBEmprestimoRevista", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBEmprestimoRevistas.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBEmprestimoRevistas.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
 			}
 		}
 		
@@ -2809,12 +1714,6 @@ namespace BiblioLivri.Model
 		
 		private string _FilPais;
 		
-		private EntitySet<TBItensEmprestimoFilme> _TBItensEmprestimoFilmes;
-		
-		private EntitySet<TBItensVendaFilme> _TBItensVendaFilmes;
-		
-		private EntityRef<TBAutor> _TBAutor;
-		
 		private EntityRef<TBGenero> _TBGenero;
 		
 		private EntityRef<TBMidia> _TBMidia;
@@ -2847,9 +1746,6 @@ namespace BiblioLivri.Model
 		
 		public TBFilme()
 		{
-			this._TBItensEmprestimoFilmes = new EntitySet<TBItensEmprestimoFilme>(new Action<TBItensEmprestimoFilme>(this.attach_TBItensEmprestimoFilmes), new Action<TBItensEmprestimoFilme>(this.detach_TBItensEmprestimoFilmes));
-			this._TBItensVendaFilmes = new EntitySet<TBItensVendaFilme>(new Action<TBItensVendaFilme>(this.attach_TBItensVendaFilmes), new Action<TBItensVendaFilme>(this.detach_TBItensVendaFilmes));
-			this._TBAutor = default(EntityRef<TBAutor>);
 			this._TBGenero = default(EntityRef<TBGenero>);
 			this._TBMidia = default(EntityRef<TBMidia>);
 			OnCreated();
@@ -2886,10 +1782,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Diretor != value))
 				{
-					if (this._TBAutor.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_DiretorChanging(value);
 					this.SendPropertyChanging();
 					this._id_Diretor = value;
@@ -3067,66 +1959,6 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBFilme_TBItensEmprestimoFilme", Storage="_TBItensEmprestimoFilmes", ThisKey="id_Filme", OtherKey="id_Acervo")]
-		public EntitySet<TBItensEmprestimoFilme> TBItensEmprestimoFilmes
-		{
-			get
-			{
-				return this._TBItensEmprestimoFilmes;
-			}
-			set
-			{
-				this._TBItensEmprestimoFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBFilme_TBItensVendaFilme", Storage="_TBItensVendaFilmes", ThisKey="id_Filme", OtherKey="id_Acervo")]
-		public EntitySet<TBItensVendaFilme> TBItensVendaFilmes
-		{
-			get
-			{
-				return this._TBItensVendaFilmes;
-			}
-			set
-			{
-				this._TBItensVendaFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBAutor_TBFilme", Storage="_TBAutor", ThisKey="id_Diretor", OtherKey="id_Autor", IsForeignKey=true)]
-		public TBAutor TBAutor
-		{
-			get
-			{
-				return this._TBAutor.Entity;
-			}
-			set
-			{
-				TBAutor previousValue = this._TBAutor.Entity;
-				if (((previousValue != value) 
-							|| (this._TBAutor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBAutor.Entity = null;
-						previousValue.TBFilmes.Remove(this);
-					}
-					this._TBAutor.Entity = value;
-					if ((value != null))
-					{
-						value.TBFilmes.Add(this);
-						this._id_Diretor = value.id_Autor;
-					}
-					else
-					{
-						this._id_Diretor = default(int);
-					}
-					this.SendPropertyChanged("TBAutor");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBGenero_TBFilme", Storage="_TBGenero", ThisKey="id_Genero", OtherKey="id_genero", IsForeignKey=true)]
 		public TBGenero TBGenero
 		{
@@ -3213,30 +2045,6 @@ namespace BiblioLivri.Model
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_TBItensEmprestimoFilmes(TBItensEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBFilme = this;
-		}
-		
-		private void detach_TBItensEmprestimoFilmes(TBItensEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBFilme = null;
-		}
-		
-		private void attach_TBItensVendaFilmes(TBItensVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBFilme = this;
-		}
-		
-		private void detach_TBItensVendaFilmes(TBItensVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBFilme = null;
 		}
 	}
 	
@@ -4344,8 +3152,6 @@ namespace BiblioLivri.Model
 		
 		private EntityRef<TBEmprestimoFilme> _TBEmprestimoFilme;
 		
-		private EntityRef<TBFilme> _TBFilme;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4363,7 +3169,6 @@ namespace BiblioLivri.Model
 		public TBItensEmprestimoFilme()
 		{
 			this._TBEmprestimoFilme = default(EntityRef<TBEmprestimoFilme>);
-			this._TBFilme = default(EntityRef<TBFilme>);
 			OnCreated();
 		}
 		
@@ -4402,10 +3207,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Acervo != value))
 				{
-					if (this._TBFilme.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_AcervoChanging(value);
 					this.SendPropertyChanging();
 					this._id_Acervo = value;
@@ -4489,40 +3290,6 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBFilme_TBItensEmprestimoFilme", Storage="_TBFilme", ThisKey="id_Acervo", OtherKey="id_Filme", IsForeignKey=true)]
-		public TBFilme TBFilme
-		{
-			get
-			{
-				return this._TBFilme.Entity;
-			}
-			set
-			{
-				TBFilme previousValue = this._TBFilme.Entity;
-				if (((previousValue != value) 
-							|| (this._TBFilme.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBFilme.Entity = null;
-						previousValue.TBItensEmprestimoFilmes.Remove(this);
-					}
-					this._TBFilme.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensEmprestimoFilmes.Add(this);
-						this._id_Acervo = value.id_Filme;
-					}
-					else
-					{
-						this._id_Acervo = default(int);
-					}
-					this.SendPropertyChanged("TBFilme");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -4560,8 +3327,6 @@ namespace BiblioLivri.Model
 		
 		private EntityRef<TBEmprestimoLivro> _TBEmprestimoLivro;
 		
-		private EntityRef<TBLivro> _TBLivro;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4579,7 +3344,6 @@ namespace BiblioLivri.Model
 		public TBItensEmprestimoLivro()
 		{
 			this._TBEmprestimoLivro = default(EntityRef<TBEmprestimoLivro>);
-			this._TBLivro = default(EntityRef<TBLivro>);
 			OnCreated();
 		}
 		
@@ -4618,10 +3382,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Acervo != value))
 				{
-					if (this._TBLivro.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_AcervoChanging(value);
 					this.SendPropertyChanging();
 					this._id_Acervo = value;
@@ -4701,40 +3461,6 @@ namespace BiblioLivri.Model
 						this._num_Emprestimo_Livro = default(int);
 					}
 					this.SendPropertyChanged("TBEmprestimoLivro");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLivro_TBItensEmprestimoLivro", Storage="_TBLivro", ThisKey="id_Acervo", OtherKey="id_Livro", IsForeignKey=true)]
-		public TBLivro TBLivro
-		{
-			get
-			{
-				return this._TBLivro.Entity;
-			}
-			set
-			{
-				TBLivro previousValue = this._TBLivro.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLivro.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLivro.Entity = null;
-						previousValue.TBItensEmprestimoLivros.Remove(this);
-					}
-					this._TBLivro.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensEmprestimoLivros.Add(this);
-						this._id_Acervo = value.id_Livro;
-					}
-					else
-					{
-						this._id_Acervo = default(int);
-					}
-					this.SendPropertyChanged("TBLivro");
 				}
 			}
 		}
@@ -4990,8 +3716,6 @@ namespace BiblioLivri.Model
 		
 		private int _Quantidade;
 		
-		private EntityRef<TBFilme> _TBFilme;
-		
 		private EntityRef<TBVendaFilme> _TBVendaFilme;
 		
     #region Extensibility Method Definitions
@@ -5010,7 +3734,6 @@ namespace BiblioLivri.Model
 		
 		public TBItensVendaFilme()
 		{
-			this._TBFilme = default(EntityRef<TBFilme>);
 			this._TBVendaFilme = default(EntityRef<TBVendaFilme>);
 			OnCreated();
 		}
@@ -5050,10 +3773,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Acervo != value))
 				{
-					if (this._TBFilme.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_AcervoChanging(value);
 					this.SendPropertyChanging();
 					this._id_Acervo = value;
@@ -5099,40 +3818,6 @@ namespace BiblioLivri.Model
 					this._Quantidade = value;
 					this.SendPropertyChanged("Quantidade");
 					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBFilme_TBItensVendaFilme", Storage="_TBFilme", ThisKey="id_Acervo", OtherKey="id_Filme", IsForeignKey=true)]
-		public TBFilme TBFilme
-		{
-			get
-			{
-				return this._TBFilme.Entity;
-			}
-			set
-			{
-				TBFilme previousValue = this._TBFilme.Entity;
-				if (((previousValue != value) 
-							|| (this._TBFilme.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBFilme.Entity = null;
-						previousValue.TBItensVendaFilmes.Remove(this);
-					}
-					this._TBFilme.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensVendaFilmes.Add(this);
-						this._id_Acervo = value.id_Filme;
-					}
-					else
-					{
-						this._id_Acervo = default(int);
-					}
-					this.SendPropertyChanged("TBFilme");
 				}
 			}
 		}
@@ -5206,8 +3891,6 @@ namespace BiblioLivri.Model
 		
 		private int _Quantidade;
 		
-		private EntityRef<TBLivro> _TBLivro;
-		
 		private EntityRef<TBVendaLivro> _TBVendaLivro;
 		
     #region Extensibility Method Definitions
@@ -5226,7 +3909,6 @@ namespace BiblioLivri.Model
 		
 		public TBItensVendaLivro()
 		{
-			this._TBLivro = default(EntityRef<TBLivro>);
 			this._TBVendaLivro = default(EntityRef<TBVendaLivro>);
 			OnCreated();
 		}
@@ -5266,10 +3948,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Acervo != value))
 				{
-					if (this._TBLivro.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_AcervoChanging(value);
 					this.SendPropertyChanging();
 					this._id_Acervo = value;
@@ -5315,40 +3993,6 @@ namespace BiblioLivri.Model
 					this._Quantidade = value;
 					this.SendPropertyChanged("Quantidade");
 					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLivro_TBItensVendaLivro", Storage="_TBLivro", ThisKey="id_Acervo", OtherKey="id_Livro", IsForeignKey=true)]
-		public TBLivro TBLivro
-		{
-			get
-			{
-				return this._TBLivro.Entity;
-			}
-			set
-			{
-				TBLivro previousValue = this._TBLivro.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLivro.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLivro.Entity = null;
-						previousValue.TBItensVendaLivros.Remove(this);
-					}
-					this._TBLivro.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensVendaLivros.Add(this);
-						this._id_Acervo = value.id_Livro;
-					}
-					else
-					{
-						this._id_Acervo = default(int);
-					}
-					this.SendPropertyChanged("TBLivro");
 				}
 			}
 		}
@@ -5654,14 +4298,6 @@ namespace BiblioLivri.Model
 		
 		private string _LiIdioma;
 		
-		private EntitySet<TBItensEmprestimoLivro> _TBItensEmprestimoLivros;
-		
-		private EntitySet<TBItensVendaLivro> _TBItensVendaLivros;
-		
-		private EntityRef<TBAutor> _TBAutor;
-		
-		private EntityRef<TBEditora> _TBEditora;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5694,14 +4330,10 @@ namespace BiblioLivri.Model
 		
 		public TBLivro()
 		{
-			this._TBItensEmprestimoLivros = new EntitySet<TBItensEmprestimoLivro>(new Action<TBItensEmprestimoLivro>(this.attach_TBItensEmprestimoLivros), new Action<TBItensEmprestimoLivro>(this.detach_TBItensEmprestimoLivros));
-			this._TBItensVendaLivros = new EntitySet<TBItensVendaLivro>(new Action<TBItensVendaLivro>(this.attach_TBItensVendaLivros), new Action<TBItensVendaLivro>(this.detach_TBItensVendaLivros));
-			this._TBAutor = default(EntityRef<TBAutor>);
-			this._TBEditora = default(EntityRef<TBEditora>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Livro", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Livro", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
 		public int id_Livro
 		{
 			get
@@ -5721,7 +4353,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", DbType="Int NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
 		public int id_Autor
 		{
 			get
@@ -5732,10 +4364,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Autor != value))
 				{
-					if (this._TBAutor.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_AutorChanging(value);
 					this.SendPropertyChanging();
 					this._id_Autor = value;
@@ -5745,7 +4373,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiISBN", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiISBN", DbType="NChar(10) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string LiISBN
 		{
 			get
@@ -5765,7 +4393,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_CoAutor", DbType="Int")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_CoAutor", DbType="Int", UpdateCheck=UpdateCheck.Never)]
 		public System.Nullable<int> id_CoAutor
 		{
 			get
@@ -5785,7 +4413,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiCDU", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiCDU", DbType="VarChar(15) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string LiCDU
 		{
 			get
@@ -5816,10 +4444,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_Editora != value))
 				{
-					if (this._TBEditora.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_EditoraChanging(value);
 					this.SendPropertyChanging();
 					this._id_Editora = value;
@@ -5829,7 +4453,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiNumPaginas", DbType="Char(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiNumPaginas", DbType="Char(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string LiNumPaginas
 		{
 			get
@@ -5849,7 +4473,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Genero", DbType="Int NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Genero", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
 		public int id_Genero
 		{
 			get
@@ -5869,7 +4493,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiTitulo", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiTitulo", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
 		public string LiTitulo
 		{
 			get
@@ -5889,7 +4513,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiAno", DbType="VarChar(4)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiAno", DbType="VarChar(4)", UpdateCheck=UpdateCheck.Never)]
 		public string LiAno
 		{
 			get
@@ -5909,7 +4533,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiPais", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiPais", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
 		public string LiPais
 		{
 			get
@@ -5929,7 +4553,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiIdioma", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiIdioma", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
 		public string LiIdioma
 		{
 			get
@@ -5945,100 +4569,6 @@ namespace BiblioLivri.Model
 					this._LiIdioma = value;
 					this.SendPropertyChanged("LiIdioma");
 					this.OnLiIdiomaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLivro_TBItensEmprestimoLivro", Storage="_TBItensEmprestimoLivros", ThisKey="id_Livro", OtherKey="id_Acervo")]
-		public EntitySet<TBItensEmprestimoLivro> TBItensEmprestimoLivros
-		{
-			get
-			{
-				return this._TBItensEmprestimoLivros;
-			}
-			set
-			{
-				this._TBItensEmprestimoLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLivro_TBItensVendaLivro", Storage="_TBItensVendaLivros", ThisKey="id_Livro", OtherKey="id_Acervo")]
-		public EntitySet<TBItensVendaLivro> TBItensVendaLivros
-		{
-			get
-			{
-				return this._TBItensVendaLivros;
-			}
-			set
-			{
-				this._TBItensVendaLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBAutor_TBLivro", Storage="_TBAutor", ThisKey="id_Autor", OtherKey="id_Autor", IsForeignKey=true)]
-		public TBAutor TBAutor
-		{
-			get
-			{
-				return this._TBAutor.Entity;
-			}
-			set
-			{
-				TBAutor previousValue = this._TBAutor.Entity;
-				if (((previousValue != value) 
-							|| (this._TBAutor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBAutor.Entity = null;
-						previousValue.TBLivros.Remove(this);
-					}
-					this._TBAutor.Entity = value;
-					if ((value != null))
-					{
-						value.TBLivros.Add(this);
-						this._id_Autor = value.id_Autor;
-					}
-					else
-					{
-						this._id_Autor = default(int);
-					}
-					this.SendPropertyChanged("TBAutor");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEditora_TBLivro", Storage="_TBEditora", ThisKey="id_Editora", OtherKey="id_Editora", IsForeignKey=true)]
-		public TBEditora TBEditora
-		{
-			get
-			{
-				return this._TBEditora.Entity;
-			}
-			set
-			{
-				TBEditora previousValue = this._TBEditora.Entity;
-				if (((previousValue != value) 
-							|| (this._TBEditora.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBEditora.Entity = null;
-						previousValue.TBLivros.Remove(this);
-					}
-					this._TBEditora.Entity = value;
-					if ((value != null))
-					{
-						value.TBLivros.Add(this);
-						this._id_Editora = value.id_Editora;
-					}
-					else
-					{
-						this._id_Editora = default(int);
-					}
-					this.SendPropertyChanged("TBEditora");
 				}
 			}
 		}
@@ -6061,30 +4591,6 @@ namespace BiblioLivri.Model
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_TBItensEmprestimoLivros(TBItensEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLivro = this;
-		}
-		
-		private void detach_TBItensEmprestimoLivros(TBItensEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLivro = null;
-		}
-		
-		private void attach_TBItensVendaLivros(TBItensVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLivro = this;
-		}
-		
-		private void detach_TBItensVendaLivros(TBItensVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLivro = null;
 		}
 	}
 	
@@ -6550,10 +5056,6 @@ namespace BiblioLivri.Model
 		
 		private EntitySet<TBItensVendaFilme> _TBItensVendaFilmes;
 		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -6569,8 +5071,6 @@ namespace BiblioLivri.Model
 		public TBVendaFilme()
 		{
 			this._TBItensVendaFilmes = new EntitySet<TBItensVendaFilme>(new Action<TBItensVendaFilme>(this.attach_TBItensVendaFilmes), new Action<TBItensVendaFilme>(this.detach_TBItensVendaFilmes));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
 			OnCreated();
 		}
 		
@@ -6605,10 +5105,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -6648,74 +5144,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensVendaFilmes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaFilme", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBVendaFilmes.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaFilmes.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaFilme", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBVendaFilmes.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaFilmes.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
 			}
 		}
 		
@@ -6766,14 +5194,6 @@ namespace BiblioLivri.Model
 		
 		private EntitySet<TBItensVendaLivro> _TBItensVendaLivros;
 		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
-		
-		private EntityRef<TBCliente> _TBCliente2;
-		
-		private EntityRef<TBCliente1> _TBCliente11;
-		
 		private EntityRef<TBFuncionario> _TBFuncionario;
 		
     #region Extensibility Method Definitions
@@ -6791,10 +5211,6 @@ namespace BiblioLivri.Model
 		public TBVendaLivro()
 		{
 			this._TBItensVendaLivros = new EntitySet<TBItensVendaLivro>(new Action<TBItensVendaLivro>(this.attach_TBItensVendaLivros), new Action<TBItensVendaLivro>(this.detach_TBItensVendaLivros));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
-			this._TBCliente2 = default(EntityRef<TBCliente>);
-			this._TBCliente11 = default(EntityRef<TBCliente1>);
 			this._TBFuncionario = default(EntityRef<TBFuncionario>);
 			OnCreated();
 		}
@@ -6830,12 +5246,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue) 
-								|| this._TBCliente2.HasLoadedOrAssignedValue) 
-								|| this._TBCliente11.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -6879,142 +5289,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensVendaLivros.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaLivro", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBVendaLivros.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaLivros.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaLivro", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBVendaLivros.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaLivros.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaLivro1", Storage="_TBCliente2", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente2
-		{
-			get
-			{
-				return this._TBCliente2.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente2.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente2.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente2.Entity = null;
-						previousValue.TBVendaLivros1.Remove(this);
-					}
-					this._TBCliente2.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaLivros1.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente2");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaLivro1", Storage="_TBCliente11", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente11
-		{
-			get
-			{
-				return this._TBCliente11.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente11.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente11.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente11.Entity = null;
-						previousValue.TBVendaLivros1.Remove(this);
-					}
-					this._TBCliente11.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaLivros1.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente11");
-				}
 			}
 		}
 		
@@ -7099,10 +5373,6 @@ namespace BiblioLivri.Model
 		
 		private EntitySet<TBItensVendaRevista> _TBItensVendaRevistas;
 		
-		private EntityRef<TBCliente> _TBCliente;
-		
-		private EntityRef<TBCliente1> _TBCliente1;
-		
 		private EntityRef<TBFuncionario> _TBFuncionario;
 		
     #region Extensibility Method Definitions
@@ -7120,8 +5390,6 @@ namespace BiblioLivri.Model
 		public TBVendaRevista()
 		{
 			this._TBItensVendaRevistas = new EntitySet<TBItensVendaRevista>(new Action<TBItensVendaRevista>(this.attach_TBItensVendaRevistas), new Action<TBItensVendaRevista>(this.detach_TBItensVendaRevistas));
-			this._TBCliente = default(EntityRef<TBCliente>);
-			this._TBCliente1 = default(EntityRef<TBCliente1>);
 			this._TBFuncionario = default(EntityRef<TBFuncionario>);
 			OnCreated();
 		}
@@ -7157,10 +5425,6 @@ namespace BiblioLivri.Model
 			{
 				if ((this._id_cliente != value))
 				{
-					if ((this._TBCliente.HasLoadedOrAssignedValue || this._TBCliente1.HasLoadedOrAssignedValue))
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.Onid_clienteChanging(value);
 					this.SendPropertyChanging();
 					this._id_cliente = value;
@@ -7204,74 +5468,6 @@ namespace BiblioLivri.Model
 			set
 			{
 				this._TBItensVendaRevistas.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente_TBVendaRevista", Storage="_TBCliente", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente TBCliente
-		{
-			get
-			{
-				return this._TBCliente.Entity;
-			}
-			set
-			{
-				TBCliente previousValue = this._TBCliente.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente.Entity = null;
-						previousValue.TBVendaRevistas.Remove(this);
-					}
-					this._TBCliente.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaRevistas.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBCliente1_TBVendaRevista", Storage="_TBCliente1", ThisKey="id_cliente", OtherKey="id_cliente", IsForeignKey=true)]
-		public TBCliente1 TBCliente1
-		{
-			get
-			{
-				return this._TBCliente1.Entity;
-			}
-			set
-			{
-				TBCliente1 previousValue = this._TBCliente1.Entity;
-				if (((previousValue != value) 
-							|| (this._TBCliente1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBCliente1.Entity = null;
-						previousValue.TBVendaRevistas.Remove(this);
-					}
-					this._TBCliente1.Entity = value;
-					if ((value != null))
-					{
-						value.TBVendaRevistas.Add(this);
-						this._id_cliente = value.id_cliente;
-					}
-					else
-					{
-						this._id_cliente = default(int);
-					}
-					this.SendPropertyChanged("TBCliente1");
-				}
 			}
 		}
 		

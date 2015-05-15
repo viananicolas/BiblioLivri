@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using System.Web.Services;
 using BiblioLivri.Model;
 
 namespace BiblioLivri.Control
@@ -24,7 +23,7 @@ namespace BiblioLivri.Control
         public void Incluir(TBCliente oCliente)
         {
             Model.TBCliente.Incluir(oCliente);
-            
+
         }
         public TBCliente SelecionaPK(int codigo)
         {
@@ -33,8 +32,8 @@ namespace BiblioLivri.Control
 
         public List<TBCliente> SelecionaTodos()
         {
-           
-           return Model.TBCliente.SelecionaTodos();
+
+            return Model.TBCliente.SelecionaTodos();
         }
         public bool ValidaCPF(string CPF)
         {

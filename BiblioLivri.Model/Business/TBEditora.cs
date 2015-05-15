@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace BiblioLivri.Model
 {
-    public partial class TBCliente
+    public partial class TBEditora
     {
-        public static void Incluir(TBCliente oCliente)
+        public static void Incluir(TBEditora oEditora)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBClientes.InsertOnSubmit(oCliente);
-                    odb.SubmitChanges();   
+                    odb.TBEditoras.InsertOnSubmit(oEditora);
+                    odb.SubmitChanges();
                 }
                 catch (Exception ex)
                 {
                     throw ex;
-                   
+
                 }
                 finally
                 {
@@ -28,36 +28,16 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Alterar(TBCliente oCliente)
+        public static void Alterar(TBEditora oEditora)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBClientes.Attach(oCliente, true);
+                    odb.TBEditoras.Attach(oEditora, true);
                     odb.SubmitChanges();
                 }
-                catch(Exception ex)
-                {
-                throw ex;
-                }
-                finally
-                {
-                odb.Dispose();
-                }
-            }
-        }
-        public static void Excluir(TBCliente oCliente)
-        {
-            using (DataContext odb = new DataContext())
-            {
-                try
-                {
-                    odb.TBClientes.Attach(oCliente);
-                    odb.TBClientes.DeleteOnSubmit(oCliente);
-                    odb.SubmitChanges();
-                }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -67,34 +47,36 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static TBCliente SelecionaPK(int codigo)
+        public static void Excluir(TBEditora oEditora)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    return (from p in odb.TBClientes where p.id_cliente == codigo select p).FirstOrDefault();
+                    odb.TBEditoras.Attach(oEditora);
+                    odb.TBEditoras.DeleteOnSubmit(oEditora);
+                    odb.SubmitChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
+        }
+        public static TBEditora SelecionaPK(int codigo)
+        {
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    return (from p in odb.TBEditoras where p.id_Editora == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }
-                catch(Exception ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    odb.Dispose();
-                }
-            }
-        }
-        public static List<TBCliente> SelecionaTodos()
-        {
-            using (DataContext odb = new DataContext())
-            {
-                try
-                {
-                    return (from p in odb.TBClientes select p).ToList();
-                }
                 catch (Exception ex)
                 {
                     throw ex;
@@ -105,16 +87,15 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static bool ValidaCPF(string CPF)
+        public static List<TBEditora> SelecionaTodos()
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                  var Elem = (from p in odb.TBClientes where CPF == p.CliCPF select p).FirstOrDefault();
-                  return (Elem == null);
+                    return (from p in odb.TBEditoras select p).ToList();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }

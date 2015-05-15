@@ -41,6 +41,6 @@ namespace BiblioLivri.Control
         public bool ValidaISBN(string ISBN)
         {
             return Model.TBLivro.ValidaISBN(ISBN);
-        }   
+        }
     }
 }

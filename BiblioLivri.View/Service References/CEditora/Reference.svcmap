@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5cd79898-28a0-4320-b993-98cf128fb751" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CEditora.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CEditora.disco" MetadataType="Disco" ID="b2037600-ae8e-4db8-9e43-feade9b2d93c" SourceId="1" SourceUrl="http://localhost:26772/CEditora.svc?disco" />
+    <MetadataFile FileName="CEditora.xsd" MetadataType="Schema" ID="f0f29e9e-73b6-40ca-8b94-aeba926c0085" SourceId="1" SourceUrl="http://localhost:26772/CEditora.svc?xsd=xsd1" />
+    <MetadataFile FileName="CEditora1.xsd" MetadataType="Schema" ID="1a3e04f6-fc4e-447b-b0ca-bbf09ebe6541" SourceId="1" SourceUrl="http://localhost:26772/CEditora.svc?xsd=xsd0" />
+    <MetadataFile FileName="CEditora.wsdl" MetadataType="Wsdl" ID="30d59bea-6635-4b2c-8442-d9c1473e4a7d" SourceId="1" SourceUrl="http://localhost:26772/CEditora.svc?wsdl" />
+    <MetadataFile FileName="CEditora2.xsd" MetadataType="Schema" ID="57a1139e-4b83-4647-a354-a9692dab5078" SourceId="1" SourceUrl="http://localhost:26772/CEditora.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
