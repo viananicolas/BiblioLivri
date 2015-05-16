@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -48,17 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutor.Designer.cs">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditora.Designer.cs">
+      <DependentUpon>FrmEditora.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEmprestimo.Designer.cs">
       <DependentUpon>FrmEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenero.Designer.cs">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLivro.cs">
       <SubType>Form</SubType>
@@ -89,16 +108,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CFuncionario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CGenero\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CLivro\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAutor.resx">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditora.resx">
+      <DependentUpon>FrmEditora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEmprestimo.resx">
       <DependentUpon>FrmEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenero.resx">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLivro.resx">
       <DependentUpon>FrmLivro.cs</DependentUpon>
@@ -163,6 +201,32 @@
     <None Include="Service References\CEditora\CEditora2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CFuncionario\BiblioLivri.View.CFuncionario.TBFuncionario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CFuncionario\CFuncionario.wsdl" />
+    <None Include="Service References\CFuncionario\CFuncionario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFuncionario\CFuncionario1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFuncionario\CFuncionario2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CGenero\BiblioLivri.View.CGenero.TBGenero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CGenero\CGenero.wsdl" />
+    <None Include="Service References\CGenero\CGenero.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CGenero\CGenero1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CGenero\CGenero2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CLivro\BiblioLivri.View.CLivro.TBLivro.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -189,6 +253,8 @@
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CCliente\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
+    <WCFMetadataStorage Include="Service References\CFuncionario\" />
+    <WCFMetadataStorage Include="Service References\CGenero\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +276,9 @@
     <None Include="Service References\CLivro\CLivro.disco" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\CLivro\CLivro3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CLivro\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +319,25 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Information\ListaEstado.txt" />
+    <Content Include="Information\ListaIdioma.txt" />
+    <Content Include="Information\ListaPaises.txt" />
+    <None Include="Service References\CFuncionario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CFuncionario\configuration.svcinfo" />
+    <None Include="Service References\CFuncionario\configuration91.svcinfo" />
+    <None Include="Service References\CFuncionario\CFuncionario.disco" />
+    <None Include="Service References\CGenero\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CGenero\configuration.svcinfo" />
+    <None Include="Service References\CGenero\configuration91.svcinfo" />
+    <None Include="Service References\CGenero\CGenero.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

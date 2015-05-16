@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,13 +59,11 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
-            this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -280,8 +277,6 @@
             // 
             this.cmbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Items.AddRange(new object[] {
-            "Brasil"});
             this.cmbPais.Location = new System.Drawing.Point(54, 88);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(121, 21);
@@ -291,8 +286,6 @@
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "RJ"});
             this.cmbEstado.Location = new System.Drawing.Point(54, 36);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
@@ -395,7 +388,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -434,7 +426,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dtgClientes;
-        private System.Windows.Forms.BindingSource tBClienteBindingSource;
         private System.Windows.Forms.GroupBox groupBox4;
     }
 }

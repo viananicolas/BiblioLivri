@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BiblioLivri.Model
 {
-    public partial class TBAutor
+    public partial class TBGenero
     {
-        public static void Incluir(TBAutor oAutor)
+        public static void Incluir(TBGenero oGenero)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.InsertOnSubmit(oAutor);
+                    odb.TBGeneros.InsertOnSubmit(oGenero);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -28,13 +28,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Alterar(TBAutor oAutor)
+        public static void Alterar(TBGenero oGenero)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.Attach(oAutor, true);
+                    odb.TBGeneros.Attach(oGenero, true);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -47,14 +47,14 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Excluir(TBAutor oAutor)
+        public static void Excluir(TBGenero oGenero)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.Attach(oAutor);
-                    odb.TBAutors.DeleteOnSubmit(oAutor);
+                    odb.TBGeneros.Attach(oGenero);
+                    odb.TBGeneros.DeleteOnSubmit(oGenero);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -67,13 +67,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static TBAutor SelecionaPK(int codigo)
+        public static TBGenero SelecionaPK(int codigo)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    return (from p in odb.TBAutors where p.id_Autor == codigo select p).FirstOrDefault();
+                    return (from p in odb.TBGeneros where p.id_genero == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }
@@ -87,13 +87,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static List<TBAutor> SelecionaTodos()
+        public static List<TBGenero> SelecionaTodos()
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    return (from p in odb.TBAutors orderby p.AuSobrenome select p).ToList();
+                    return (from p in odb.TBGeneros select p).ToList();
                 }
                 catch (Exception ex)
                 {

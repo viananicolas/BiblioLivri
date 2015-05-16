@@ -11,8 +11,8 @@
 namespace BiblioLivri.View.CLivro {
     using System.Runtime.Serialization;
     using System;
-    
-    
+    using System.Data.Linq;
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TBLivro", Namespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model")]
@@ -27,6 +27,10 @@ namespace BiblioLivri.View.CLivro {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LiCDUField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        //private BiblioLivri.View.CLivro.Binary LiCapaField;
+        private byte[] LiCapaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LiISBNField;
@@ -90,6 +94,21 @@ namespace BiblioLivri.View.CLivro {
                 if ((object.ReferenceEquals(this.LiCDUField, value) != true)) {
                     this.LiCDUField = value;
                     this.RaisePropertyChanged("LiCDU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        // public BiblioLivri.View.CLivro.Binary LiCapa {
+        public byte[] LiCapa
+        {
+            get {
+                return this.LiCapaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LiCapaField, value) != true)) {
+                    this.LiCapaField = value;
+                    this.RaisePropertyChanged("LiCapa");
                 }
             }
         }
@@ -232,6 +251,70 @@ namespace BiblioLivri.View.CLivro {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Binary", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq")]
+    [System.SerializableAttribute()]
+    public partial class Binary : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] BytesField;
+       // private System.Data.Linq.Binary v;
+       // private byte[] imgbytesize;
+
+        /*public Binary(byte[] imgbytesize)
+        {
+            this.imgbytesize = imgbytesize;
+        }*/
+
+
+        /*public Binary(System.Data.Linq.Binary v)
+        {
+            this.v = v;
+        }*/
+
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Bytes {
+            get {
+                return this.BytesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BytesField, value) != true)) {
+                    this.BytesField = value;
+                    this.RaisePropertyChanged("Bytes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+       /* public static implicit operator Binary(System.Data.Linq.Binary v)
+        {
+            CLivro.Binary a = new Binary(v);
+            return a;
+        }*/
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="17e00c97-b35e-4e2b-9977-675b745c7405" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CGenero.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CGenero.disco" MetadataType="Disco" ID="a1a0c565-2d11-4c4e-a0be-d52eb4272aae" SourceId="1" SourceUrl="http://localhost:26772/CGenero.svc?disco" />
+    <MetadataFile FileName="CGenero.xsd" MetadataType="Schema" ID="2a5d2e8e-58a9-4ee2-a1ae-69e4b435b679" SourceId="1" SourceUrl="http://localhost:26772/CGenero.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGenero1.xsd" MetadataType="Schema" ID="3f2ea07c-25f0-43eb-8b65-df73d6c11f0b" SourceId="1" SourceUrl="http://localhost:26772/CGenero.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGenero2.xsd" MetadataType="Schema" ID="d6bd54e2-4075-4edd-86b2-095047576cab" SourceId="1" SourceUrl="http://localhost:26772/CGenero.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGenero.wsdl" MetadataType="Wsdl" ID="07de1471-fad8-418b-bf1b-e8b659b4207d" SourceId="1" SourceUrl="http://localhost:26772/CGenero.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

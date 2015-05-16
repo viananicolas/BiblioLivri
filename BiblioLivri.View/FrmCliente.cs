@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,6 @@ namespace BiblioLivri.View
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-           
             CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
             oProxy.Open();
             CCliente.TBCliente[] testes = oProxy.SelecionaTodos();
@@ -27,9 +27,25 @@ namespace BiblioLivri.View
             dtgClientes.DataSource = testes;
             dtgClientes.Refresh();
             oProxy.Close();
-                
-           
+            CarregaPaises();
+            CarregaEstados();
         }
+
+        private void CarregaEstados()
+        {
+            foreach (var item in File.ReadLines(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.View\Information\ListaEstado.txt"))
+            {
+                cmbEstado.Items.Add(item);
+            }
+        }
+
+        private void CarregaPaises()
+         {
+            foreach (var item in File.ReadLines(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.View\Information\ListaPaises.txt"))
+             {
+                 cmbPais.Items.Add(item);
+             }
+         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {

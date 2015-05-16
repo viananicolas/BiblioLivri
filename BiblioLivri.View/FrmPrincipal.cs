@@ -30,5 +30,33 @@ namespace BiblioLivri.View
             frmemprestimo.MdiParent = this;
             frmemprestimo.Show();
         }
+
+        private void autorDiretorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAutor frmautor = new FrmAutor();
+            frmautor.MdiParent = this;
+            frmautor.Show();
+        }
+
+        private void livrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLivro frmlivro = new FrmLivro();
+            frmlivro.MdiParent = this;
+            frmlivro.Show();
+        }
+
+        private void editorasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditora frmeditora = new FrmEditora();
+            frmeditora.MdiParent = this;
+            frmeditora.Show();
+        }
+
+        private void gênerosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGenero frmgenero = new FrmGenero();
+            frmgenero.MdiParent = this;
+            frmgenero.Show();
+        }
     }
 }

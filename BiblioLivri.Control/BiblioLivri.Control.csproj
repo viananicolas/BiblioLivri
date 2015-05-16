@@ -64,6 +64,8 @@
     <Content Include="CAutor.svc" />
     <Content Include="CCliente.svc" />
     <Content Include="CEditora.svc" />
+    <Content Include="CFuncionario.svc" />
+    <Content Include="CGenero.svc" />
     <Content Include="CLivro.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -77,12 +79,20 @@
     <Compile Include="CEditora.svc.cs">
       <DependentUpon>CEditora.svc</DependentUpon>
     </Compile>
+    <Compile Include="CFuncionario.svc.cs">
+      <DependentUpon>CFuncionario.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CGenero.svc.cs">
+      <DependentUpon>CGenero.svc</DependentUpon>
+    </Compile>
     <Compile Include="CLivro.svc.cs">
       <DependentUpon>CLivro.svc</DependentUpon>
     </Compile>
     <Compile Include="ICAutor.cs" />
     <Compile Include="ICCliente.cs" />
     <Compile Include="ICEditora.cs" />
+    <Compile Include="ICFuncionario.cs" />
+    <Compile Include="ICGenero.cs" />
     <Compile Include="ICLivro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

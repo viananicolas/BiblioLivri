@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BiblioLivri.Model
 {
-    public partial class TBAutor
+    public partial class TBFuncionario
     {
-        public static void Incluir(TBAutor oAutor)
+        public static void Incluir(TBFuncionario oFuncionario)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.InsertOnSubmit(oAutor);
+                    odb.TBFuncionarios.InsertOnSubmit(oFuncionario);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -28,13 +28,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Alterar(TBAutor oAutor)
+        public static void Alterar(TBFuncionario oFuncionario)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.Attach(oAutor, true);
+                    odb.TBFuncionarios.Attach(oFuncionario, true);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -47,14 +47,14 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static void Excluir(TBAutor oAutor)
+        public static void Excluir(TBFuncionario oFuncionario)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    odb.TBAutors.Attach(oAutor);
-                    odb.TBAutors.DeleteOnSubmit(oAutor);
+                    odb.TBFuncionarios.Attach(oFuncionario);
+                    odb.TBFuncionarios.DeleteOnSubmit(oFuncionario);
                     odb.SubmitChanges();
                 }
                 catch (Exception ex)
@@ -67,13 +67,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static TBAutor SelecionaPK(int codigo)
+        public static TBFuncionario SelecionaPK(int codigo)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    return (from p in odb.TBAutors where p.id_Autor == codigo select p).FirstOrDefault();
+                    return (from p in odb.TBFuncionarios where p.id_funcionario == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }
@@ -87,13 +87,32 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static List<TBAutor> SelecionaTodos()
+        public static List<TBFuncionario> SelecionaTodos()
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    return (from p in odb.TBAutors orderby p.AuSobrenome select p).ToList();
+                    return (from p in odb.TBFuncionarios select p).ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
+        }
+        public static bool ValidaCPF(string CPF)
+        {
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    var Elem = (from p in odb.TBFuncionarios where CPF == p.FunCPF select p).FirstOrDefault();
+                    return (Elem == null);
                 }
                 catch (Exception ex)
                 {
