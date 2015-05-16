@@ -73,6 +73,12 @@
     <Compile Include="FrmEmprestimo.Designer.cs">
       <DependentUpon>FrmEmprestimo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilme.Designer.cs">
+      <DependentUpon>FrmFilme.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGenero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="FrmLivro.Designer.cs">
       <DependentUpon>FrmLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeriodico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPeriodico.Designer.cs">
+      <DependentUpon>FrmPeriodico.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CFilme\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CFuncionario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CPeriodico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAutor.resx">
       <DependentUpon>FrmAutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmprestimo.resx">
       <DependentUpon>FrmEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFilme.resx">
+      <DependentUpon>FrmFilme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGenero.resx">
       <DependentUpon>FrmGenero.cs</DependentUpon>
@@ -201,6 +226,19 @@
     <None Include="Service References\CEditora\CEditora2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CFilme\BiblioLivri.View.CFilme.TBFilme.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CFilme\CFilme.wsdl" />
+    <None Include="Service References\CFilme\CFilme.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFilme\CFilme1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFilme\CFilme2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CFuncionario\BiblioLivri.View.CFuncionario.TBFuncionario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -240,6 +278,19 @@
     <None Include="Service References\CLivro\CLivro2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CPeriodico\BiblioLivri.View.CPeriodico.TBPeriodico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPeriodico\CPeriodico.wsdl" />
+    <None Include="Service References\CPeriodico\CPeriodico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CPeriodico\CPeriodico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CPeriodico\CPeriodico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -253,9 +304,11 @@
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CCliente\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
+    <WCFMetadataStorage Include="Service References\CFilme\" />
     <WCFMetadataStorage Include="Service References\CFuncionario\" />
     <WCFMetadataStorage Include="Service References\CGenero\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
+    <WCFMetadataStorage Include="Service References\CPeriodico\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CCliente\CCliente.disco" />
@@ -324,6 +377,20 @@
     <Content Include="Information\ListaEstado.txt" />
     <Content Include="Information\ListaIdioma.txt" />
     <Content Include="Information\ListaPaises.txt" />
+    <None Include="Service References\CPeriodico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CPeriodico\configuration.svcinfo" />
+    <None Include="Service References\CPeriodico\configuration91.svcinfo" />
+    <None Include="Service References\CPeriodico\CPeriodico.disco" />
+    <None Include="Service References\CFilme\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CFilme\configuration.svcinfo" />
+    <None Include="Service References\CFilme\configuration91.svcinfo" />
+    <None Include="Service References\CFilme\CFilme.disco" />
     <None Include="Service References\CFuncionario\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

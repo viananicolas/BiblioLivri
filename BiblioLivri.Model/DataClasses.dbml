@@ -68,20 +68,6 @@
       <Association Name="TBEmprestimoRevista_TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas" ThisKey="num_Emprestimo_Revista" OtherKey="num_Emprestimo_Revista" Type="TBItensEmprestimoRevista" />
     </Type>
   </Table>
-  <Table Name="dbo.TBFilme" Member="TBFilmes">
-    <Type Name="TBFilme">
-      <Column Name="id_Filme" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Diretor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FilDuracao" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FilDescricao" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="id_Midia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FilTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="FilAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
-      <Column Name="FilIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="FilPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.TBFornecedor" Member="TBFornecedors">
     <Type Name="TBFornecedor">
       <Column Name="id_Fornecedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -135,7 +121,6 @@
       <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="TBEmprestimoRevista_TBItensEmprestimoRevista" Member="TBEmprestimoRevista" ThisKey="num_Emprestimo_Revista" OtherKey="num_Emprestimo_Revista" Type="TBEmprestimoRevista" IsForeignKey="true" />
-      <Association Name="TBPeriodico_TBItensEmprestimoRevista" Member="TBPeriodico" ThisKey="id_Acervo" OtherKey="id_revista" Type="TBPeriodico" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBItensVendaFilme" Member="TBItensVendaFilmes">
@@ -162,7 +147,6 @@
       <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBPeriodico_TBItensVendaRevista" Member="TBPeriodico" ThisKey="id_Acervo" OtherKey="id_revista" Type="TBPeriodico" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBMidia" Member="TBMidias">
@@ -173,18 +157,16 @@
   </Table>
   <Table Name="dbo.TBPeriodico" Member="TBPeriodicos">
     <Type Name="TBPeriodico">
-      <Column Name="id_revista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ReISSN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ReNumPaginas" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ReTipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ReMes" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="ReTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ReAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
-      <Column Name="RePais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ReIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="TBPeriodico_TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas" ThisKey="id_revista" OtherKey="id_Acervo" Type="TBItensEmprestimoRevista" />
-      <Association Name="TBPeriodico_TBItensVendaRevista" Member="TBItensVendaRevistas" ThisKey="id_revista" OtherKey="id_Acervo" Type="TBItensVendaRevista" />
+      <Column Name="id_revista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReISSN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReNumPaginas" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReTipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReMes" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RePais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBVendaFilme" Member="TBVendaFilmes">
@@ -245,6 +227,21 @@
       <Column Name="FunNumero" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="FunComplemento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="FunCPF" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBFilme" Member="TBFilmes">
+    <Type Name="TBFilme">
+      <Column Name="id_Filme" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Diretor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilDuracao" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilDescricao" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_Midia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FilCapa" Type="System.Byte[]" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
 </Database>

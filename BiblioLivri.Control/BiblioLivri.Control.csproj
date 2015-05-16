@@ -64,9 +64,11 @@
     <Content Include="CAutor.svc" />
     <Content Include="CCliente.svc" />
     <Content Include="CEditora.svc" />
+    <Content Include="CFilme.svc" />
     <Content Include="CFuncionario.svc" />
     <Content Include="CGenero.svc" />
     <Content Include="CLivro.svc" />
+    <Content Include="CPeriodico.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +81,9 @@
     <Compile Include="CEditora.svc.cs">
       <DependentUpon>CEditora.svc</DependentUpon>
     </Compile>
+    <Compile Include="CFilme.svc.cs">
+      <DependentUpon>CFilme.svc</DependentUpon>
+    </Compile>
     <Compile Include="CFuncionario.svc.cs">
       <DependentUpon>CFuncionario.svc</DependentUpon>
     </Compile>
@@ -88,12 +93,17 @@
     <Compile Include="CLivro.svc.cs">
       <DependentUpon>CLivro.svc</DependentUpon>
     </Compile>
+    <Compile Include="CPeriodico.svc.cs">
+      <DependentUpon>CPeriodico.svc</DependentUpon>
+    </Compile>
     <Compile Include="ICAutor.cs" />
     <Compile Include="ICCliente.cs" />
     <Compile Include="ICEditora.cs" />
+    <Compile Include="ICFilme.cs" />
     <Compile Include="ICFuncionario.cs" />
     <Compile Include="ICGenero.cs" />
     <Compile Include="ICLivro.cs" />
+    <Compile Include="ICPeriodico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

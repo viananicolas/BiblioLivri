@@ -45,9 +45,11 @@
     <Compile Include="Business\TBAutor.cs" />
     <Compile Include="Business\TBCliente.cs" />
     <Compile Include="Business\TBEditora.cs" />
+    <Compile Include="Business\TBFilme.cs" />
     <Compile Include="Business\TBFuncionario.cs" />
     <Compile Include="Business\TBGenero.cs" />
     <Compile Include="Business\TBLivro.cs" />
+    <Compile Include="Business\TBPeriodico.cs" />
     <Compile Include="DataClasses.cs">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>

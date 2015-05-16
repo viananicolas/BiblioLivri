@@ -44,12 +44,6 @@
         <elementListCompartment Id="b81f79c2-5529-4380-a02c-d2ef1b1752b0" absoluteBounds="10.39, 10.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="bd2c2b02-fda4-4353-aba2-f468b02db2f0" absoluteBounds="10.375, 26.75, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/DataContext/TBFilme" />
-      <nestedChildShapes>
-        <elementListCompartment Id="486227e1-2e29-4dce-b278-0af5abc2b6ed" absoluteBounds="10.39, 27.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="e77c3521-ae98-4004-9e57-02861825d4a9" absoluteBounds="0.75, 3.75, 2, 2.7324039713541666">
       <DataClassMoniker Name="/DataContext/TBFornecedor" />
       <nestedChildShapes>
@@ -155,20 +149,6 @@
         <classShapeMoniker Id="e399cfc4-f17a-4ac1-9154-d2bf36ec37aa" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(12.375 : 17.1162019856771); (14.125 : 17.1162019856771); (14.125 : 14.9535953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/DataContext/TBPeriodico/TBPeriodico_TBItensEmprestimoRevista" />
-      <nodes>
-        <classShapeMoniker Id="d30f4f5e-2e20-4116-a333-6241c18caca6" />
-        <classShapeMoniker Id="e399cfc4-f17a-4ac1-9154-d2bf36ec37aa" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(11.25 : 15.75); (11.25 : 14.9535953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/DataContext/TBPeriodico/TBPeriodico_TBItensVendaRevista" />
-      <nodes>
-        <classShapeMoniker Id="d30f4f5e-2e20-4116-a333-6241c18caca6" />
-        <classShapeMoniker Id="8fac198c-70c9-4ba0-bb22-5f6b696e1aff" />
-      </nodes>
-    </associationConnector>
     <associationConnector edgePoints="[(9.375 : 8.7612939453125); (9.75 : 9.1362939453125); (9.75 : 10); (12.75 : 10); (13.125 : 10.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataContext/TBVendaFilme/TBVendaFilme_TBItensVendaFilme" />
       <nodes>
@@ -193,6 +173,12 @@
       <DataClassMoniker Name="/DataContext/TBFuncionario" />
       <nestedChildShapes>
         <elementListCompartment Id="1bc6b190-41d8-46b4-af15-0c51ed6e5b04" absoluteBounds="7.015, 17.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5754e5c1-74d5-4a53-a093-84f6322e113a" absoluteBounds="11.875, 26.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DataContext/TBFilme" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70bf7582-51a5-4797-a9f3-c224e70b9a4b" absoluteBounds="11.89, 27.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
