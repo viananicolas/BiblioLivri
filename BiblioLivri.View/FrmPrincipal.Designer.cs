@@ -32,16 +32,11 @@
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acervoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.periódicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cópiaDeLivroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gênerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mídiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorDiretorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimentaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,10 +89,7 @@
             // pessoasToolStripMenuItem
             // 
             this.pessoasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.funcionáriosToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.fornecedoresToolStripMenuItem});
+            this.clientesToolStripMenuItem});
             this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
             this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pessoasToolStripMenuItem.Text = "Pessoas";
@@ -105,61 +97,37 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // funcionáriosToolStripMenuItem
-            // 
-            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
-            // 
-            // fornecedoresToolStripMenuItem
-            // 
-            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // acervoToolStripMenuItem
             // 
             this.acervoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filmesToolStripMenuItem,
             this.livrosToolStripMenuItem,
-            this.periódicosToolStripMenuItem});
+            this.cópiaDeLivroToolStripMenuItem});
             this.acervoToolStripMenuItem.Name = "acervoToolStripMenuItem";
             this.acervoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.acervoToolStripMenuItem.Text = "Acervo";
             // 
-            // filmesToolStripMenuItem
-            // 
-            this.filmesToolStripMenuItem.Name = "filmesToolStripMenuItem";
-            this.filmesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.filmesToolStripMenuItem.Text = "Filmes";
-            // 
             // livrosToolStripMenuItem
             // 
             this.livrosToolStripMenuItem.Name = "livrosToolStripMenuItem";
-            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.livrosToolStripMenuItem.Text = "Livros";
             this.livrosToolStripMenuItem.Click += new System.EventHandler(this.livrosToolStripMenuItem_Click);
             // 
-            // periódicosToolStripMenuItem
+            // cópiaDeLivroToolStripMenuItem
             // 
-            this.periódicosToolStripMenuItem.Name = "periódicosToolStripMenuItem";
-            this.periódicosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.periódicosToolStripMenuItem.Text = "Periódicos";
+            this.cópiaDeLivroToolStripMenuItem.Name = "cópiaDeLivroToolStripMenuItem";
+            this.cópiaDeLivroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cópiaDeLivroToolStripMenuItem.Text = "Cópia de Livro";
+            this.cópiaDeLivroToolStripMenuItem.Click += new System.EventHandler(this.cópiaDeLivroToolStripMenuItem_Click);
             // 
             // outrosToolStripMenuItem
             // 
             this.outrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gênerosToolStripMenuItem,
-            this.mídiaToolStripMenuItem,
             this.autorDiretorToolStripMenuItem,
             this.editorasToolStripMenuItem});
             this.outrosToolStripMenuItem.Name = "outrosToolStripMenuItem";
@@ -169,27 +137,21 @@
             // gênerosToolStripMenuItem
             // 
             this.gênerosToolStripMenuItem.Name = "gênerosToolStripMenuItem";
-            this.gênerosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gênerosToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.gênerosToolStripMenuItem.Text = "Gêneros";
             this.gênerosToolStripMenuItem.Click += new System.EventHandler(this.gênerosToolStripMenuItem_Click);
-            // 
-            // mídiaToolStripMenuItem
-            // 
-            this.mídiaToolStripMenuItem.Name = "mídiaToolStripMenuItem";
-            this.mídiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mídiaToolStripMenuItem.Text = "Mídia";
             // 
             // autorDiretorToolStripMenuItem
             // 
             this.autorDiretorToolStripMenuItem.Name = "autorDiretorToolStripMenuItem";
-            this.autorDiretorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.autorDiretorToolStripMenuItem.Text = "Autor/Diretor";
+            this.autorDiretorToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.autorDiretorToolStripMenuItem.Text = "Autores";
             this.autorDiretorToolStripMenuItem.Click += new System.EventHandler(this.autorDiretorToolStripMenuItem_Click);
             // 
             // editorasToolStripMenuItem
             // 
             this.editorasToolStripMenuItem.Name = "editorasToolStripMenuItem";
-            this.editorasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editorasToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.editorasToolStripMenuItem.Text = "Editoras";
             this.editorasToolStripMenuItem.Click += new System.EventHandler(this.editorasToolStripMenuItem_Click);
             // 
@@ -215,7 +177,8 @@
             // 
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.vendaToolStripMenuItem.Text = "Venda";
+            this.vendaToolStripMenuItem.Text = "Doação";
+            this.vendaToolStripMenuItem.Click += new System.EventHandler(this.vendaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -374,16 +337,10 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acervoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filmesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem livrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem periódicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gênerosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mídiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autorDiretorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçãoToolStripMenuItem;
@@ -408,6 +365,7 @@
         private System.Windows.Forms.ToolStripMenuItem empréstimosEmAbertoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecimentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cópiaDeLivroToolStripMenuItem;
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="84b7fb5b-70f3-4918-8663-617573e2fca7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7f7ec52-6d14-41f4-ba6a-4092c7cbd97d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26772/CCliente.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CCliente.disco" MetadataType="Disco" ID="85928a9d-af42-4b98-90a0-f7f23748687a" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?disco" />
-    <MetadataFile FileName="CCliente.wsdl" MetadataType="Wsdl" ID="5d701d53-95e7-47be-9e50-60fb9e56682a" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?wsdl" />
-    <MetadataFile FileName="CCliente.xsd" MetadataType="Schema" ID="afab3f38-be98-4e3b-a8a8-fe492cdc7ee0" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd0" />
-    <MetadataFile FileName="CCliente1.xsd" MetadataType="Schema" ID="e2b5fea7-3650-4d3a-9af8-8df094e65b49" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd1" />
-    <MetadataFile FileName="CCliente2.xsd" MetadataType="Schema" ID="a11010b2-2126-46cf-b4b5-6531aad2ec98" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd2" />
+    <MetadataFile FileName="CCliente.disco" MetadataType="Disco" ID="aa6dd85f-fcf6-4bbd-a23b-4c87f6922d1e" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?disco" />
+    <MetadataFile FileName="CCliente.wsdl" MetadataType="Wsdl" ID="d88f1eac-2e3a-487d-bf50-ceb436f3d2a5" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?wsdl" />
+    <MetadataFile FileName="CCliente.xsd" MetadataType="Schema" ID="d5f37e36-f7d3-4255-9e7a-9f14f7890293" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd0" />
+    <MetadataFile FileName="CCliente1.xsd" MetadataType="Schema" ID="de862dd1-ec8a-41b1-a36a-7eeb94810011" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd1" />
+    <MetadataFile FileName="CCliente2.xsd" MetadataType="Schema" ID="08c9126e-002a-472d-adac-38576a5779c3" SourceId="1" SourceUrl="http://localhost:26772/CCliente.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

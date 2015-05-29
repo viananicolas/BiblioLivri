@@ -18,6 +18,7 @@ namespace BiblioLivri.View
         public int id_coautor;
         public int id_editora;
         private int id_genero;
+        private bool inserir = true;
         public byte[] imgbytesize;
 
         public FrmLivro()
@@ -30,7 +31,7 @@ namespace BiblioLivri.View
             CarregaAutores();
             CarregaEditora();
             CarregaPaises();
-            CarregaIdioma();
+            //CarregaIdioma();
             CarregaLivros();
             CarregaGeneros();
         }
@@ -59,16 +60,54 @@ namespace BiblioLivri.View
                 cmbEditora.Items.Add(item.EdNome);
             }
         }
+        private void CarregaGeneros(int genero)
+        {
+            CGenero.CGeneroClient oProxy = new CGenero.CGeneroClient();
+            string nomegenero = null;
+            foreach (var item in oProxy.SelecionaTodos())
+            {
+                cmbGenero.Items.Add(item.GeDescricao);
+                if (genero == item.id_genero)
+                    nomegenero = item.GeDescricao;
+            }
+            cmbGenero.SelectedItem = nomegenero;
+        }
 
+            private void CarregaEditora(int editora)
+        {
+            CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
+            string nomeeditora = null;
+            foreach (var item in oProxy.SelecionaTodos())
+            {
+                cmbEditora.Items.Add(item.EdNome);
+                if (editora == item.id_editora)
+                    nomeeditora = item.EdNome;
+            }
+            cmbEditora.SelectedItem = nomeeditora;
+        }
         private void CarregaAutores()
         {
             CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-           
+
+            foreach (var item in oProxy.SelecionaTodos())
+            {
+                cmbAutor.Items.Add(item.AuNome + " " + item.AuSobrenome);
+
+            }
+        }
+        private void CarregaAutores(int autor, int co_autor)
+        {
+            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+            string nomeautor = null;
             foreach (var item in oProxy.SelecionaTodos())
             {
                 cmbAutor.Items.Add(item.AuNome +" "+ item.AuSobrenome);
-                cmbCoAutor.Items.Add(item.AuNome + " " + item.AuSobrenome);
+             
+                if (autor == item.id_autor)
+                    nomeautor = item.AuNome + " " + item.AuSobrenome;
+                
             }
+            cmbAutor.SelectedItem = nomeautor;
         }
 
         private void btnCapa_Click(object sender, EventArgs e)
@@ -96,32 +135,53 @@ namespace BiblioLivri.View
                 cmbPais.Items.Add(item);
             }
         }
-        private void CarregaIdioma()
-        {
-            foreach (var item in File.ReadLines(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.View\Information\ListaIdioma.txt"))
-            {
-                cmbIdioma.Items.Add(item);
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
-            CLivro.TBLivro oLivro = new CLivro.TBLivro();
-            oLivro.LiCapa = imgbytesize;
-            oLivro.id_Autor = id_autor;
-            oLivro.id_CoAutor = id_coautor;
-            oLivro.id_Editora = id_editora;
-            oLivro.id_Genero = id_genero;
-            oLivro.LiAno = txtAno.Text;
-            oLivro.LiCDU = txtCDU.Text;
-            oLivro.LiIdioma = cmbIdioma.SelectedItem.ToString();
-            oLivro.LiISBN = txtISBN.Text;
-            oLivro.LiNumPaginas = txtNumPaginas.Text;
-            oLivro.LiPais = cmbPais.SelectedItem.ToString();
-            oLivro.LiTitulo = txtTitulo.Text;
-            oProxy.Incluir(oLivro);
-            CarregaLivros();
+            using (var oProxy = new CLivro.CLivroClient())
+            {
+                if (ValidaCampos())
+                {
+                    CLivro.TBLivro oLivro = new CLivro.TBLivro();
+                    oLivro.LiCapa = imgbytesize;
+                    oLivro.id_autor = id_autor;
+                    oLivro.ID_Editora = id_editora;
+                    oLivro.id_genero = id_genero;
+                    oLivro.LiCDU = txtCDU.Text;
+                    oLivro.LiPagina = txtNumPaginas.Text;
+                    oLivro.LiISBN = txtISBN.Text;
+                    oLivro.LiPais = cmbPais.SelectedItem.ToString();
+                    oLivro.LiTitulo = txtTitulo.Text;
+                    if (inserir)
+                    {
+                        if (oProxy.ValidaISBN(txtISBN.Text))
+                        {
+                            MessageBox.Show("ISBN já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        }
+                        else
+                        {
+                            oProxy.Incluir(oLivro);
+                            MessageBox.Show("Livro inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
+                        }
+                    }
+                    else
+                    {
+                        oLivro.LiISBN = txtID.Text;
+                        oProxy.Alterar(oLivro);
+                        MessageBox.Show("Livro inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
+                    }
+                    oProxy.Incluir(oLivro);
+                    CarregaLivros();
+                }
+
+            }
+
+        }
+
+        private bool ValidaCampos()
+        {
+            return true;
         }
 
         private void cmbAutor_SelectedValueChanged(object sender, EventArgs e)
@@ -132,20 +192,7 @@ namespace BiblioLivri.View
             {
                 if (cmbAutor.SelectedItem.ToString() == item.AuNome + " " + item.AuSobrenome)
                 {
-                    id_autor = item.id_Autor;
-                }
-            }
-        }
-
-        private void cmbCoAutor_SelectedValueChanged(object sender, EventArgs e)
-        {
-            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-
-            foreach (var item in oProxy.SelecionaTodos())
-            {
-                if (cmbAutor.SelectedItem.ToString() == item.AuNome + " " + item.AuSobrenome)
-                {
-                    id_coautor = item.id_Autor;
+                    id_autor = item.id_autor;
                 }
             }
         }
@@ -158,7 +205,7 @@ namespace BiblioLivri.View
             {
                 if (cmbEditora.SelectedItem.ToString() == item.EdNome)
                 {
-                    id_editora = item.id_Editora;
+                    id_editora = item.id_editora;
                 }
             }
         }
@@ -174,5 +221,46 @@ namespace BiblioLivri.View
                 }
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Editar();
+        }
+        private void Editar()
+        {
+            inserir = false;
+            if (dtgLivros.SelectedRows.Count > 0)
+            {
+                CLivro.TBLivro oLivro = dtgLivros.SelectedRows[0].DataBoundItem as CLivro.TBLivro;
+                id_autor = oLivro.id_autor;
+                id_editora = oLivro.ID_Editora;
+                id_genero = oLivro.id_genero;
+                txtCDU.Text = oLivro.LiCDU;
+                txtISBN.Text = oLivro.LiISBN;
+                txtTitulo.Text = oLivro.LiTitulo;
+                CarregaAutores(id_autor, id_coautor);
+                CarregaEditora(id_editora);
+                CarregaGeneros(id_genero);
+                cmbPais.SelectedItem = oLivro.LiPais;
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (dtgLivros.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Tem certeza?", "Confirmação", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.OK)
+                {
+                    CLivro.TBLivro oLivro = dtgLivros.SelectedRows[0].DataBoundItem as CLivro.TBLivro;
+                    CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
+                    oProxy.Open();
+                    oProxy.Excluir(oLivro);
+                    MessageBox.Show("Cliente excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    oProxy.Close();
+                    CarregaLivros();
+                }
+            }
+        }
+
     }
 }

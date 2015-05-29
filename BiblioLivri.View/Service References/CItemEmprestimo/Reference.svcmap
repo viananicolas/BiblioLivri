@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="37c4d44d-81a1-44e3-ab71-c287cca612ae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CItemEmprestimo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CItemEmprestimo.xsd" MetadataType="Schema" ID="e03a86fe-0e47-4d78-a826-550717bcb4ad" SourceId="1" SourceUrl="http://localhost:26772/CItemEmprestimo.svc?xsd=xsd1" />
+    <MetadataFile FileName="CItemEmprestimo1.xsd" MetadataType="Schema" ID="003688d2-6751-4de8-95ee-79fb3a789d75" SourceId="1" SourceUrl="http://localhost:26772/CItemEmprestimo.svc?xsd=xsd2" />
+    <MetadataFile FileName="CItemEmprestimo.disco" MetadataType="Disco" ID="448ad44a-0534-413c-af86-c04c4718e65a" SourceId="1" SourceUrl="http://localhost:26772/CItemEmprestimo.svc?disco" />
+    <MetadataFile FileName="CItemEmprestimo2.xsd" MetadataType="Schema" ID="29aaac0e-2510-46e4-8f63-faf44ee844ce" SourceId="1" SourceUrl="http://localhost:26772/CItemEmprestimo.svc?xsd=xsd0" />
+    <MetadataFile FileName="CItemEmprestimo.wsdl" MetadataType="Wsdl" ID="5bb55a22-c6e5-4d72-87c1-7b7e9136f772" SourceId="1" SourceUrl="http://localhost:26772/CItemEmprestimo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

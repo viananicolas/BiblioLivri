@@ -28,7 +28,7 @@ namespace BiblioLivri.Control
             Model.TBLivro.Incluir(oLivro);
         }
 
-        public TBLivro SelecionaPK(int codigo)
+        public TBLivro SelecionaPK(string codigo)
         {
             return Model.TBLivro.SelecionaPK(codigo);
         }

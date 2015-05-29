@@ -32,7 +32,7 @@ namespace BiblioLivri.View.CAutor {
         private string AuSobrenomeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_AutorField;
+        private int id_autorField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -84,14 +84,14 @@ namespace BiblioLivri.View.CAutor {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Autor {
+        public int id_autor {
             get {
-                return this.id_AutorField;
+                return this.id_autorField;
             }
             set {
-                if ((this.id_AutorField.Equals(value) != true)) {
-                    this.id_AutorField = value;
-                    this.RaisePropertyChanged("id_Autor");
+                if ((this.id_autorField.Equals(value) != true)) {
+                    this.id_autorField = value;
+                    this.RaisePropertyChanged("id_autor");
                 }
             }
         }

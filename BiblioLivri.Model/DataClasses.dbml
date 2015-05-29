@@ -1,247 +1,93 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BiblioLivraDB" Class="DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=Notenick;Initial Catalog=BiblioLivraDB;Integrated Security=True" SettingsObjectName="BiblioLivri.Model.Properties.Settings" SettingsPropertyName="BiblioLivraDBConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.TBCliente" Member="TBClientes">
-    <Type Name="TBCliente">
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliSaldo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliNome" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliSobrenome" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliEstado" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliCEP" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliCelular" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CliTelefone" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="CliEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="CliNumero" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="CliComplemento" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="CliCPF" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </Type>
-  </Table>
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BiblioLivri" Class="DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Notenick;Initial Catalog=BiblioLivri;Integrated Security=True" SettingsObjectName="BiblioLivri.Model.Properties.Settings" SettingsPropertyName="BiblioLivriConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TBAutor" Member="TBAutors">
     <Type Name="TBAutor">
-      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_autor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuNacionalidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.TBDevolucao" Member="TBDevolucaos">
-    <Type Name="TBDevolucao">
-      <Column Name="id_Devolucao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+  <Table Name="dbo.TBCliente" Member="TBClientes">
+    <Type Name="TBCliente">
+      <Column Name="CliNumCartao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliEndereco" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliCEP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliTelefone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CliEmail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliCelular" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliCPF" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliEstado" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CliPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBCopiaLivro" Member="TBCopiaLivros">
+    <Type Name="TBCopiaLivro">
+      <Column Name="CoISBN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CoNumCopia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DataAquisicao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CoEdicao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CoIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CoAno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CoEmprestado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBDoacao" Member="TBDoacaos">
+    <Type Name="TBDoacao">
+      <Column Name="DoNumDoacao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DoNumClienteDoador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBEditora" Member="TBEditoras">
     <Type Name="TBEditora">
-      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_editora" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="EdNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EdCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EdEmail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EdTelefone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.TBEmprestimoFilme" Member="TBEmprestimoFilmes">
-    <Type Name="TBEmprestimoFilme">
-      <Column Name="num_Emprestimo_Filme" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBEmprestimoFilme_TBItensEmprestimoFilme" Member="TBItensEmprestimoFilmes" ThisKey="num_Emprestimo_Filme" OtherKey="num_Emprestimo_Filme" Type="TBItensEmprestimoFilme" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBEmprestimoLivro" Member="TBEmprestimoLivros">
-    <Type Name="TBEmprestimoLivro">
-      <Column Name="num_Emprestimo_Livro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBEmprestimoLivro_TBItensEmprestimoLivro" Member="TBItensEmprestimoLivros" ThisKey="num_Emprestimo_Livro" OtherKey="num_Emprestimo_Livro" Type="TBItensEmprestimoLivro" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBEmprestimoRevista" Member="TBEmprestimoRevistas">
-    <Type Name="TBEmprestimoRevista">
-      <Column Name="num_Emprestimo_Revista" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DataDevolucao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TBEmprestimoRevista_TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas" ThisKey="num_Emprestimo_Revista" OtherKey="num_Emprestimo_Revista" Type="TBItensEmprestimoRevista" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBFornecedor" Member="TBFornecedors">
-    <Type Name="TBFornecedor">
-      <Column Name="id_Fornecedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ForRazaoSocial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ForCNPJ" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="ForTelefone" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="ForCelular" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
-      <Column Name="ForEmail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ForCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ForEstado" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
-      <Column Name="ForCEP" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="ForEndereco" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBFornecimento" Member="TBFornecimentos">
-    <Type Name="TBFornecimento">
-      <Column Name="id_Fornecimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_Fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ForData" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="ForDescricao" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.TBEmprestimo" Member="TBEmprestimos">
+    <Type Name="TBEmprestimo">
+      <Column Name="EmpNumEmprestimo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EmpNumCartao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EmpDataDevolucao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBGenero" Member="TBGeneros">
     <Type Name="TBGenero">
       <Column Name="id_genero" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="GeDescricao" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="GeDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.TBItensEmprestimoFilme" Member="TBItensEmprestimoFilmes">
-    <Type Name="TBItensEmprestimoFilme">
-      <Column Name="num_Emprestimo_Filme" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBEmprestimoFilme_TBItensEmprestimoFilme" Member="TBEmprestimoFilme" ThisKey="num_Emprestimo_Filme" OtherKey="num_Emprestimo_Filme" Type="TBEmprestimoFilme" IsForeignKey="true" />
+  <Table Name="dbo.TBItemDoacao" Member="TBItemDoacaos">
+    <Type Name="TBItemDoacao">
+      <Column Name="ItemNumDoacao" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ItemNumCopia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ItemDataDoacao" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.TBItensEmprestimoLivro" Member="TBItensEmprestimoLivros">
-    <Type Name="TBItensEmprestimoLivro">
-      <Column Name="num_Emprestimo_Livro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBEmprestimoLivro_TBItensEmprestimoLivro" Member="TBEmprestimoLivro" ThisKey="num_Emprestimo_Livro" OtherKey="num_Emprestimo_Livro" Type="TBEmprestimoLivro" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBItensEmprestimoRevista" Member="TBItensEmprestimoRevistas">
-    <Type Name="TBItensEmprestimoRevista">
-      <Column Name="num_Emprestimo_Revista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBEmprestimoRevista_TBItensEmprestimoRevista" Member="TBEmprestimoRevista" ThisKey="num_Emprestimo_Revista" OtherKey="num_Emprestimo_Revista" Type="TBEmprestimoRevista" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBItensVendaFilme" Member="TBItensVendaFilmes">
-    <Type Name="TBItensVendaFilme">
-      <Column Name="num_Venda_Filme" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBVendaFilme_TBItensVendaFilme" Member="TBVendaFilme" ThisKey="num_Venda_Filme" OtherKey="num_Venda_Filme" Type="TBVendaFilme" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBItensVendaLivro" Member="TBItensVendaLivros">
-    <Type Name="TBItensVendaLivro">
-      <Column Name="num_Venda_Livro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBVendaLivro_TBItensVendaLivro" Member="TBVendaLivro" ThisKey="num_Venda_Livro" OtherKey="num_Venda_Livro" Type="TBVendaLivro" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBItensVendaRevista" Member="TBItensVendaRevistas">
-    <Type Name="TBItensVendaRevista">
-      <Column Name="num_Venda_Revista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_Acervo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBMidia" Member="TBMidias">
-    <Type Name="TBMidia">
-      <Column Name="id_Midia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MiTipoMidia" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBPeriodico" Member="TBPeriodicos">
-    <Type Name="TBPeriodico">
-      <Column Name="id_revista" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReISSN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReNumPaginas" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReTipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReMes" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="RePais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ReIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBVendaFilme" Member="TBVendaFilmes">
-    <Type Name="TBVendaFilme">
-      <Column Name="num_Venda_Filme" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBVendaFilme_TBItensVendaFilme" Member="TBItensVendaFilmes" ThisKey="num_Venda_Filme" OtherKey="num_Venda_Filme" Type="TBItensVendaFilme" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBVendaLivro" Member="TBVendaLivros">
-    <Type Name="TBVendaLivro">
-      <Column Name="num_Venda_Livro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="TBVendaLivro_TBItensVendaLivro" Member="TBItensVendaLivros" ThisKey="num_Venda_Livro" OtherKey="num_Venda_Livro" Type="TBItensVendaLivro" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBVendaRevista" Member="TBVendaRevistas">
-    <Type Name="TBVendaRevista">
-      <Column Name="num_Venda_Revista" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_atendente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.TBItemEmprestimo" Member="TBItemEmprestimos">
+    <Type Name="TBItemEmprestimo">
+      <Column Name="ItemNumEmprestimo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ItemNumCopia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ItemDataEmprestimo" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.TBLivro" Member="TBLivros">
     <Type Name="TBLivro">
-      <Column Name="id_Livro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="LiISBN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_CoAutor" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="LiCDU" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="LiNumPaginas" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiISBN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ID_Editora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="LiTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="LiAno" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="LiPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="LiIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiCDU" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiPagina" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_autor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="LiCapa" Type="System.Byte[]" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBFuncionario" Member="TBFuncionarios">
-    <Type Name="TBFuncionario">
-      <Column Name="id_funcionario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="WhenChanged" />
-      <Column Name="FunSalario" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunSalDesconto" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunPIS" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunCidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunEstado" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunCEP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunCelular" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunTelefone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunEmail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunNumero" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunComplemento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FunCPF" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TBFilme" Member="TBFilmes">
-    <Type Name="TBFilme">
-      <Column Name="id_Filme" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Diretor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilDuracao" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilDescricao" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="id_Midia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilTitulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilIdioma" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FilCapa" Type="System.Byte[]" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LiPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
 </Database>

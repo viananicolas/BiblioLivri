@@ -32,8 +32,11 @@ namespace BiblioLivri.Control
 
         public List<TBCliente> SelecionaTodos()
         {
-
             return Model.TBCliente.SelecionaTodos();
+        }
+        public List<TBCliente> SelecionaTodosConsulta(int Criteria, string Criterio)
+        {
+            return Model.TBCliente.SelecionaTodosConsulta(Criteria, Criterio);
         }
         public bool ValidaCPF(string CPF)
         {

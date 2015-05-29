@@ -58,5 +58,22 @@ namespace BiblioLivri.View
             frmgenero.MdiParent = this;
             frmgenero.Show();
         }
+
+        private void filmesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cópiaDeLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmcopialivro = new FrmCopiaLivro();
+            frmcopialivro.MdiParent = this;
+            frmcopialivro.Show();
+        }
     }
 }

@@ -63,6 +63,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelecionaTodosConsulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Criteria" type="xs:int" />
+        <xs:element minOccurs="0" name="Criterio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecionaTodosConsultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" minOccurs="0" name="SelecionaTodosConsultaResult" nillable="true" type="q6:ArrayOfTBCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ValidaCPF">
     <xs:complexType>
       <xs:sequence>

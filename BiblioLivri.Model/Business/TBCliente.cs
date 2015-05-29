@@ -15,6 +15,9 @@ namespace BiblioLivri.Model
                 try
                 {
                     odb.TBClientes.InsertOnSubmit(oCliente);
+/*#if DEBUG
+                    odb.Log = new System.IO.StreamWriter(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.Model\Logs\linq-to-sql-insert.log") { AutoFlush = true };
+#endif*/
                     odb.SubmitChanges();   
                 }
                 catch (Exception ex)
@@ -34,12 +37,18 @@ namespace BiblioLivri.Model
             {
                 try
                 {
-                    odb.TBClientes.Attach(oCliente, true);
+                  odb.TBClientes.Attach(oCliente, true);
+                    #if DEBUG
+                    odb.Log = new System.IO.StreamWriter(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.Model\Logs\linq-to-sql-update.log") { AutoFlush = true };
+#endif
                     odb.SubmitChanges();
+
+
                 }
                 catch(Exception ex)
                 {
-                throw ex;
+                
+                    throw ex;
                 }
                 finally
                 {
@@ -73,7 +82,7 @@ namespace BiblioLivri.Model
             {
                 try
                 {
-                    return (from p in odb.TBClientes where p.id_cliente == codigo select p).FirstOrDefault();
+                    return (from p in odb.TBClientes where p.CliNumCartao == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }
@@ -94,6 +103,31 @@ namespace BiblioLivri.Model
                 try
                 {
                     return (from p in odb.TBClientes select p).ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
+        }
+        public static List<TBCliente> SelecionaTodosConsulta(int Criteria, string Criterio)
+        {
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    switch (Criteria)
+                    {
+                        case (0): return (from p in odb.TBClientes where p.CliNome == Criterio select p).ToList();
+                        case (1): return (from p in odb.TBClientes where p.CliCidade == Criterio select p).ToList();
+                        case (2): return (from p in odb.TBClientes where p.CliCPF == Criterio select p).ToList();
+                        case (3): return (from p in odb.TBClientes where p.CliSobrenome == Criterio select p).ToList();
+                        default:  return (from p in odb.TBClientes select p).ToList(); ;
+                    }
                 }
                 catch (Exception ex)
                 {

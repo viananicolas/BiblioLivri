@@ -67,13 +67,13 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static TBLivro SelecionaPK(int codigo)
+        public static TBLivro SelecionaPK(string codigo)
         {
             using (DataContext odb = new DataContext())
             {
                 try
                 {
-                    var Elem = from p in odb.TBLivros where p.id_Livro == codigo select p;
+                    var Elem = from p in odb.TBLivros where p.LiISBN == codigo select p;
                     TBLivro oRetorno = Elem.First() ?? null;
                     return oRetorno;
                 }

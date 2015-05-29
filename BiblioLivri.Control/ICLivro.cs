@@ -19,7 +19,7 @@ namespace BiblioLivri.Control
         [OperationContract]
         void Excluir(TBLivro oLivro);
         [OperationContract]
-        TBLivro SelecionaPK(int codigo);
+        TBLivro SelecionaPK(string codigo);
         [OperationContract]
         List<TBLivro> SelecionaTodos();
         [OperationContract]

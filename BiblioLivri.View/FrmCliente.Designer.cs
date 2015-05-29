@@ -60,6 +60,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cmbCriterio = new System.Windows.Forms.ComboBox();
+            this.txtCriterio = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -167,7 +174,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(261, 69);
+            this.txtID.Location = new System.Drawing.Point(280, 69);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(79, 20);
@@ -178,9 +185,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(225, 72);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 13);
+            this.label13.Size = new System.Drawing.Size(53, 13);
             this.label13.TabIndex = 6;
-            this.label13.Text = "ID:";
+            this.label13.Text = "Nº Cartão";
             // 
             // txtCPF
             // 
@@ -224,6 +231,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtEndereco);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtComplemento);
@@ -351,27 +360,101 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgClientes.Location = new System.Drawing.Point(6, 25);
+            this.dtgClientes.Location = new System.Drawing.Point(6, 45);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgClientes.Size = new System.Drawing.Size(835, 244);
+            this.dtgClientes.Size = new System.Drawing.Size(835, 248);
             this.dtgClientes.TabIndex = 13;
+            this.dtgClientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnExcluir);
+            this.groupBox4.Controls.Add(this.btnAlterar);
+            this.groupBox4.Controls.Add(this.btnPesquisar);
+            this.groupBox4.Controls.Add(this.cmbCriterio);
+            this.groupBox4.Controls.Add(this.txtCriterio);
             this.groupBox4.Controls.Add(this.dtgClientes);
             this.groupBox4.Location = new System.Drawing.Point(12, 351);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(847, 275);
+            this.groupBox4.Size = new System.Drawing.Size(847, 299);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Todos os clientes:";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(766, 16);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 19;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(685, 17);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 18;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(425, 17);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 17;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // cmbCriterio
+            // 
+            this.cmbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCriterio.FormattingEnabled = true;
+            this.cmbCriterio.Items.AddRange(new object[] {
+            "Cidade",
+            "CPF",
+            "Nome",
+            "Sobrenome",
+            "Todos"});
+            this.cmbCriterio.Location = new System.Drawing.Point(298, 19);
+            this.cmbCriterio.Name = "cmbCriterio";
+            this.cmbCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cmbCriterio.TabIndex = 16;
+            // 
+            // txtCriterio
+            // 
+            this.txtCriterio.Location = new System.Drawing.Point(6, 19);
+            this.txtCriterio.Name = "txtCriterio";
+            this.txtCriterio.Size = new System.Drawing.Size(286, 20);
+            this.txtCriterio.TabIndex = 15;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(261, 88);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(179, 20);
+            this.txtEndereco.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(181, 91);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Endereço:";
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 624);
+            this.ClientSize = new System.Drawing.Size(890, 656);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -389,6 +472,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -427,5 +511,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dtgClientes;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox cmbCriterio;
+        private System.Windows.Forms.TextBox txtCriterio;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label14;
     }
 }

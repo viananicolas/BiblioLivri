@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TBEmprestimo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmpDataDevolucao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmpNumCartao" type="xs:int" />
+      <xs:element minOccurs="0" name="EmpNumEmprestimo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TBEmprestimo" nillable="true" type="tns:TBEmprestimo" />
+  <xs:complexType name="ArrayOfTBEmprestimo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TBEmprestimo" nillable="true" type="tns:TBEmprestimo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTBEmprestimo" nillable="true" type="tns:ArrayOfTBEmprestimo" />
+</xs:schema>

@@ -22,7 +22,7 @@ namespace BiblioLivri.Model
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="BiblioLivraDB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="BiblioLivri")]
 	public partial class DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,82 +30,40 @@ namespace BiblioLivri.Model
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertTBCliente(TBCliente instance);
-    partial void UpdateTBCliente(TBCliente instance);
-    partial void DeleteTBCliente(TBCliente instance);
     partial void InsertTBAutor(TBAutor instance);
     partial void UpdateTBAutor(TBAutor instance);
     partial void DeleteTBAutor(TBAutor instance);
-    partial void InsertTBDevolucao(TBDevolucao instance);
-    partial void UpdateTBDevolucao(TBDevolucao instance);
-    partial void DeleteTBDevolucao(TBDevolucao instance);
+    partial void InsertTBCliente(TBCliente instance);
+    partial void UpdateTBCliente(TBCliente instance);
+    partial void DeleteTBCliente(TBCliente instance);
+    partial void InsertTBCopiaLivro(TBCopiaLivro instance);
+    partial void UpdateTBCopiaLivro(TBCopiaLivro instance);
+    partial void DeleteTBCopiaLivro(TBCopiaLivro instance);
+    partial void InsertTBDoacao(TBDoacao instance);
+    partial void UpdateTBDoacao(TBDoacao instance);
+    partial void DeleteTBDoacao(TBDoacao instance);
     partial void InsertTBEditora(TBEditora instance);
     partial void UpdateTBEditora(TBEditora instance);
     partial void DeleteTBEditora(TBEditora instance);
-    partial void InsertTBEmprestimoFilme(TBEmprestimoFilme instance);
-    partial void UpdateTBEmprestimoFilme(TBEmprestimoFilme instance);
-    partial void DeleteTBEmprestimoFilme(TBEmprestimoFilme instance);
-    partial void InsertTBEmprestimoLivro(TBEmprestimoLivro instance);
-    partial void UpdateTBEmprestimoLivro(TBEmprestimoLivro instance);
-    partial void DeleteTBEmprestimoLivro(TBEmprestimoLivro instance);
-    partial void InsertTBEmprestimoRevista(TBEmprestimoRevista instance);
-    partial void UpdateTBEmprestimoRevista(TBEmprestimoRevista instance);
-    partial void DeleteTBEmprestimoRevista(TBEmprestimoRevista instance);
-    partial void InsertTBFornecedor(TBFornecedor instance);
-    partial void UpdateTBFornecedor(TBFornecedor instance);
-    partial void DeleteTBFornecedor(TBFornecedor instance);
-    partial void InsertTBFornecimento(TBFornecimento instance);
-    partial void UpdateTBFornecimento(TBFornecimento instance);
-    partial void DeleteTBFornecimento(TBFornecimento instance);
+    partial void InsertTBEmprestimo(TBEmprestimo instance);
+    partial void UpdateTBEmprestimo(TBEmprestimo instance);
+    partial void DeleteTBEmprestimo(TBEmprestimo instance);
     partial void InsertTBGenero(TBGenero instance);
     partial void UpdateTBGenero(TBGenero instance);
     partial void DeleteTBGenero(TBGenero instance);
-    partial void InsertTBItensEmprestimoFilme(TBItensEmprestimoFilme instance);
-    partial void UpdateTBItensEmprestimoFilme(TBItensEmprestimoFilme instance);
-    partial void DeleteTBItensEmprestimoFilme(TBItensEmprestimoFilme instance);
-    partial void InsertTBItensEmprestimoLivro(TBItensEmprestimoLivro instance);
-    partial void UpdateTBItensEmprestimoLivro(TBItensEmprestimoLivro instance);
-    partial void DeleteTBItensEmprestimoLivro(TBItensEmprestimoLivro instance);
-    partial void InsertTBItensEmprestimoRevista(TBItensEmprestimoRevista instance);
-    partial void UpdateTBItensEmprestimoRevista(TBItensEmprestimoRevista instance);
-    partial void DeleteTBItensEmprestimoRevista(TBItensEmprestimoRevista instance);
-    partial void InsertTBItensVendaFilme(TBItensVendaFilme instance);
-    partial void UpdateTBItensVendaFilme(TBItensVendaFilme instance);
-    partial void DeleteTBItensVendaFilme(TBItensVendaFilme instance);
-    partial void InsertTBItensVendaLivro(TBItensVendaLivro instance);
-    partial void UpdateTBItensVendaLivro(TBItensVendaLivro instance);
-    partial void DeleteTBItensVendaLivro(TBItensVendaLivro instance);
-    partial void InsertTBItensVendaRevista(TBItensVendaRevista instance);
-    partial void UpdateTBItensVendaRevista(TBItensVendaRevista instance);
-    partial void DeleteTBItensVendaRevista(TBItensVendaRevista instance);
-    partial void InsertTBMidia(TBMidia instance);
-    partial void UpdateTBMidia(TBMidia instance);
-    partial void DeleteTBMidia(TBMidia instance);
-    partial void InsertTBPeriodico(TBPeriodico instance);
-    partial void UpdateTBPeriodico(TBPeriodico instance);
-    partial void DeleteTBPeriodico(TBPeriodico instance);
-    partial void InsertTBVendaFilme(TBVendaFilme instance);
-    partial void UpdateTBVendaFilme(TBVendaFilme instance);
-    partial void DeleteTBVendaFilme(TBVendaFilme instance);
-    partial void InsertTBVendaLivro(TBVendaLivro instance);
-    partial void UpdateTBVendaLivro(TBVendaLivro instance);
-    partial void DeleteTBVendaLivro(TBVendaLivro instance);
-    partial void InsertTBVendaRevista(TBVendaRevista instance);
-    partial void UpdateTBVendaRevista(TBVendaRevista instance);
-    partial void DeleteTBVendaRevista(TBVendaRevista instance);
+    partial void InsertTBItemDoacao(TBItemDoacao instance);
+    partial void UpdateTBItemDoacao(TBItemDoacao instance);
+    partial void DeleteTBItemDoacao(TBItemDoacao instance);
+    partial void InsertTBItemEmprestimo(TBItemEmprestimo instance);
+    partial void UpdateTBItemEmprestimo(TBItemEmprestimo instance);
+    partial void DeleteTBItemEmprestimo(TBItemEmprestimo instance);
     partial void InsertTBLivro(TBLivro instance);
     partial void UpdateTBLivro(TBLivro instance);
     partial void DeleteTBLivro(TBLivro instance);
-    partial void InsertTBFuncionario(TBFuncionario instance);
-    partial void UpdateTBFuncionario(TBFuncionario instance);
-    partial void DeleteTBFuncionario(TBFuncionario instance);
-    partial void InsertTBFilme(TBFilme instance);
-    partial void UpdateTBFilme(TBFilme instance);
-    partial void DeleteTBFilme(TBFilme instance);
     #endregion
 		
 		public DataContext() : 
-				base(global::BiblioLivri.Model.Properties.Settings.Default.BiblioLivraDBConnectionString, mappingSource)
+				base(global::BiblioLivri.Model.Properties.Settings.Default.BiblioLivriConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -134,14 +92,6 @@ namespace BiblioLivri.Model
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<TBCliente> TBClientes
-		{
-			get
-			{
-				return this.GetTable<TBCliente>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TBAutor> TBAutors
 		{
 			get
@@ -150,11 +100,27 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		public System.Data.Linq.Table<TBDevolucao> TBDevolucaos
+		public System.Data.Linq.Table<TBCliente> TBClientes
 		{
 			get
 			{
-				return this.GetTable<TBDevolucao>();
+				return this.GetTable<TBCliente>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBCopiaLivro> TBCopiaLivros
+		{
+			get
+			{
+				return this.GetTable<TBCopiaLivro>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBDoacao> TBDoacaos
+		{
+			get
+			{
+				return this.GetTable<TBDoacao>();
 			}
 		}
 		
@@ -166,43 +132,11 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		public System.Data.Linq.Table<TBEmprestimoFilme> TBEmprestimoFilmes
+		public System.Data.Linq.Table<TBEmprestimo> TBEmprestimos
 		{
 			get
 			{
-				return this.GetTable<TBEmprestimoFilme>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBEmprestimoLivro> TBEmprestimoLivros
-		{
-			get
-			{
-				return this.GetTable<TBEmprestimoLivro>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBEmprestimoRevista> TBEmprestimoRevistas
-		{
-			get
-			{
-				return this.GetTable<TBEmprestimoRevista>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBFornecedor> TBFornecedors
-		{
-			get
-			{
-				return this.GetTable<TBFornecedor>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBFornecimento> TBFornecimentos
-		{
-			get
-			{
-				return this.GetTable<TBFornecimento>();
+				return this.GetTable<TBEmprestimo>();
 			}
 		}
 		
@@ -214,91 +148,19 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		public System.Data.Linq.Table<TBItensEmprestimoFilme> TBItensEmprestimoFilmes
+		public System.Data.Linq.Table<TBItemDoacao> TBItemDoacaos
 		{
 			get
 			{
-				return this.GetTable<TBItensEmprestimoFilme>();
+				return this.GetTable<TBItemDoacao>();
 			}
 		}
 		
-		public System.Data.Linq.Table<TBItensEmprestimoLivro> TBItensEmprestimoLivros
+		public System.Data.Linq.Table<TBItemEmprestimo> TBItemEmprestimos
 		{
 			get
 			{
-				return this.GetTable<TBItensEmprestimoLivro>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBItensEmprestimoRevista> TBItensEmprestimoRevistas
-		{
-			get
-			{
-				return this.GetTable<TBItensEmprestimoRevista>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBItensVendaFilme> TBItensVendaFilmes
-		{
-			get
-			{
-				return this.GetTable<TBItensVendaFilme>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBItensVendaLivro> TBItensVendaLivros
-		{
-			get
-			{
-				return this.GetTable<TBItensVendaLivro>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBItensVendaRevista> TBItensVendaRevistas
-		{
-			get
-			{
-				return this.GetTable<TBItensVendaRevista>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBMidia> TBMidias
-		{
-			get
-			{
-				return this.GetTable<TBMidia>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBPeriodico> TBPeriodicos
-		{
-			get
-			{
-				return this.GetTable<TBPeriodico>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBVendaFilme> TBVendaFilmes
-		{
-			get
-			{
-				return this.GetTable<TBVendaFilme>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBVendaLivro> TBVendaLivros
-		{
-			get
-			{
-				return this.GetTable<TBVendaLivro>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBVendaRevista> TBVendaRevistas
-		{
-			get
-			{
-				return this.GetTable<TBVendaRevista>();
+				return this.GetTable<TBItemEmprestimo>();
 			}
 		}
 		
@@ -309,396 +171,6 @@ namespace BiblioLivri.Model
 				return this.GetTable<TBLivro>();
 			}
 		}
-		
-		public System.Data.Linq.Table<TBFuncionario> TBFuncionarios
-		{
-			get
-			{
-				return this.GetTable<TBFuncionario>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TBFilme> TBFilmes
-		{
-			get
-			{
-				return this.GetTable<TBFilme>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBCliente")]
-	public partial class TBCliente : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_cliente;
-		
-		private double _CliSaldo;
-		
-		private string _CliNome;
-		
-		private string _CliSobrenome;
-		
-		private string _CliCidade;
-		
-		private string _CliEstado;
-		
-		private string _CliPais;
-		
-		private string _CliCEP;
-		
-		private string _CliCelular;
-		
-		private string _CliTelefone;
-		
-		private string _CliEmail;
-		
-		private string _CliNumero;
-		
-		private string _CliComplemento;
-		
-		private string _CliCPF;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void OnCliSaldoChanging(double value);
-    partial void OnCliSaldoChanged();
-    partial void OnCliNomeChanging(string value);
-    partial void OnCliNomeChanged();
-    partial void OnCliSobrenomeChanging(string value);
-    partial void OnCliSobrenomeChanged();
-    partial void OnCliCidadeChanging(string value);
-    partial void OnCliCidadeChanged();
-    partial void OnCliEstadoChanging(string value);
-    partial void OnCliEstadoChanged();
-    partial void OnCliPaisChanging(string value);
-    partial void OnCliPaisChanged();
-    partial void OnCliCEPChanging(string value);
-    partial void OnCliCEPChanged();
-    partial void OnCliCelularChanging(string value);
-    partial void OnCliCelularChanged();
-    partial void OnCliTelefoneChanging(string value);
-    partial void OnCliTelefoneChanged();
-    partial void OnCliEmailChanging(string value);
-    partial void OnCliEmailChanged();
-    partial void OnCliNumeroChanging(string value);
-    partial void OnCliNumeroChanged();
-    partial void OnCliComplementoChanging(string value);
-    partial void OnCliComplementoChanged();
-    partial void OnCliCPFChanging(string value);
-    partial void OnCliCPFChanged();
-    #endregion
-		
-		public TBCliente()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliSaldo", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public double CliSaldo
-		{
-			get
-			{
-				return this._CliSaldo;
-			}
-			set
-			{
-				if ((this._CliSaldo != value))
-				{
-					this.OnCliSaldoChanging(value);
-					this.SendPropertyChanging();
-					this._CliSaldo = value;
-					this.SendPropertyChanged("CliSaldo");
-					this.OnCliSaldoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNome", DbType="VarChar(70) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliNome
-		{
-			get
-			{
-				return this._CliNome;
-			}
-			set
-			{
-				if ((this._CliNome != value))
-				{
-					this.OnCliNomeChanging(value);
-					this.SendPropertyChanging();
-					this._CliNome = value;
-					this.SendPropertyChanged("CliNome");
-					this.OnCliNomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliSobrenome", DbType="VarChar(100) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliSobrenome
-		{
-			get
-			{
-				return this._CliSobrenome;
-			}
-			set
-			{
-				if ((this._CliSobrenome != value))
-				{
-					this.OnCliSobrenomeChanging(value);
-					this.SendPropertyChanging();
-					this._CliSobrenome = value;
-					this.SendPropertyChanged("CliSobrenome");
-					this.OnCliSobrenomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliCidade
-		{
-			get
-			{
-				return this._CliCidade;
-			}
-			set
-			{
-				if ((this._CliCidade != value))
-				{
-					this.OnCliCidadeChanging(value);
-					this.SendPropertyChanging();
-					this._CliCidade = value;
-					this.SendPropertyChanged("CliCidade");
-					this.OnCliCidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEstado", DbType="NChar(2) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliEstado
-		{
-			get
-			{
-				return this._CliEstado;
-			}
-			set
-			{
-				if ((this._CliEstado != value))
-				{
-					this.OnCliEstadoChanging(value);
-					this.SendPropertyChanging();
-					this._CliEstado = value;
-					this.SendPropertyChanged("CliEstado");
-					this.OnCliEstadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliPais
-		{
-			get
-			{
-				return this._CliPais;
-			}
-			set
-			{
-				if ((this._CliPais != value))
-				{
-					this.OnCliPaisChanging(value);
-					this.SendPropertyChanging();
-					this._CliPais = value;
-					this.SendPropertyChanged("CliPais");
-					this.OnCliPaisChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCEP", DbType="VarChar(15) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliCEP
-		{
-			get
-			{
-				return this._CliCEP;
-			}
-			set
-			{
-				if ((this._CliCEP != value))
-				{
-					this.OnCliCEPChanging(value);
-					this.SendPropertyChanging();
-					this._CliCEP = value;
-					this.SendPropertyChanged("CliCEP");
-					this.OnCliCEPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCelular", DbType="VarChar(11) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliCelular
-		{
-			get
-			{
-				return this._CliCelular;
-			}
-			set
-			{
-				if ((this._CliCelular != value))
-				{
-					this.OnCliCelularChanging(value);
-					this.SendPropertyChanging();
-					this._CliCelular = value;
-					this.SendPropertyChanged("CliCelular");
-					this.OnCliCelularChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliTelefone", DbType="NVarChar(10)", UpdateCheck=UpdateCheck.Never)]
-		public string CliTelefone
-		{
-			get
-			{
-				return this._CliTelefone;
-			}
-			set
-			{
-				if ((this._CliTelefone != value))
-				{
-					this.OnCliTelefoneChanging(value);
-					this.SendPropertyChanging();
-					this._CliTelefone = value;
-					this.SendPropertyChanged("CliTelefone");
-					this.OnCliTelefoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEmail", DbType="NVarChar(50)", UpdateCheck=UpdateCheck.Never)]
-		public string CliEmail
-		{
-			get
-			{
-				return this._CliEmail;
-			}
-			set
-			{
-				if ((this._CliEmail != value))
-				{
-					this.OnCliEmailChanging(value);
-					this.SendPropertyChanging();
-					this._CliEmail = value;
-					this.SendPropertyChanged("CliEmail");
-					this.OnCliEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNumero", DbType="NVarChar(10)", UpdateCheck=UpdateCheck.Never)]
-		public string CliNumero
-		{
-			get
-			{
-				return this._CliNumero;
-			}
-			set
-			{
-				if ((this._CliNumero != value))
-				{
-					this.OnCliNumeroChanging(value);
-					this.SendPropertyChanging();
-					this._CliNumero = value;
-					this.SendPropertyChanged("CliNumero");
-					this.OnCliNumeroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliComplemento", DbType="NVarChar(15)", UpdateCheck=UpdateCheck.Never)]
-		public string CliComplemento
-		{
-			get
-			{
-				return this._CliComplemento;
-			}
-			set
-			{
-				if ((this._CliComplemento != value))
-				{
-					this.OnCliComplementoChanging(value);
-					this.SendPropertyChanging();
-					this._CliComplemento = value;
-					this.SendPropertyChanged("CliComplemento");
-					this.OnCliComplementoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCPF", DbType="VarChar(11) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string CliCPF
-		{
-			get
-			{
-				return this._CliCPF;
-			}
-			set
-			{
-				if ((this._CliCPF != value))
-				{
-					this.OnCliCPFChanging(value);
-					this.SendPropertyChanging();
-					this._CliCPF = value;
-					this.SendPropertyChanged("CliCPF");
-					this.OnCliCPFChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBAutor")]
@@ -707,7 +179,7 @@ namespace BiblioLivri.Model
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_Autor;
+		private int _id_autor;
 		
 		private string _AuNome;
 		
@@ -719,8 +191,8 @@ namespace BiblioLivri.Model
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_AutorChanging(int value);
-    partial void Onid_AutorChanged();
+    partial void Onid_autorChanging(int value);
+    partial void Onid_autorChanged();
     partial void OnAuNomeChanging(string value);
     partial void OnAuNomeChanged();
     partial void OnAuSobrenomeChanging(string value);
@@ -734,22 +206,22 @@ namespace BiblioLivri.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_Autor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_autor", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int id_autor
 		{
 			get
 			{
-				return this._id_Autor;
+				return this._id_autor;
 			}
 			set
 			{
-				if ((this._id_Autor != value))
+				if ((this._id_autor != value))
 				{
-					this.Onid_AutorChanging(value);
+					this.Onid_autorChanging(value);
 					this.SendPropertyChanging();
-					this._id_Autor = value;
-					this.SendPropertyChanged("id_Autor");
-					this.Onid_AutorChanged();
+					this._id_autor = value;
+					this.SendPropertyChanged("id_autor");
+					this.Onid_autorChanged();
 				}
 			}
 		}
@@ -835,139 +307,599 @@ namespace BiblioLivri.Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBDevolucao")]
-	public partial class TBDevolucao : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBCliente")]
+	public partial class TBCliente : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_Devolucao;
+		private int _CliNumCartao;
 		
-		private int _id_Acervo;
+		private string _CliSobrenome;
 		
-		private int _id_atendente;
+		private string _CliNome;
 		
-		private System.DateTime _Data;
+		private string _CliEndereco;
 		
-		private System.Nullable<int> _id_cliente;
+		private string _CliCidade;
+		
+		private string _CliCEP;
+		
+		private string _CliTelefone;
+		
+		private string _CliEmail;
+		
+		private string _CliCelular;
+		
+		private string _CliCPF;
+		
+		private string _CliEstado;
+		
+		private string _CliPais;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_DevolucaoChanging(int value);
-    partial void Onid_DevolucaoChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void Onid_clienteChanging(System.Nullable<int> value);
-    partial void Onid_clienteChanged();
+    partial void OnCliNumCartaoChanging(int value);
+    partial void OnCliNumCartaoChanged();
+    partial void OnCliSobrenomeChanging(string value);
+    partial void OnCliSobrenomeChanged();
+    partial void OnCliNomeChanging(string value);
+    partial void OnCliNomeChanged();
+    partial void OnCliEnderecoChanging(string value);
+    partial void OnCliEnderecoChanged();
+    partial void OnCliCidadeChanging(string value);
+    partial void OnCliCidadeChanged();
+    partial void OnCliCEPChanging(string value);
+    partial void OnCliCEPChanged();
+    partial void OnCliTelefoneChanging(string value);
+    partial void OnCliTelefoneChanged();
+    partial void OnCliEmailChanging(string value);
+    partial void OnCliEmailChanged();
+    partial void OnCliCelularChanging(string value);
+    partial void OnCliCelularChanged();
+    partial void OnCliCPFChanging(string value);
+    partial void OnCliCPFChanged();
+    partial void OnCliEstadoChanging(string value);
+    partial void OnCliEstadoChanged();
+    partial void OnCliPaisChanging(string value);
+    partial void OnCliPaisChanged();
     #endregion
 		
-		public TBDevolucao()
+		public TBCliente()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Devolucao", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_Devolucao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNumCartao", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int CliNumCartao
 		{
 			get
 			{
-				return this._id_Devolucao;
+				return this._CliNumCartao;
 			}
 			set
 			{
-				if ((this._id_Devolucao != value))
+				if ((this._CliNumCartao != value))
 				{
-					this.Onid_DevolucaoChanging(value);
+					this.OnCliNumCartaoChanging(value);
 					this.SendPropertyChanging();
-					this._id_Devolucao = value;
-					this.SendPropertyChanged("id_Devolucao");
-					this.Onid_DevolucaoChanged();
+					this._CliNumCartao = value;
+					this.SendPropertyChanged("CliNumCartao");
+					this.OnCliNumCartaoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL")]
-		public int id_Acervo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliSobrenome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliSobrenome
 		{
 			get
 			{
-				return this._id_Acervo;
+				return this._CliSobrenome;
 			}
 			set
 			{
-				if ((this._id_Acervo != value))
+				if ((this._CliSobrenome != value))
 				{
-					this.Onid_AcervoChanging(value);
+					this.OnCliSobrenomeChanging(value);
 					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
+					this._CliSobrenome = value;
+					this.SendPropertyChanged("CliSobrenome");
+					this.OnCliSobrenomeChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliNome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliNome
 		{
 			get
 			{
-				return this._id_atendente;
+				return this._CliNome;
 			}
 			set
 			{
-				if ((this._id_atendente != value))
+				if ((this._CliNome != value))
 				{
-					this.Onid_atendenteChanging(value);
+					this.OnCliNomeChanging(value);
 					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
+					this._CliNome = value;
+					this.SendPropertyChanged("CliNome");
+					this.OnCliNomeChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
-		public System.DateTime Data
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEndereco", DbType="VarChar(150) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliEndereco
 		{
 			get
 			{
-				return this._Data;
+				return this._CliEndereco;
 			}
 			set
 			{
-				if ((this._Data != value))
+				if ((this._CliEndereco != value))
 				{
-					this.OnDataChanging(value);
+					this.OnCliEnderecoChanging(value);
 					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
+					this._CliEndereco = value;
+					this.SendPropertyChanged("CliEndereco");
+					this.OnCliEnderecoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int")]
-		public System.Nullable<int> id_cliente
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliCidade
 		{
 			get
 			{
-				return this._id_cliente;
+				return this._CliCidade;
 			}
 			set
 			{
-				if ((this._id_cliente != value))
+				if ((this._CliCidade != value))
 				{
-					this.Onid_clienteChanging(value);
+					this.OnCliCidadeChanging(value);
 					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
+					this._CliCidade = value;
+					this.SendPropertyChanged("CliCidade");
+					this.OnCliCidadeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCEP", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliCEP
+		{
+			get
+			{
+				return this._CliCEP;
+			}
+			set
+			{
+				if ((this._CliCEP != value))
+				{
+					this.OnCliCEPChanging(value);
+					this.SendPropertyChanging();
+					this._CliCEP = value;
+					this.SendPropertyChanged("CliCEP");
+					this.OnCliCEPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliTelefone", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
+		public string CliTelefone
+		{
+			get
+			{
+				return this._CliTelefone;
+			}
+			set
+			{
+				if ((this._CliTelefone != value))
+				{
+					this.OnCliTelefoneChanging(value);
+					this.SendPropertyChanging();
+					this._CliTelefone = value;
+					this.SendPropertyChanged("CliTelefone");
+					this.OnCliTelefoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEmail", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliEmail
+		{
+			get
+			{
+				return this._CliEmail;
+			}
+			set
+			{
+				if ((this._CliEmail != value))
+				{
+					this.OnCliEmailChanging(value);
+					this.SendPropertyChanging();
+					this._CliEmail = value;
+					this.SendPropertyChanged("CliEmail");
+					this.OnCliEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCelular", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliCelular
+		{
+			get
+			{
+				return this._CliCelular;
+			}
+			set
+			{
+				if ((this._CliCelular != value))
+				{
+					this.OnCliCelularChanging(value);
+					this.SendPropertyChanging();
+					this._CliCelular = value;
+					this.SendPropertyChanged("CliCelular");
+					this.OnCliCelularChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliCPF", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliCPF
+		{
+			get
+			{
+				return this._CliCPF;
+			}
+			set
+			{
+				if ((this._CliCPF != value))
+				{
+					this.OnCliCPFChanging(value);
+					this.SendPropertyChanging();
+					this._CliCPF = value;
+					this.SendPropertyChanged("CliCPF");
+					this.OnCliCPFChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliEstado", DbType="VarChar(2) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliEstado
+		{
+			get
+			{
+				return this._CliEstado;
+			}
+			set
+			{
+				if ((this._CliEstado != value))
+				{
+					this.OnCliEstadoChanging(value);
+					this.SendPropertyChanging();
+					this._CliEstado = value;
+					this.SendPropertyChanged("CliEstado");
+					this.OnCliEstadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CliPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CliPais
+		{
+			get
+			{
+				return this._CliPais;
+			}
+			set
+			{
+				if ((this._CliPais != value))
+				{
+					this.OnCliPaisChanging(value);
+					this.SendPropertyChanging();
+					this._CliPais = value;
+					this.SendPropertyChanged("CliPais");
+					this.OnCliPaisChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBCopiaLivro")]
+	public partial class TBCopiaLivro : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _CoISBN;
+		
+		private int _CoNumCopia;
+		
+		private System.DateTime _DataAquisicao;
+		
+		private string _CoEdicao;
+		
+		private string _CoIdioma;
+		
+		private string _CoAno;
+		
+		private bool _CoEmprestado;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCoISBNChanging(string value);
+    partial void OnCoISBNChanged();
+    partial void OnCoNumCopiaChanging(int value);
+    partial void OnCoNumCopiaChanged();
+    partial void OnDataAquisicaoChanging(System.DateTime value);
+    partial void OnDataAquisicaoChanged();
+    partial void OnCoEdicaoChanging(string value);
+    partial void OnCoEdicaoChanged();
+    partial void OnCoIdiomaChanging(string value);
+    partial void OnCoIdiomaChanged();
+    partial void OnCoAnoChanging(string value);
+    partial void OnCoAnoChanged();
+    partial void OnCoEmprestadoChanging(bool value);
+    partial void OnCoEmprestadoChanged();
+    #endregion
+		
+		public TBCopiaLivro()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoISBN", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CoISBN
+		{
+			get
+			{
+				return this._CoISBN;
+			}
+			set
+			{
+				if ((this._CoISBN != value))
+				{
+					this.OnCoISBNChanging(value);
+					this.SendPropertyChanging();
+					this._CoISBN = value;
+					this.SendPropertyChanged("CoISBN");
+					this.OnCoISBNChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoNumCopia", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int CoNumCopia
+		{
+			get
+			{
+				return this._CoNumCopia;
+			}
+			set
+			{
+				if ((this._CoNumCopia != value))
+				{
+					this.OnCoNumCopiaChanging(value);
+					this.SendPropertyChanging();
+					this._CoNumCopia = value;
+					this.SendPropertyChanged("CoNumCopia");
+					this.OnCoNumCopiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataAquisicao", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public System.DateTime DataAquisicao
+		{
+			get
+			{
+				return this._DataAquisicao;
+			}
+			set
+			{
+				if ((this._DataAquisicao != value))
+				{
+					this.OnDataAquisicaoChanging(value);
+					this.SendPropertyChanging();
+					this._DataAquisicao = value;
+					this.SendPropertyChanged("DataAquisicao");
+					this.OnDataAquisicaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoEdicao", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CoEdicao
+		{
+			get
+			{
+				return this._CoEdicao;
+			}
+			set
+			{
+				if ((this._CoEdicao != value))
+				{
+					this.OnCoEdicaoChanging(value);
+					this.SendPropertyChanging();
+					this._CoEdicao = value;
+					this.SendPropertyChanged("CoEdicao");
+					this.OnCoEdicaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoIdioma", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CoIdioma
+		{
+			get
+			{
+				return this._CoIdioma;
+			}
+			set
+			{
+				if ((this._CoIdioma != value))
+				{
+					this.OnCoIdiomaChanging(value);
+					this.SendPropertyChanging();
+					this._CoIdioma = value;
+					this.SendPropertyChanged("CoIdioma");
+					this.OnCoIdiomaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoAno", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string CoAno
+		{
+			get
+			{
+				return this._CoAno;
+			}
+			set
+			{
+				if ((this._CoAno != value))
+				{
+					this.OnCoAnoChanging(value);
+					this.SendPropertyChanging();
+					this._CoAno = value;
+					this.SendPropertyChanged("CoAno");
+					this.OnCoAnoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoEmprestado", DbType="Bit NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public bool CoEmprestado
+		{
+			get
+			{
+				return this._CoEmprestado;
+			}
+			set
+			{
+				if ((this._CoEmprestado != value))
+				{
+					this.OnCoEmprestadoChanging(value);
+					this.SendPropertyChanging();
+					this._CoEmprestado = value;
+					this.SendPropertyChanged("CoEmprestado");
+					this.OnCoEmprestadoChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBDoacao")]
+	public partial class TBDoacao : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DoNumDoacao;
+		
+		private int _DoNumClienteDoador;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDoNumDoacaoChanging(int value);
+    partial void OnDoNumDoacaoChanged();
+    partial void OnDoNumClienteDoadorChanging(int value);
+    partial void OnDoNumClienteDoadorChanged();
+    #endregion
+		
+		public TBDoacao()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoNumDoacao", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int DoNumDoacao
+		{
+			get
+			{
+				return this._DoNumDoacao;
+			}
+			set
+			{
+				if ((this._DoNumDoacao != value))
+				{
+					this.OnDoNumDoacaoChanging(value);
+					this.SendPropertyChanging();
+					this._DoNumDoacao = value;
+					this.SendPropertyChanged("DoNumDoacao");
+					this.OnDoNumDoacaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoNumClienteDoador", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int DoNumClienteDoador
+		{
+			get
+			{
+				return this._DoNumClienteDoador;
+			}
+			set
+			{
+				if ((this._DoNumClienteDoador != value))
+				{
+					this.OnDoNumClienteDoadorChanging(value);
+					this.SendPropertyChanging();
+					this._DoNumClienteDoador = value;
+					this.SendPropertyChanged("DoNumClienteDoador");
+					this.OnDoNumClienteDoadorChanged();
 				}
 			}
 		}
@@ -999,18 +931,30 @@ namespace BiblioLivri.Model
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_Editora;
+		private int _id_editora;
 		
 		private string _EdNome;
+		
+		private string _EdCidade;
+		
+		private string _EdEmail;
+		
+		private string _EdTelefone;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_EditoraChanging(int value);
-    partial void Onid_EditoraChanged();
+    partial void Onid_editoraChanging(int value);
+    partial void Onid_editoraChanged();
     partial void OnEdNomeChanging(string value);
     partial void OnEdNomeChanged();
+    partial void OnEdCidadeChanging(string value);
+    partial void OnEdCidadeChanged();
+    partial void OnEdEmailChanging(string value);
+    partial void OnEdEmailChanged();
+    partial void OnEdTelefoneChanging(string value);
+    partial void OnEdTelefoneChanged();
     #endregion
 		
 		public TBEditora()
@@ -1018,22 +962,22 @@ namespace BiblioLivri.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Editora", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_Editora
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_editora", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int id_editora
 		{
 			get
 			{
-				return this._id_Editora;
+				return this._id_editora;
 			}
 			set
 			{
-				if ((this._id_Editora != value))
+				if ((this._id_editora != value))
 				{
-					this.Onid_EditoraChanging(value);
+					this.Onid_editoraChanging(value);
 					this.SendPropertyChanging();
-					this._id_Editora = value;
-					this.SendPropertyChanged("id_Editora");
-					this.Onid_EditoraChanged();
+					this._id_editora = value;
+					this.SendPropertyChanged("id_editora");
+					this.Onid_editoraChanged();
 				}
 			}
 		}
@@ -1058,766 +1002,62 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBEmprestimoFilme")]
-	public partial class TBEmprestimoFilme : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Emprestimo_Filme;
-		
-		private int _id_cliente;
-		
-		private System.DateTime _DataDevolucao;
-		
-		private int _id_atendente;
-		
-		private EntitySet<TBItensEmprestimoFilme> _TBItensEmprestimoFilmes;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Emprestimo_FilmeChanging(int value);
-    partial void Onnum_Emprestimo_FilmeChanged();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void OnDataDevolucaoChanging(System.DateTime value);
-    partial void OnDataDevolucaoChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBEmprestimoFilme()
-		{
-			this._TBItensEmprestimoFilmes = new EntitySet<TBItensEmprestimoFilme>(new Action<TBItensEmprestimoFilme>(this.attach_TBItensEmprestimoFilmes), new Action<TBItensEmprestimoFilme>(this.detach_TBItensEmprestimoFilmes));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Filme", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Emprestimo_Filme
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string EdCidade
 		{
 			get
 			{
-				return this._num_Emprestimo_Filme;
+				return this._EdCidade;
 			}
 			set
 			{
-				if ((this._num_Emprestimo_Filme != value))
+				if ((this._EdCidade != value))
 				{
-					this.Onnum_Emprestimo_FilmeChanging(value);
+					this.OnEdCidadeChanging(value);
 					this.SendPropertyChanging();
-					this._num_Emprestimo_Filme = value;
-					this.SendPropertyChanged("num_Emprestimo_Filme");
-					this.Onnum_Emprestimo_FilmeChanged();
+					this._EdCidade = value;
+					this.SendPropertyChanged("EdCidade");
+					this.OnEdCidadeChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int NOT NULL")]
-		public int id_cliente
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdEmail", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string EdEmail
 		{
 			get
 			{
-				return this._id_cliente;
+				return this._EdEmail;
 			}
 			set
 			{
-				if ((this._id_cliente != value))
+				if ((this._EdEmail != value))
 				{
-					this.Onid_clienteChanging(value);
+					this.OnEdEmailChanging(value);
 					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
+					this._EdEmail = value;
+					this.SendPropertyChanged("EdEmail");
+					this.OnEdEmailChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataDevolucao", DbType="Date NOT NULL")]
-		public System.DateTime DataDevolucao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdTelefone", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string EdTelefone
 		{
 			get
 			{
-				return this._DataDevolucao;
+				return this._EdTelefone;
 			}
 			set
 			{
-				if ((this._DataDevolucao != value))
+				if ((this._EdTelefone != value))
 				{
-					this.OnDataDevolucaoChanging(value);
+					this.OnEdTelefoneChanging(value);
 					this.SendPropertyChanging();
-					this._DataDevolucao = value;
-					this.SendPropertyChanged("DataDevolucao");
-					this.OnDataDevolucaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoFilme_TBItensEmprestimoFilme", Storage="_TBItensEmprestimoFilmes", ThisKey="num_Emprestimo_Filme", OtherKey="num_Emprestimo_Filme")]
-		public EntitySet<TBItensEmprestimoFilme> TBItensEmprestimoFilmes
-		{
-			get
-			{
-				return this._TBItensEmprestimoFilmes;
-			}
-			set
-			{
-				this._TBItensEmprestimoFilmes.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBItensEmprestimoFilmes(TBItensEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoFilme = this;
-		}
-		
-		private void detach_TBItensEmprestimoFilmes(TBItensEmprestimoFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoFilme = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBEmprestimoLivro")]
-	public partial class TBEmprestimoLivro : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Emprestimo_Livro;
-		
-		private int _id_cliente;
-		
-		private System.DateTime _DataDevolucao;
-		
-		private int _id_atendente;
-		
-		private EntitySet<TBItensEmprestimoLivro> _TBItensEmprestimoLivros;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Emprestimo_LivroChanging(int value);
-    partial void Onnum_Emprestimo_LivroChanged();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void OnDataDevolucaoChanging(System.DateTime value);
-    partial void OnDataDevolucaoChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBEmprestimoLivro()
-		{
-			this._TBItensEmprestimoLivros = new EntitySet<TBItensEmprestimoLivro>(new Action<TBItensEmprestimoLivro>(this.attach_TBItensEmprestimoLivros), new Action<TBItensEmprestimoLivro>(this.detach_TBItensEmprestimoLivros));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Livro", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Emprestimo_Livro
-		{
-			get
-			{
-				return this._num_Emprestimo_Livro;
-			}
-			set
-			{
-				if ((this._num_Emprestimo_Livro != value))
-				{
-					this.Onnum_Emprestimo_LivroChanging(value);
-					this.SendPropertyChanging();
-					this._num_Emprestimo_Livro = value;
-					this.SendPropertyChanged("num_Emprestimo_Livro");
-					this.Onnum_Emprestimo_LivroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int NOT NULL")]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataDevolucao", DbType="Date NOT NULL")]
-		public System.DateTime DataDevolucao
-		{
-			get
-			{
-				return this._DataDevolucao;
-			}
-			set
-			{
-				if ((this._DataDevolucao != value))
-				{
-					this.OnDataDevolucaoChanging(value);
-					this.SendPropertyChanging();
-					this._DataDevolucao = value;
-					this.SendPropertyChanged("DataDevolucao");
-					this.OnDataDevolucaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoLivro_TBItensEmprestimoLivro", Storage="_TBItensEmprestimoLivros", ThisKey="num_Emprestimo_Livro", OtherKey="num_Emprestimo_Livro")]
-		public EntitySet<TBItensEmprestimoLivro> TBItensEmprestimoLivros
-		{
-			get
-			{
-				return this._TBItensEmprestimoLivros;
-			}
-			set
-			{
-				this._TBItensEmprestimoLivros.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBItensEmprestimoLivros(TBItensEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoLivro = this;
-		}
-		
-		private void detach_TBItensEmprestimoLivros(TBItensEmprestimoLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoLivro = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBEmprestimoRevista")]
-	public partial class TBEmprestimoRevista : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Emprestimo_Revista;
-		
-		private System.Nullable<int> _id_cliente;
-		
-		private System.Nullable<System.DateTime> _DataDevolucao;
-		
-		private System.Nullable<int> _id_atendente;
-		
-		private EntitySet<TBItensEmprestimoRevista> _TBItensEmprestimoRevistas;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Emprestimo_RevistaChanging(int value);
-    partial void Onnum_Emprestimo_RevistaChanged();
-    partial void Onid_clienteChanging(System.Nullable<int> value);
-    partial void Onid_clienteChanged();
-    partial void OnDataDevolucaoChanging(System.Nullable<System.DateTime> value);
-    partial void OnDataDevolucaoChanged();
-    partial void Onid_atendenteChanging(System.Nullable<int> value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBEmprestimoRevista()
-		{
-			this._TBItensEmprestimoRevistas = new EntitySet<TBItensEmprestimoRevista>(new Action<TBItensEmprestimoRevista>(this.attach_TBItensEmprestimoRevistas), new Action<TBItensEmprestimoRevista>(this.detach_TBItensEmprestimoRevistas));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Revista", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Emprestimo_Revista
-		{
-			get
-			{
-				return this._num_Emprestimo_Revista;
-			}
-			set
-			{
-				if ((this._num_Emprestimo_Revista != value))
-				{
-					this.Onnum_Emprestimo_RevistaChanging(value);
-					this.SendPropertyChanging();
-					this._num_Emprestimo_Revista = value;
-					this.SendPropertyChanged("num_Emprestimo_Revista");
-					this.Onnum_Emprestimo_RevistaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int")]
-		public System.Nullable<int> id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataDevolucao", DbType="Date")]
-		public System.Nullable<System.DateTime> DataDevolucao
-		{
-			get
-			{
-				return this._DataDevolucao;
-			}
-			set
-			{
-				if ((this._DataDevolucao != value))
-				{
-					this.OnDataDevolucaoChanging(value);
-					this.SendPropertyChanging();
-					this._DataDevolucao = value;
-					this.SendPropertyChanged("DataDevolucao");
-					this.OnDataDevolucaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int")]
-		public System.Nullable<int> id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoRevista_TBItensEmprestimoRevista", Storage="_TBItensEmprestimoRevistas", ThisKey="num_Emprestimo_Revista", OtherKey="num_Emprestimo_Revista")]
-		public EntitySet<TBItensEmprestimoRevista> TBItensEmprestimoRevistas
-		{
-			get
-			{
-				return this._TBItensEmprestimoRevistas;
-			}
-			set
-			{
-				this._TBItensEmprestimoRevistas.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBItensEmprestimoRevistas(TBItensEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoRevista = this;
-		}
-		
-		private void detach_TBItensEmprestimoRevistas(TBItensEmprestimoRevista entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBEmprestimoRevista = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBFornecedor")]
-	public partial class TBFornecedor : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_Fornecedor;
-		
-		private string _ForRazaoSocial;
-		
-		private string _ForCNPJ;
-		
-		private string _ForTelefone;
-		
-		private string _ForCelular;
-		
-		private string _ForEmail;
-		
-		private string _ForCidade;
-		
-		private string _ForEstado;
-		
-		private string _ForCEP;
-		
-		private string _ForEndereco;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_FornecedorChanging(int value);
-    partial void Onid_FornecedorChanged();
-    partial void OnForRazaoSocialChanging(string value);
-    partial void OnForRazaoSocialChanged();
-    partial void OnForCNPJChanging(string value);
-    partial void OnForCNPJChanged();
-    partial void OnForTelefoneChanging(string value);
-    partial void OnForTelefoneChanged();
-    partial void OnForCelularChanging(string value);
-    partial void OnForCelularChanged();
-    partial void OnForEmailChanging(string value);
-    partial void OnForEmailChanged();
-    partial void OnForCidadeChanging(string value);
-    partial void OnForCidadeChanged();
-    partial void OnForEstadoChanging(string value);
-    partial void OnForEstadoChanged();
-    partial void OnForCEPChanging(string value);
-    partial void OnForCEPChanged();
-    partial void OnForEnderecoChanging(string value);
-    partial void OnForEnderecoChanged();
-    #endregion
-		
-		public TBFornecedor()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Fornecedor", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_Fornecedor
-		{
-			get
-			{
-				return this._id_Fornecedor;
-			}
-			set
-			{
-				if ((this._id_Fornecedor != value))
-				{
-					this.Onid_FornecedorChanging(value);
-					this.SendPropertyChanging();
-					this._id_Fornecedor = value;
-					this.SendPropertyChanged("id_Fornecedor");
-					this.Onid_FornecedorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForRazaoSocial", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string ForRazaoSocial
-		{
-			get
-			{
-				return this._ForRazaoSocial;
-			}
-			set
-			{
-				if ((this._ForRazaoSocial != value))
-				{
-					this.OnForRazaoSocialChanging(value);
-					this.SendPropertyChanging();
-					this._ForRazaoSocial = value;
-					this.SendPropertyChanged("ForRazaoSocial");
-					this.OnForRazaoSocialChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForCNPJ", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string ForCNPJ
-		{
-			get
-			{
-				return this._ForCNPJ;
-			}
-			set
-			{
-				if ((this._ForCNPJ != value))
-				{
-					this.OnForCNPJChanging(value);
-					this.SendPropertyChanging();
-					this._ForCNPJ = value;
-					this.SendPropertyChanged("ForCNPJ");
-					this.OnForCNPJChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForTelefone", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string ForTelefone
-		{
-			get
-			{
-				return this._ForTelefone;
-			}
-			set
-			{
-				if ((this._ForTelefone != value))
-				{
-					this.OnForTelefoneChanging(value);
-					this.SendPropertyChanging();
-					this._ForTelefone = value;
-					this.SendPropertyChanged("ForTelefone");
-					this.OnForTelefoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForCelular", DbType="VarChar(11) NOT NULL", CanBeNull=false)]
-		public string ForCelular
-		{
-			get
-			{
-				return this._ForCelular;
-			}
-			set
-			{
-				if ((this._ForCelular != value))
-				{
-					this.OnForCelularChanging(value);
-					this.SendPropertyChanging();
-					this._ForCelular = value;
-					this.SendPropertyChanged("ForCelular");
-					this.OnForCelularChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForEmail", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string ForEmail
-		{
-			get
-			{
-				return this._ForEmail;
-			}
-			set
-			{
-				if ((this._ForEmail != value))
-				{
-					this.OnForEmailChanging(value);
-					this.SendPropertyChanging();
-					this._ForEmail = value;
-					this.SendPropertyChanged("ForEmail");
-					this.OnForEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string ForCidade
-		{
-			get
-			{
-				return this._ForCidade;
-			}
-			set
-			{
-				if ((this._ForCidade != value))
-				{
-					this.OnForCidadeChanging(value);
-					this.SendPropertyChanging();
-					this._ForCidade = value;
-					this.SendPropertyChanged("ForCidade");
-					this.OnForCidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForEstado", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
-		public string ForEstado
-		{
-			get
-			{
-				return this._ForEstado;
-			}
-			set
-			{
-				if ((this._ForEstado != value))
-				{
-					this.OnForEstadoChanging(value);
-					this.SendPropertyChanging();
-					this._ForEstado = value;
-					this.SendPropertyChanged("ForEstado");
-					this.OnForEstadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForCEP", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string ForCEP
-		{
-			get
-			{
-				return this._ForCEP;
-			}
-			set
-			{
-				if ((this._ForCEP != value))
-				{
-					this.OnForCEPChanging(value);
-					this.SendPropertyChanging();
-					this._ForCEP = value;
-					this.SendPropertyChanged("ForCEP");
-					this.OnForCEPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForEndereco", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string ForEndereco
-		{
-			get
-			{
-				return this._ForEndereco;
-			}
-			set
-			{
-				if ((this._ForEndereco != value))
-				{
-					this.OnForEnderecoChanging(value);
-					this.SendPropertyChanging();
-					this._ForEndereco = value;
-					this.SendPropertyChanged("ForEndereco");
-					this.OnForEnderecoChanged();
+					this._EdTelefone = value;
+					this.SendPropertyChanged("EdTelefone");
+					this.OnEdTelefoneChanged();
 				}
 			}
 		}
@@ -1843,115 +1083,91 @@ namespace BiblioLivri.Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBFornecimento")]
-	public partial class TBFornecimento : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBEmprestimo")]
+	public partial class TBEmprestimo : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_Fornecimento;
+		private int _EmpNumEmprestimo;
 		
-		private int _id_Fornecedor;
+		private int _EmpNumCartao;
 		
-		private System.DateTime _ForData;
-		
-		private string _ForDescricao;
+		private System.DateTime _EmpDataDevolucao;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_FornecimentoChanging(int value);
-    partial void Onid_FornecimentoChanged();
-    partial void Onid_FornecedorChanging(int value);
-    partial void Onid_FornecedorChanged();
-    partial void OnForDataChanging(System.DateTime value);
-    partial void OnForDataChanged();
-    partial void OnForDescricaoChanging(string value);
-    partial void OnForDescricaoChanged();
+    partial void OnEmpNumEmprestimoChanging(int value);
+    partial void OnEmpNumEmprestimoChanged();
+    partial void OnEmpNumCartaoChanging(int value);
+    partial void OnEmpNumCartaoChanged();
+    partial void OnEmpDataDevolucaoChanging(System.DateTime value);
+    partial void OnEmpDataDevolucaoChanged();
     #endregion
 		
-		public TBFornecimento()
+		public TBEmprestimo()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Fornecimento", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_Fornecimento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmpNumEmprestimo", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int EmpNumEmprestimo
 		{
 			get
 			{
-				return this._id_Fornecimento;
+				return this._EmpNumEmprestimo;
 			}
 			set
 			{
-				if ((this._id_Fornecimento != value))
+				if ((this._EmpNumEmprestimo != value))
 				{
-					this.Onid_FornecimentoChanging(value);
+					this.OnEmpNumEmprestimoChanging(value);
 					this.SendPropertyChanging();
-					this._id_Fornecimento = value;
-					this.SendPropertyChanged("id_Fornecimento");
-					this.Onid_FornecimentoChanged();
+					this._EmpNumEmprestimo = value;
+					this.SendPropertyChanged("EmpNumEmprestimo");
+					this.OnEmpNumEmprestimoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Fornecedor", DbType="Int NOT NULL")]
-		public int id_Fornecedor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmpNumCartao", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int EmpNumCartao
 		{
 			get
 			{
-				return this._id_Fornecedor;
+				return this._EmpNumCartao;
 			}
 			set
 			{
-				if ((this._id_Fornecedor != value))
+				if ((this._EmpNumCartao != value))
 				{
-					this.Onid_FornecedorChanging(value);
+					this.OnEmpNumCartaoChanging(value);
 					this.SendPropertyChanging();
-					this._id_Fornecedor = value;
-					this.SendPropertyChanged("id_Fornecedor");
-					this.Onid_FornecedorChanged();
+					this._EmpNumCartao = value;
+					this.SendPropertyChanged("EmpNumCartao");
+					this.OnEmpNumCartaoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForData", DbType="Date NOT NULL")]
-		public System.DateTime ForData
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmpDataDevolucao", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public System.DateTime EmpDataDevolucao
 		{
 			get
 			{
-				return this._ForData;
+				return this._EmpDataDevolucao;
 			}
 			set
 			{
-				if ((this._ForData != value))
+				if ((this._EmpDataDevolucao != value))
 				{
-					this.OnForDataChanging(value);
+					this.OnEmpDataDevolucaoChanging(value);
 					this.SendPropertyChanging();
-					this._ForData = value;
-					this.SendPropertyChanged("ForData");
-					this.OnForDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ForDescricao", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string ForDescricao
-		{
-			get
-			{
-				return this._ForDescricao;
-			}
-			set
-			{
-				if ((this._ForDescricao != value))
-				{
-					this.OnForDescricaoChanging(value);
-					this.SendPropertyChanging();
-					this._ForDescricao = value;
-					this.SendPropertyChanged("ForDescricao");
-					this.OnForDescricaoChanged();
+					this._EmpDataDevolucao = value;
+					this.SendPropertyChanged("EmpDataDevolucao");
+					this.OnEmpDataDevolucaoChanged();
 				}
 			}
 		}
@@ -2022,7 +1238,7 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GeDescricao", DbType="VarChar(100) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GeDescricao", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
 		public string GeDescricao
 		{
 			get
@@ -2063,156 +1279,91 @@ namespace BiblioLivri.Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensEmprestimoFilme")]
-	public partial class TBItensEmprestimoFilme : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItemDoacao")]
+	public partial class TBItemDoacao : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _num_Emprestimo_Filme;
+		private int _ItemNumDoacao;
 		
-		private int _id_Acervo;
+		private int _ItemNumCopia;
 		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-		private EntityRef<TBEmprestimoFilme> _TBEmprestimoFilme;
+		private System.DateTime _ItemDataDoacao;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onnum_Emprestimo_FilmeChanging(int value);
-    partial void Onnum_Emprestimo_FilmeChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
+    partial void OnItemNumDoacaoChanging(int value);
+    partial void OnItemNumDoacaoChanged();
+    partial void OnItemNumCopiaChanging(int value);
+    partial void OnItemNumCopiaChanged();
+    partial void OnItemDataDoacaoChanging(System.DateTime value);
+    partial void OnItemDataDoacaoChanged();
     #endregion
 		
-		public TBItensEmprestimoFilme()
+		public TBItemDoacao()
 		{
-			this._TBEmprestimoFilme = default(EntityRef<TBEmprestimoFilme>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Filme", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Emprestimo_Filme
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemNumDoacao", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int ItemNumDoacao
 		{
 			get
 			{
-				return this._num_Emprestimo_Filme;
+				return this._ItemNumDoacao;
 			}
 			set
 			{
-				if ((this._num_Emprestimo_Filme != value))
+				if ((this._ItemNumDoacao != value))
 				{
-					if (this._TBEmprestimoFilme.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onnum_Emprestimo_FilmeChanging(value);
+					this.OnItemNumDoacaoChanging(value);
 					this.SendPropertyChanging();
-					this._num_Emprestimo_Filme = value;
-					this.SendPropertyChanged("num_Emprestimo_Filme");
-					this.Onnum_Emprestimo_FilmeChanged();
+					this._ItemNumDoacao = value;
+					this.SendPropertyChanged("ItemNumDoacao");
+					this.OnItemNumDoacaoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemNumCopia", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int ItemNumCopia
 		{
 			get
 			{
-				return this._id_Acervo;
+				return this._ItemNumCopia;
 			}
 			set
 			{
-				if ((this._id_Acervo != value))
+				if ((this._ItemNumCopia != value))
 				{
-					this.Onid_AcervoChanging(value);
+					this.OnItemNumCopiaChanging(value);
 					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
+					this._ItemNumCopia = value;
+					this.SendPropertyChanged("ItemNumCopia");
+					this.OnItemNumCopiaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="DateTime NOT NULL")]
-		public System.DateTime Data
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemDataDoacao", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public System.DateTime ItemDataDoacao
 		{
 			get
 			{
-				return this._Data;
+				return this._ItemDataDoacao;
 			}
 			set
 			{
-				if ((this._Data != value))
+				if ((this._ItemDataDoacao != value))
 				{
-					this.OnDataChanging(value);
+					this.OnItemDataDoacaoChanging(value);
 					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoFilme_TBItensEmprestimoFilme", Storage="_TBEmprestimoFilme", ThisKey="num_Emprestimo_Filme", OtherKey="num_Emprestimo_Filme", IsForeignKey=true)]
-		public TBEmprestimoFilme TBEmprestimoFilme
-		{
-			get
-			{
-				return this._TBEmprestimoFilme.Entity;
-			}
-			set
-			{
-				TBEmprestimoFilme previousValue = this._TBEmprestimoFilme.Entity;
-				if (((previousValue != value) 
-							|| (this._TBEmprestimoFilme.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBEmprestimoFilme.Entity = null;
-						previousValue.TBItensEmprestimoFilmes.Remove(this);
-					}
-					this._TBEmprestimoFilme.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensEmprestimoFilmes.Add(this);
-						this._num_Emprestimo_Filme = value.num_Emprestimo_Filme;
-					}
-					else
-					{
-						this._num_Emprestimo_Filme = default(int);
-					}
-					this.SendPropertyChanged("TBEmprestimoFilme");
+					this._ItemDataDoacao = value;
+					this.SendPropertyChanged("ItemDataDoacao");
+					this.OnItemDataDoacaoChanged();
 				}
 			}
 		}
@@ -2238,1565 +1389,91 @@ namespace BiblioLivri.Model
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensEmprestimoLivro")]
-	public partial class TBItensEmprestimoLivro : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItemEmprestimo")]
+	public partial class TBItemEmprestimo : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _num_Emprestimo_Livro;
+		private int _ItemNumEmprestimo;
 		
-		private int _id_Acervo;
+		private int _ItemNumCopia;
 		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-		private EntityRef<TBEmprestimoLivro> _TBEmprestimoLivro;
+		private System.DateTime _ItemDataEmprestimo;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onnum_Emprestimo_LivroChanging(int value);
-    partial void Onnum_Emprestimo_LivroChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
+    partial void OnItemNumEmprestimoChanging(int value);
+    partial void OnItemNumEmprestimoChanged();
+    partial void OnItemNumCopiaChanging(int value);
+    partial void OnItemNumCopiaChanged();
+    partial void OnItemDataEmprestimoChanging(System.DateTime value);
+    partial void OnItemDataEmprestimoChanged();
     #endregion
 		
-		public TBItensEmprestimoLivro()
-		{
-			this._TBEmprestimoLivro = default(EntityRef<TBEmprestimoLivro>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Livro", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Emprestimo_Livro
-		{
-			get
-			{
-				return this._num_Emprestimo_Livro;
-			}
-			set
-			{
-				if ((this._num_Emprestimo_Livro != value))
-				{
-					if (this._TBEmprestimoLivro.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onnum_Emprestimo_LivroChanging(value);
-					this.SendPropertyChanging();
-					this._num_Emprestimo_Livro = value;
-					this.SendPropertyChanged("num_Emprestimo_Livro");
-					this.Onnum_Emprestimo_LivroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
-		{
-			get
-			{
-				return this._id_Acervo;
-			}
-			set
-			{
-				if ((this._id_Acervo != value))
-				{
-					this.Onid_AcervoChanging(value);
-					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="DateTime NOT NULL")]
-		public System.DateTime Data
-		{
-			get
-			{
-				return this._Data;
-			}
-			set
-			{
-				if ((this._Data != value))
-				{
-					this.OnDataChanging(value);
-					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoLivro_TBItensEmprestimoLivro", Storage="_TBEmprestimoLivro", ThisKey="num_Emprestimo_Livro", OtherKey="num_Emprestimo_Livro", IsForeignKey=true)]
-		public TBEmprestimoLivro TBEmprestimoLivro
-		{
-			get
-			{
-				return this._TBEmprestimoLivro.Entity;
-			}
-			set
-			{
-				TBEmprestimoLivro previousValue = this._TBEmprestimoLivro.Entity;
-				if (((previousValue != value) 
-							|| (this._TBEmprestimoLivro.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBEmprestimoLivro.Entity = null;
-						previousValue.TBItensEmprestimoLivros.Remove(this);
-					}
-					this._TBEmprestimoLivro.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensEmprestimoLivros.Add(this);
-						this._num_Emprestimo_Livro = value.num_Emprestimo_Livro;
-					}
-					else
-					{
-						this._num_Emprestimo_Livro = default(int);
-					}
-					this.SendPropertyChanged("TBEmprestimoLivro");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensEmprestimoRevista")]
-	public partial class TBItensEmprestimoRevista : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Emprestimo_Revista;
-		
-		private int _id_Acervo;
-		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-		private EntityRef<TBEmprestimoRevista> _TBEmprestimoRevista;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Emprestimo_RevistaChanging(int value);
-    partial void Onnum_Emprestimo_RevistaChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
-    #endregion
-		
-		public TBItensEmprestimoRevista()
-		{
-			this._TBEmprestimoRevista = default(EntityRef<TBEmprestimoRevista>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Emprestimo_Revista", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Emprestimo_Revista
-		{
-			get
-			{
-				return this._num_Emprestimo_Revista;
-			}
-			set
-			{
-				if ((this._num_Emprestimo_Revista != value))
-				{
-					if (this._TBEmprestimoRevista.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onnum_Emprestimo_RevistaChanging(value);
-					this.SendPropertyChanging();
-					this._num_Emprestimo_Revista = value;
-					this.SendPropertyChanged("num_Emprestimo_Revista");
-					this.Onnum_Emprestimo_RevistaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
-		{
-			get
-			{
-				return this._id_Acervo;
-			}
-			set
-			{
-				if ((this._id_Acervo != value))
-				{
-					this.Onid_AcervoChanging(value);
-					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="DateTime NOT NULL")]
-		public System.DateTime Data
-		{
-			get
-			{
-				return this._Data;
-			}
-			set
-			{
-				if ((this._Data != value))
-				{
-					this.OnDataChanging(value);
-					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBEmprestimoRevista_TBItensEmprestimoRevista", Storage="_TBEmprestimoRevista", ThisKey="num_Emprestimo_Revista", OtherKey="num_Emprestimo_Revista", IsForeignKey=true)]
-		public TBEmprestimoRevista TBEmprestimoRevista
-		{
-			get
-			{
-				return this._TBEmprestimoRevista.Entity;
-			}
-			set
-			{
-				TBEmprestimoRevista previousValue = this._TBEmprestimoRevista.Entity;
-				if (((previousValue != value) 
-							|| (this._TBEmprestimoRevista.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBEmprestimoRevista.Entity = null;
-						previousValue.TBItensEmprestimoRevistas.Remove(this);
-					}
-					this._TBEmprestimoRevista.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensEmprestimoRevistas.Add(this);
-						this._num_Emprestimo_Revista = value.num_Emprestimo_Revista;
-					}
-					else
-					{
-						this._num_Emprestimo_Revista = default(int);
-					}
-					this.SendPropertyChanged("TBEmprestimoRevista");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensVendaFilme")]
-	public partial class TBItensVendaFilme : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Filme;
-		
-		private int _id_Acervo;
-		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-		private EntityRef<TBVendaFilme> _TBVendaFilme;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_FilmeChanging(int value);
-    partial void Onnum_Venda_FilmeChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
-    #endregion
-		
-		public TBItensVendaFilme()
-		{
-			this._TBVendaFilme = default(EntityRef<TBVendaFilme>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Filme", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Venda_Filme
-		{
-			get
-			{
-				return this._num_Venda_Filme;
-			}
-			set
-			{
-				if ((this._num_Venda_Filme != value))
-				{
-					if (this._TBVendaFilme.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onnum_Venda_FilmeChanging(value);
-					this.SendPropertyChanging();
-					this._num_Venda_Filme = value;
-					this.SendPropertyChanged("num_Venda_Filme");
-					this.Onnum_Venda_FilmeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
-		{
-			get
-			{
-				return this._id_Acervo;
-			}
-			set
-			{
-				if ((this._id_Acervo != value))
-				{
-					this.Onid_AcervoChanging(value);
-					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
-		public System.DateTime Data
-		{
-			get
-			{
-				return this._Data;
-			}
-			set
-			{
-				if ((this._Data != value))
-				{
-					this.OnDataChanging(value);
-					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBVendaFilme_TBItensVendaFilme", Storage="_TBVendaFilme", ThisKey="num_Venda_Filme", OtherKey="num_Venda_Filme", IsForeignKey=true)]
-		public TBVendaFilme TBVendaFilme
-		{
-			get
-			{
-				return this._TBVendaFilme.Entity;
-			}
-			set
-			{
-				TBVendaFilme previousValue = this._TBVendaFilme.Entity;
-				if (((previousValue != value) 
-							|| (this._TBVendaFilme.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBVendaFilme.Entity = null;
-						previousValue.TBItensVendaFilmes.Remove(this);
-					}
-					this._TBVendaFilme.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensVendaFilmes.Add(this);
-						this._num_Venda_Filme = value.num_Venda_Filme;
-					}
-					else
-					{
-						this._num_Venda_Filme = default(int);
-					}
-					this.SendPropertyChanged("TBVendaFilme");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensVendaLivro")]
-	public partial class TBItensVendaLivro : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Livro;
-		
-		private int _id_Acervo;
-		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-		private EntityRef<TBVendaLivro> _TBVendaLivro;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_LivroChanging(int value);
-    partial void Onnum_Venda_LivroChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
-    #endregion
-		
-		public TBItensVendaLivro()
-		{
-			this._TBVendaLivro = default(EntityRef<TBVendaLivro>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Livro", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Venda_Livro
-		{
-			get
-			{
-				return this._num_Venda_Livro;
-			}
-			set
-			{
-				if ((this._num_Venda_Livro != value))
-				{
-					if (this._TBVendaLivro.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onnum_Venda_LivroChanging(value);
-					this.SendPropertyChanging();
-					this._num_Venda_Livro = value;
-					this.SendPropertyChanged("num_Venda_Livro");
-					this.Onnum_Venda_LivroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
-		{
-			get
-			{
-				return this._id_Acervo;
-			}
-			set
-			{
-				if ((this._id_Acervo != value))
-				{
-					this.Onid_AcervoChanging(value);
-					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
-		public System.DateTime Data
-		{
-			get
-			{
-				return this._Data;
-			}
-			set
-			{
-				if ((this._Data != value))
-				{
-					this.OnDataChanging(value);
-					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBVendaLivro_TBItensVendaLivro", Storage="_TBVendaLivro", ThisKey="num_Venda_Livro", OtherKey="num_Venda_Livro", IsForeignKey=true)]
-		public TBVendaLivro TBVendaLivro
-		{
-			get
-			{
-				return this._TBVendaLivro.Entity;
-			}
-			set
-			{
-				TBVendaLivro previousValue = this._TBVendaLivro.Entity;
-				if (((previousValue != value) 
-							|| (this._TBVendaLivro.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBVendaLivro.Entity = null;
-						previousValue.TBItensVendaLivros.Remove(this);
-					}
-					this._TBVendaLivro.Entity = value;
-					if ((value != null))
-					{
-						value.TBItensVendaLivros.Add(this);
-						this._num_Venda_Livro = value.num_Venda_Livro;
-					}
-					else
-					{
-						this._num_Venda_Livro = default(int);
-					}
-					this.SendPropertyChanged("TBVendaLivro");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBItensVendaRevista")]
-	public partial class TBItensVendaRevista : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Revista;
-		
-		private int _id_Acervo;
-		
-		private System.DateTime _Data;
-		
-		private int _Quantidade;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_RevistaChanging(int value);
-    partial void Onnum_Venda_RevistaChanged();
-    partial void Onid_AcervoChanging(int value);
-    partial void Onid_AcervoChanged();
-    partial void OnDataChanging(System.DateTime value);
-    partial void OnDataChanged();
-    partial void OnQuantidadeChanging(int value);
-    partial void OnQuantidadeChanged();
-    #endregion
-		
-		public TBItensVendaRevista()
+		public TBItemEmprestimo()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Revista", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int num_Venda_Revista
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemNumEmprestimo", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int ItemNumEmprestimo
 		{
 			get
 			{
-				return this._num_Venda_Revista;
+				return this._ItemNumEmprestimo;
 			}
 			set
 			{
-				if ((this._num_Venda_Revista != value))
+				if ((this._ItemNumEmprestimo != value))
 				{
-					this.Onnum_Venda_RevistaChanging(value);
+					this.OnItemNumEmprestimoChanging(value);
 					this.SendPropertyChanging();
-					this._num_Venda_Revista = value;
-					this.SendPropertyChanged("num_Venda_Revista");
-					this.Onnum_Venda_RevistaChanged();
+					this._ItemNumEmprestimo = value;
+					this.SendPropertyChanged("ItemNumEmprestimo");
+					this.OnItemNumEmprestimoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Acervo", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_Acervo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemNumCopia", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int ItemNumCopia
 		{
 			get
 			{
-				return this._id_Acervo;
+				return this._ItemNumCopia;
 			}
 			set
 			{
-				if ((this._id_Acervo != value))
+				if ((this._ItemNumCopia != value))
 				{
-					this.Onid_AcervoChanging(value);
+					this.OnItemNumCopiaChanging(value);
 					this.SendPropertyChanging();
-					this._id_Acervo = value;
-					this.SendPropertyChanged("id_Acervo");
-					this.Onid_AcervoChanged();
+					this._ItemNumCopia = value;
+					this.SendPropertyChanged("ItemNumCopia");
+					this.OnItemNumCopiaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data", DbType="Date NOT NULL")]
-		public System.DateTime Data
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemDataEmprestimo", DbType="Date NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public System.DateTime ItemDataEmprestimo
 		{
 			get
 			{
-				return this._Data;
+				return this._ItemDataEmprestimo;
 			}
 			set
 			{
-				if ((this._Data != value))
+				if ((this._ItemDataEmprestimo != value))
 				{
-					this.OnDataChanging(value);
+					this.OnItemDataEmprestimoChanging(value);
 					this.SendPropertyChanging();
-					this._Data = value;
-					this.SendPropertyChanged("Data");
-					this.OnDataChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantidade", DbType="Int NOT NULL")]
-		public int Quantidade
-		{
-			get
-			{
-				return this._Quantidade;
-			}
-			set
-			{
-				if ((this._Quantidade != value))
-				{
-					this.OnQuantidadeChanging(value);
-					this.SendPropertyChanging();
-					this._Quantidade = value;
-					this.SendPropertyChanged("Quantidade");
-					this.OnQuantidadeChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBMidia")]
-	public partial class TBMidia : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_Midia;
-		
-		private string _MiTipoMidia;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_MidiaChanging(int value);
-    partial void Onid_MidiaChanged();
-    partial void OnMiTipoMidiaChanging(string value);
-    partial void OnMiTipoMidiaChanged();
-    #endregion
-		
-		public TBMidia()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Midia", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_Midia
-		{
-			get
-			{
-				return this._id_Midia;
-			}
-			set
-			{
-				if ((this._id_Midia != value))
-				{
-					this.Onid_MidiaChanging(value);
-					this.SendPropertyChanging();
-					this._id_Midia = value;
-					this.SendPropertyChanged("id_Midia");
-					this.Onid_MidiaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MiTipoMidia", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string MiTipoMidia
-		{
-			get
-			{
-				return this._MiTipoMidia;
-			}
-			set
-			{
-				if ((this._MiTipoMidia != value))
-				{
-					this.OnMiTipoMidiaChanging(value);
-					this.SendPropertyChanging();
-					this._MiTipoMidia = value;
-					this.SendPropertyChanged("MiTipoMidia");
-					this.OnMiTipoMidiaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBPeriodico")]
-	public partial class TBPeriodico : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_revista;
-		
-		private string _ReISSN;
-		
-		private int _id_Editora;
-		
-		private string _ReNumPaginas;
-		
-		private string _ReTipo;
-		
-		private string _ReMes;
-		
-		private string _ReTitulo;
-		
-		private string _ReAno;
-		
-		private string _RePais;
-		
-		private string _ReIdioma;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_revistaChanging(int value);
-    partial void Onid_revistaChanged();
-    partial void OnReISSNChanging(string value);
-    partial void OnReISSNChanged();
-    partial void Onid_EditoraChanging(int value);
-    partial void Onid_EditoraChanged();
-    partial void OnReNumPaginasChanging(string value);
-    partial void OnReNumPaginasChanged();
-    partial void OnReTipoChanging(string value);
-    partial void OnReTipoChanged();
-    partial void OnReMesChanging(string value);
-    partial void OnReMesChanged();
-    partial void OnReTituloChanging(string value);
-    partial void OnReTituloChanged();
-    partial void OnReAnoChanging(string value);
-    partial void OnReAnoChanged();
-    partial void OnRePaisChanging(string value);
-    partial void OnRePaisChanged();
-    partial void OnReIdiomaChanging(string value);
-    partial void OnReIdiomaChanged();
-    #endregion
-		
-		public TBPeriodico()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_revista", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_revista
-		{
-			get
-			{
-				return this._id_revista;
-			}
-			set
-			{
-				if ((this._id_revista != value))
-				{
-					this.Onid_revistaChanging(value);
-					this.SendPropertyChanging();
-					this._id_revista = value;
-					this.SendPropertyChanged("id_revista");
-					this.Onid_revistaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReISSN", DbType="VarChar(10) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReISSN
-		{
-			get
-			{
-				return this._ReISSN;
-			}
-			set
-			{
-				if ((this._ReISSN != value))
-				{
-					this.OnReISSNChanging(value);
-					this.SendPropertyChanging();
-					this._ReISSN = value;
-					this.SendPropertyChanged("ReISSN");
-					this.OnReISSNChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Editora", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Editora
-		{
-			get
-			{
-				return this._id_Editora;
-			}
-			set
-			{
-				if ((this._id_Editora != value))
-				{
-					this.Onid_EditoraChanging(value);
-					this.SendPropertyChanging();
-					this._id_Editora = value;
-					this.SendPropertyChanged("id_Editora");
-					this.Onid_EditoraChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReNumPaginas", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReNumPaginas
-		{
-			get
-			{
-				return this._ReNumPaginas;
-			}
-			set
-			{
-				if ((this._ReNumPaginas != value))
-				{
-					this.OnReNumPaginasChanging(value);
-					this.SendPropertyChanging();
-					this._ReNumPaginas = value;
-					this.SendPropertyChanged("ReNumPaginas");
-					this.OnReNumPaginasChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReTipo", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReTipo
-		{
-			get
-			{
-				return this._ReTipo;
-			}
-			set
-			{
-				if ((this._ReTipo != value))
-				{
-					this.OnReTipoChanging(value);
-					this.SendPropertyChanging();
-					this._ReTipo = value;
-					this.SendPropertyChanged("ReTipo");
-					this.OnReTipoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReMes", DbType="VarChar(15) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReMes
-		{
-			get
-			{
-				return this._ReMes;
-			}
-			set
-			{
-				if ((this._ReMes != value))
-				{
-					this.OnReMesChanging(value);
-					this.SendPropertyChanging();
-					this._ReMes = value;
-					this.SendPropertyChanged("ReMes");
-					this.OnReMesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReTitulo", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReTitulo
-		{
-			get
-			{
-				return this._ReTitulo;
-			}
-			set
-			{
-				if ((this._ReTitulo != value))
-				{
-					this.OnReTituloChanging(value);
-					this.SendPropertyChanging();
-					this._ReTitulo = value;
-					this.SendPropertyChanged("ReTitulo");
-					this.OnReTituloChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReAno", DbType="VarChar(4) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReAno
-		{
-			get
-			{
-				return this._ReAno;
-			}
-			set
-			{
-				if ((this._ReAno != value))
-				{
-					this.OnReAnoChanging(value);
-					this.SendPropertyChanging();
-					this._ReAno = value;
-					this.SendPropertyChanged("ReAno");
-					this.OnReAnoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RePais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string RePais
-		{
-			get
-			{
-				return this._RePais;
-			}
-			set
-			{
-				if ((this._RePais != value))
-				{
-					this.OnRePaisChanging(value);
-					this.SendPropertyChanging();
-					this._RePais = value;
-					this.SendPropertyChanged("RePais");
-					this.OnRePaisChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReIdioma", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string ReIdioma
-		{
-			get
-			{
-				return this._ReIdioma;
-			}
-			set
-			{
-				if ((this._ReIdioma != value))
-				{
-					this.OnReIdiomaChanging(value);
-					this.SendPropertyChanging();
-					this._ReIdioma = value;
-					this.SendPropertyChanged("ReIdioma");
-					this.OnReIdiomaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBVendaFilme")]
-	public partial class TBVendaFilme : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Filme;
-		
-		private int _id_cliente;
-		
-		private int _id_atendente;
-		
-		private EntitySet<TBItensVendaFilme> _TBItensVendaFilmes;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_FilmeChanging(int value);
-    partial void Onnum_Venda_FilmeChanged();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBVendaFilme()
-		{
-			this._TBItensVendaFilmes = new EntitySet<TBItensVendaFilme>(new Action<TBItensVendaFilme>(this.attach_TBItensVendaFilmes), new Action<TBItensVendaFilme>(this.detach_TBItensVendaFilmes));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Filme", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Venda_Filme
-		{
-			get
-			{
-				return this._num_Venda_Filme;
-			}
-			set
-			{
-				if ((this._num_Venda_Filme != value))
-				{
-					this.Onnum_Venda_FilmeChanging(value);
-					this.SendPropertyChanging();
-					this._num_Venda_Filme = value;
-					this.SendPropertyChanged("num_Venda_Filme");
-					this.Onnum_Venda_FilmeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int NOT NULL")]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBVendaFilme_TBItensVendaFilme", Storage="_TBItensVendaFilmes", ThisKey="num_Venda_Filme", OtherKey="num_Venda_Filme")]
-		public EntitySet<TBItensVendaFilme> TBItensVendaFilmes
-		{
-			get
-			{
-				return this._TBItensVendaFilmes;
-			}
-			set
-			{
-				this._TBItensVendaFilmes.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBItensVendaFilmes(TBItensVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBVendaFilme = this;
-		}
-		
-		private void detach_TBItensVendaFilmes(TBItensVendaFilme entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBVendaFilme = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBVendaLivro")]
-	public partial class TBVendaLivro : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Livro;
-		
-		private int _id_cliente;
-		
-		private int _id_atendente;
-		
-		private EntitySet<TBItensVendaLivro> _TBItensVendaLivros;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_LivroChanging(int value);
-    partial void Onnum_Venda_LivroChanged();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBVendaLivro()
-		{
-			this._TBItensVendaLivros = new EntitySet<TBItensVendaLivro>(new Action<TBItensVendaLivro>(this.attach_TBItensVendaLivros), new Action<TBItensVendaLivro>(this.detach_TBItensVendaLivros));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Livro", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Venda_Livro
-		{
-			get
-			{
-				return this._num_Venda_Livro;
-			}
-			set
-			{
-				if ((this._num_Venda_Livro != value))
-				{
-					this.Onnum_Venda_LivroChanging(value);
-					this.SendPropertyChanging();
-					this._num_Venda_Livro = value;
-					this.SendPropertyChanged("num_Venda_Livro");
-					this.Onnum_Venda_LivroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int NOT NULL")]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBVendaLivro_TBItensVendaLivro", Storage="_TBItensVendaLivros", ThisKey="num_Venda_Livro", OtherKey="num_Venda_Livro")]
-		public EntitySet<TBItensVendaLivro> TBItensVendaLivros
-		{
-			get
-			{
-				return this._TBItensVendaLivros;
-			}
-			set
-			{
-				this._TBItensVendaLivros.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBItensVendaLivros(TBItensVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBVendaLivro = this;
-		}
-		
-		private void detach_TBItensVendaLivros(TBItensVendaLivro entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBVendaLivro = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBVendaRevista")]
-	public partial class TBVendaRevista : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _num_Venda_Revista;
-		
-		private int _id_cliente;
-		
-		private int _id_atendente;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onnum_Venda_RevistaChanging(int value);
-    partial void Onnum_Venda_RevistaChanged();
-    partial void Onid_clienteChanging(int value);
-    partial void Onid_clienteChanged();
-    partial void Onid_atendenteChanging(int value);
-    partial void Onid_atendenteChanged();
-    #endregion
-		
-		public TBVendaRevista()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_Venda_Revista", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int num_Venda_Revista
-		{
-			get
-			{
-				return this._num_Venda_Revista;
-			}
-			set
-			{
-				if ((this._num_Venda_Revista != value))
-				{
-					this.Onnum_Venda_RevistaChanging(value);
-					this.SendPropertyChanging();
-					this._num_Venda_Revista = value;
-					this.SendPropertyChanged("num_Venda_Revista");
-					this.Onnum_Venda_RevistaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_cliente", DbType="Int NOT NULL")]
-		public int id_cliente
-		{
-			get
-			{
-				return this._id_cliente;
-			}
-			set
-			{
-				if ((this._id_cliente != value))
-				{
-					this.Onid_clienteChanging(value);
-					this.SendPropertyChanging();
-					this._id_cliente = value;
-					this.SendPropertyChanged("id_cliente");
-					this.Onid_clienteChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_atendente", DbType="Int NOT NULL")]
-		public int id_atendente
-		{
-			get
-			{
-				return this._id_atendente;
-			}
-			set
-			{
-				if ((this._id_atendente != value))
-				{
-					this.Onid_atendenteChanging(value);
-					this.SendPropertyChanging();
-					this._id_atendente = value;
-					this.SendPropertyChanged("id_atendente");
-					this.Onid_atendenteChanged();
+					this._ItemDataEmprestimo = value;
+					this.SendPropertyChanged("ItemDataEmprestimo");
+					this.OnItemDataEmprestimoChanged();
 				}
 			}
 		}
@@ -3828,62 +1505,46 @@ namespace BiblioLivri.Model
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_Livro;
-		
-		private int _id_Autor;
-		
 		private string _LiISBN;
 		
-		private System.Nullable<int> _id_CoAutor;
-		
-		private string _LiCDU;
-		
-		private int _id_Editora;
-		
-		private string _LiNumPaginas;
-		
-		private int _id_Genero;
+		private int _ID_Editora;
 		
 		private string _LiTitulo;
 		
-		private string _LiAno;
+		private string _LiCDU;
 		
-		private string _LiPais;
+		private string _LiPagina;
 		
-		private string _LiIdioma;
+		private int _id_genero;
+		
+		private int _id_autor;
 		
 		private byte[] _LiCapa;
+		
+		private string _LiPais;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_LivroChanging(int value);
-    partial void Onid_LivroChanged();
-    partial void Onid_AutorChanging(int value);
-    partial void Onid_AutorChanged();
     partial void OnLiISBNChanging(string value);
     partial void OnLiISBNChanged();
-    partial void Onid_CoAutorChanging(System.Nullable<int> value);
-    partial void Onid_CoAutorChanged();
-    partial void OnLiCDUChanging(string value);
-    partial void OnLiCDUChanged();
-    partial void Onid_EditoraChanging(int value);
-    partial void Onid_EditoraChanged();
-    partial void OnLiNumPaginasChanging(string value);
-    partial void OnLiNumPaginasChanged();
-    partial void Onid_GeneroChanging(int value);
-    partial void Onid_GeneroChanged();
+    partial void OnID_EditoraChanging(int value);
+    partial void OnID_EditoraChanged();
     partial void OnLiTituloChanging(string value);
     partial void OnLiTituloChanged();
-    partial void OnLiAnoChanging(string value);
-    partial void OnLiAnoChanged();
-    partial void OnLiPaisChanging(string value);
-    partial void OnLiPaisChanged();
-    partial void OnLiIdiomaChanging(string value);
-    partial void OnLiIdiomaChanged();
+    partial void OnLiCDUChanging(string value);
+    partial void OnLiCDUChanged();
+    partial void OnLiPaginaChanging(string value);
+    partial void OnLiPaginaChanged();
+    partial void Onid_generoChanging(int value);
+    partial void Onid_generoChanged();
+    partial void Onid_autorChanging(int value);
+    partial void Onid_autorChanged();
     partial void OnLiCapaChanging(byte[] value);
     partial void OnLiCapaChanged();
+    partial void OnLiPaisChanging(string value);
+    partial void OnLiPaisChanged();
     #endregion
 		
 		public TBLivro()
@@ -3891,47 +1552,7 @@ namespace BiblioLivri.Model
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Livro", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_Livro
-		{
-			get
-			{
-				return this._id_Livro;
-			}
-			set
-			{
-				if ((this._id_Livro != value))
-				{
-					this.Onid_LivroChanging(value);
-					this.SendPropertyChanging();
-					this._id_Livro = value;
-					this.SendPropertyChanged("id_Livro");
-					this.Onid_LivroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Autor", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Autor
-		{
-			get
-			{
-				return this._id_Autor;
-			}
-			set
-			{
-				if ((this._id_Autor != value))
-				{
-					this.Onid_AutorChanging(value);
-					this.SendPropertyChanging();
-					this._id_Autor = value;
-					this.SendPropertyChanged("id_Autor");
-					this.Onid_AutorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiISBN", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiISBN", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
 		public string LiISBN
 		{
 			get
@@ -3951,102 +1572,22 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_CoAutor", DbType="Int", UpdateCheck=UpdateCheck.Never)]
-		public System.Nullable<int> id_CoAutor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Editora", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int ID_Editora
 		{
 			get
 			{
-				return this._id_CoAutor;
+				return this._ID_Editora;
 			}
 			set
 			{
-				if ((this._id_CoAutor != value))
+				if ((this._ID_Editora != value))
 				{
-					this.Onid_CoAutorChanging(value);
+					this.OnID_EditoraChanging(value);
 					this.SendPropertyChanging();
-					this._id_CoAutor = value;
-					this.SendPropertyChanged("id_CoAutor");
-					this.Onid_CoAutorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiCDU", DbType="VarChar(15) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string LiCDU
-		{
-			get
-			{
-				return this._LiCDU;
-			}
-			set
-			{
-				if ((this._LiCDU != value))
-				{
-					this.OnLiCDUChanging(value);
-					this.SendPropertyChanging();
-					this._LiCDU = value;
-					this.SendPropertyChanged("LiCDU");
-					this.OnLiCDUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Editora", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Editora
-		{
-			get
-			{
-				return this._id_Editora;
-			}
-			set
-			{
-				if ((this._id_Editora != value))
-				{
-					this.Onid_EditoraChanging(value);
-					this.SendPropertyChanging();
-					this._id_Editora = value;
-					this.SendPropertyChanged("id_Editora");
-					this.Onid_EditoraChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiNumPaginas", DbType="Char(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string LiNumPaginas
-		{
-			get
-			{
-				return this._LiNumPaginas;
-			}
-			set
-			{
-				if ((this._LiNumPaginas != value))
-				{
-					this.OnLiNumPaginasChanging(value);
-					this.SendPropertyChanging();
-					this._LiNumPaginas = value;
-					this.SendPropertyChanged("LiNumPaginas");
-					this.OnLiNumPaginasChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Genero", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Genero
-		{
-			get
-			{
-				return this._id_Genero;
-			}
-			set
-			{
-				if ((this._id_Genero != value))
-				{
-					this.Onid_GeneroChanging(value);
-					this.SendPropertyChanging();
-					this._id_Genero = value;
-					this.SendPropertyChanged("id_Genero");
-					this.Onid_GeneroChanged();
+					this._ID_Editora = value;
+					this.SendPropertyChanged("ID_Editora");
+					this.OnID_EditoraChanged();
 				}
 			}
 		}
@@ -4071,62 +1612,82 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiAno", DbType="VarChar(5) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string LiAno
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiCDU", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string LiCDU
 		{
 			get
 			{
-				return this._LiAno;
+				return this._LiCDU;
 			}
 			set
 			{
-				if ((this._LiAno != value))
+				if ((this._LiCDU != value))
 				{
-					this.OnLiAnoChanging(value);
+					this.OnLiCDUChanging(value);
 					this.SendPropertyChanging();
-					this._LiAno = value;
-					this.SendPropertyChanged("LiAno");
-					this.OnLiAnoChanged();
+					this._LiCDU = value;
+					this.SendPropertyChanged("LiCDU");
+					this.OnLiCDUChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string LiPais
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiPagina", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string LiPagina
 		{
 			get
 			{
-				return this._LiPais;
+				return this._LiPagina;
 			}
 			set
 			{
-				if ((this._LiPais != value))
+				if ((this._LiPagina != value))
 				{
-					this.OnLiPaisChanging(value);
+					this.OnLiPaginaChanging(value);
 					this.SendPropertyChanging();
-					this._LiPais = value;
-					this.SendPropertyChanged("LiPais");
-					this.OnLiPaisChanged();
+					this._LiPagina = value;
+					this.SendPropertyChanged("LiPagina");
+					this.OnLiPaginaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiIdioma", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string LiIdioma
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_genero", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int id_genero
 		{
 			get
 			{
-				return this._LiIdioma;
+				return this._id_genero;
 			}
 			set
 			{
-				if ((this._LiIdioma != value))
+				if ((this._id_genero != value))
 				{
-					this.OnLiIdiomaChanging(value);
+					this.Onid_generoChanging(value);
 					this.SendPropertyChanging();
-					this._LiIdioma = value;
-					this.SendPropertyChanged("LiIdioma");
-					this.OnLiIdiomaChanged();
+					this._id_genero = value;
+					this.SendPropertyChanged("id_genero");
+					this.Onid_generoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_autor", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int id_autor
+		{
+			get
+			{
+				return this._id_autor;
+			}
+			set
+			{
+				if ((this._id_autor != value))
+				{
+					this.Onid_autorChanging(value);
+					this.SendPropertyChanging();
+					this._id_autor = value;
+					this.SendPropertyChanged("id_autor");
+					this.Onid_autorChanged();
 				}
 			}
 		}
@@ -4151,726 +1712,22 @@ namespace BiblioLivri.Model
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBFuncionario")]
-	public partial class TBFuncionario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_funcionario;
-		
-		private double _FunSalario;
-		
-		private double _FunSalDesconto;
-		
-		private string _FunPIS;
-		
-		private string _FunNome;
-		
-		private string _FunSobrenome;
-		
-		private string _FunCidade;
-		
-		private string _FunEstado;
-		
-		private string _FunPais;
-		
-		private string _FunCEP;
-		
-		private string _FunCelular;
-		
-		private string _FunTelefone;
-		
-		private string _FunEmail;
-		
-		private string _FunNumero;
-		
-		private string _FunComplemento;
-		
-		private string _FunCPF;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_funcionarioChanging(int value);
-    partial void Onid_funcionarioChanged();
-    partial void OnFunSalarioChanging(double value);
-    partial void OnFunSalarioChanged();
-    partial void OnFunSalDescontoChanging(double value);
-    partial void OnFunSalDescontoChanged();
-    partial void OnFunPISChanging(string value);
-    partial void OnFunPISChanged();
-    partial void OnFunNomeChanging(string value);
-    partial void OnFunNomeChanged();
-    partial void OnFunSobrenomeChanging(string value);
-    partial void OnFunSobrenomeChanged();
-    partial void OnFunCidadeChanging(string value);
-    partial void OnFunCidadeChanged();
-    partial void OnFunEstadoChanging(string value);
-    partial void OnFunEstadoChanged();
-    partial void OnFunPaisChanging(string value);
-    partial void OnFunPaisChanged();
-    partial void OnFunCEPChanging(string value);
-    partial void OnFunCEPChanged();
-    partial void OnFunCelularChanging(string value);
-    partial void OnFunCelularChanged();
-    partial void OnFunTelefoneChanging(string value);
-    partial void OnFunTelefoneChanged();
-    partial void OnFunEmailChanging(string value);
-    partial void OnFunEmailChanged();
-    partial void OnFunNumeroChanging(string value);
-    partial void OnFunNumeroChanged();
-    partial void OnFunComplementoChanging(string value);
-    partial void OnFunComplementoChanged();
-    partial void OnFunCPFChanging(string value);
-    partial void OnFunCPFChanged();
-    #endregion
-		
-		public TBFuncionario()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_funcionario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.WhenChanged)]
-		public int id_funcionario
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LiPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string LiPais
 		{
 			get
 			{
-				return this._id_funcionario;
+				return this._LiPais;
 			}
 			set
 			{
-				if ((this._id_funcionario != value))
+				if ((this._LiPais != value))
 				{
-					this.Onid_funcionarioChanging(value);
+					this.OnLiPaisChanging(value);
 					this.SendPropertyChanging();
-					this._id_funcionario = value;
-					this.SendPropertyChanged("id_funcionario");
-					this.Onid_funcionarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunSalario", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public double FunSalario
-		{
-			get
-			{
-				return this._FunSalario;
-			}
-			set
-			{
-				if ((this._FunSalario != value))
-				{
-					this.OnFunSalarioChanging(value);
-					this.SendPropertyChanging();
-					this._FunSalario = value;
-					this.SendPropertyChanged("FunSalario");
-					this.OnFunSalarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunSalDesconto", DbType="Float NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public double FunSalDesconto
-		{
-			get
-			{
-				return this._FunSalDesconto;
-			}
-			set
-			{
-				if ((this._FunSalDesconto != value))
-				{
-					this.OnFunSalDescontoChanging(value);
-					this.SendPropertyChanging();
-					this._FunSalDesconto = value;
-					this.SendPropertyChanged("FunSalDesconto");
-					this.OnFunSalDescontoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunPIS", DbType="Char(15) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunPIS
-		{
-			get
-			{
-				return this._FunPIS;
-			}
-			set
-			{
-				if ((this._FunPIS != value))
-				{
-					this.OnFunPISChanging(value);
-					this.SendPropertyChanging();
-					this._FunPIS = value;
-					this.SendPropertyChanged("FunPIS");
-					this.OnFunPISChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunNome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunNome
-		{
-			get
-			{
-				return this._FunNome;
-			}
-			set
-			{
-				if ((this._FunNome != value))
-				{
-					this.OnFunNomeChanging(value);
-					this.SendPropertyChanging();
-					this._FunNome = value;
-					this.SendPropertyChanged("FunNome");
-					this.OnFunNomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunSobrenome", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunSobrenome
-		{
-			get
-			{
-				return this._FunSobrenome;
-			}
-			set
-			{
-				if ((this._FunSobrenome != value))
-				{
-					this.OnFunSobrenomeChanging(value);
-					this.SendPropertyChanging();
-					this._FunSobrenome = value;
-					this.SendPropertyChanged("FunSobrenome");
-					this.OnFunSobrenomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunCidade", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunCidade
-		{
-			get
-			{
-				return this._FunCidade;
-			}
-			set
-			{
-				if ((this._FunCidade != value))
-				{
-					this.OnFunCidadeChanging(value);
-					this.SendPropertyChanging();
-					this._FunCidade = value;
-					this.SendPropertyChanged("FunCidade");
-					this.OnFunCidadeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunEstado", DbType="VarChar(2) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunEstado
-		{
-			get
-			{
-				return this._FunEstado;
-			}
-			set
-			{
-				if ((this._FunEstado != value))
-				{
-					this.OnFunEstadoChanging(value);
-					this.SendPropertyChanging();
-					this._FunEstado = value;
-					this.SendPropertyChanged("FunEstado");
-					this.OnFunEstadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunPais
-		{
-			get
-			{
-				return this._FunPais;
-			}
-			set
-			{
-				if ((this._FunPais != value))
-				{
-					this.OnFunPaisChanging(value);
-					this.SendPropertyChanging();
-					this._FunPais = value;
-					this.SendPropertyChanged("FunPais");
-					this.OnFunPaisChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunCEP", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunCEP
-		{
-			get
-			{
-				return this._FunCEP;
-			}
-			set
-			{
-				if ((this._FunCEP != value))
-				{
-					this.OnFunCEPChanging(value);
-					this.SendPropertyChanging();
-					this._FunCEP = value;
-					this.SendPropertyChanged("FunCEP");
-					this.OnFunCEPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunCelular", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunCelular
-		{
-			get
-			{
-				return this._FunCelular;
-			}
-			set
-			{
-				if ((this._FunCelular != value))
-				{
-					this.OnFunCelularChanging(value);
-					this.SendPropertyChanging();
-					this._FunCelular = value;
-					this.SendPropertyChanged("FunCelular");
-					this.OnFunCelularChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunTelefone", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunTelefone
-		{
-			get
-			{
-				return this._FunTelefone;
-			}
-			set
-			{
-				if ((this._FunTelefone != value))
-				{
-					this.OnFunTelefoneChanging(value);
-					this.SendPropertyChanging();
-					this._FunTelefone = value;
-					this.SendPropertyChanged("FunTelefone");
-					this.OnFunTelefoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunEmail", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunEmail
-		{
-			get
-			{
-				return this._FunEmail;
-			}
-			set
-			{
-				if ((this._FunEmail != value))
-				{
-					this.OnFunEmailChanging(value);
-					this.SendPropertyChanging();
-					this._FunEmail = value;
-					this.SendPropertyChanged("FunEmail");
-					this.OnFunEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunNumero", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunNumero
-		{
-			get
-			{
-				return this._FunNumero;
-			}
-			set
-			{
-				if ((this._FunNumero != value))
-				{
-					this.OnFunNumeroChanging(value);
-					this.SendPropertyChanging();
-					this._FunNumero = value;
-					this.SendPropertyChanged("FunNumero");
-					this.OnFunNumeroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunComplemento", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunComplemento
-		{
-			get
-			{
-				return this._FunComplemento;
-			}
-			set
-			{
-				if ((this._FunComplemento != value))
-				{
-					this.OnFunComplementoChanging(value);
-					this.SendPropertyChanging();
-					this._FunComplemento = value;
-					this.SendPropertyChanged("FunComplemento");
-					this.OnFunComplementoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FunCPF", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FunCPF
-		{
-			get
-			{
-				return this._FunCPF;
-			}
-			set
-			{
-				if ((this._FunCPF != value))
-				{
-					this.OnFunCPFChanging(value);
-					this.SendPropertyChanging();
-					this._FunCPF = value;
-					this.SendPropertyChanged("FunCPF");
-					this.OnFunCPFChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBFilme")]
-	public partial class TBFilme : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_Filme;
-		
-		private int _id_Diretor;
-		
-		private string _FilDuracao;
-		
-		private int _id_Genero;
-		
-		private string _FilDescricao;
-		
-		private int _id_Midia;
-		
-		private string _FilTitulo;
-		
-		private string _FilAno;
-		
-		private string _FilIdioma;
-		
-		private string _FilPais;
-		
-		private byte[] _FilCapa;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_FilmeChanging(int value);
-    partial void Onid_FilmeChanged();
-    partial void Onid_DiretorChanging(int value);
-    partial void Onid_DiretorChanged();
-    partial void OnFilDuracaoChanging(string value);
-    partial void OnFilDuracaoChanged();
-    partial void Onid_GeneroChanging(int value);
-    partial void Onid_GeneroChanged();
-    partial void OnFilDescricaoChanging(string value);
-    partial void OnFilDescricaoChanged();
-    partial void Onid_MidiaChanging(int value);
-    partial void Onid_MidiaChanged();
-    partial void OnFilTituloChanging(string value);
-    partial void OnFilTituloChanged();
-    partial void OnFilAnoChanging(string value);
-    partial void OnFilAnoChanged();
-    partial void OnFilIdiomaChanging(string value);
-    partial void OnFilIdiomaChanged();
-    partial void OnFilPaisChanging(string value);
-    partial void OnFilPaisChanged();
-    partial void OnFilCapaChanging(byte[] value);
-    partial void OnFilCapaChanged();
-    #endregion
-		
-		public TBFilme()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Filme", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
-		public int id_Filme
-		{
-			get
-			{
-				return this._id_Filme;
-			}
-			set
-			{
-				if ((this._id_Filme != value))
-				{
-					this.Onid_FilmeChanging(value);
-					this.SendPropertyChanging();
-					this._id_Filme = value;
-					this.SendPropertyChanged("id_Filme");
-					this.Onid_FilmeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Diretor", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Diretor
-		{
-			get
-			{
-				return this._id_Diretor;
-			}
-			set
-			{
-				if ((this._id_Diretor != value))
-				{
-					this.Onid_DiretorChanging(value);
-					this.SendPropertyChanging();
-					this._id_Diretor = value;
-					this.SendPropertyChanged("id_Diretor");
-					this.Onid_DiretorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilDuracao", DbType="VarChar(10) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilDuracao
-		{
-			get
-			{
-				return this._FilDuracao;
-			}
-			set
-			{
-				if ((this._FilDuracao != value))
-				{
-					this.OnFilDuracaoChanging(value);
-					this.SendPropertyChanging();
-					this._FilDuracao = value;
-					this.SendPropertyChanged("FilDuracao");
-					this.OnFilDuracaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Genero", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Genero
-		{
-			get
-			{
-				return this._id_Genero;
-			}
-			set
-			{
-				if ((this._id_Genero != value))
-				{
-					this.Onid_GeneroChanging(value);
-					this.SendPropertyChanging();
-					this._id_Genero = value;
-					this.SendPropertyChanged("id_Genero");
-					this.Onid_GeneroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilDescricao", DbType="VarChar(200) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilDescricao
-		{
-			get
-			{
-				return this._FilDescricao;
-			}
-			set
-			{
-				if ((this._FilDescricao != value))
-				{
-					this.OnFilDescricaoChanging(value);
-					this.SendPropertyChanging();
-					this._FilDescricao = value;
-					this.SendPropertyChanged("FilDescricao");
-					this.OnFilDescricaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_Midia", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int id_Midia
-		{
-			get
-			{
-				return this._id_Midia;
-			}
-			set
-			{
-				if ((this._id_Midia != value))
-				{
-					this.Onid_MidiaChanging(value);
-					this.SendPropertyChanging();
-					this._id_Midia = value;
-					this.SendPropertyChanged("id_Midia");
-					this.Onid_MidiaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilTitulo", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilTitulo
-		{
-			get
-			{
-				return this._FilTitulo;
-			}
-			set
-			{
-				if ((this._FilTitulo != value))
-				{
-					this.OnFilTituloChanging(value);
-					this.SendPropertyChanging();
-					this._FilTitulo = value;
-					this.SendPropertyChanged("FilTitulo");
-					this.OnFilTituloChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilAno", DbType="VarChar(4) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilAno
-		{
-			get
-			{
-				return this._FilAno;
-			}
-			set
-			{
-				if ((this._FilAno != value))
-				{
-					this.OnFilAnoChanging(value);
-					this.SendPropertyChanging();
-					this._FilAno = value;
-					this.SendPropertyChanged("FilAno");
-					this.OnFilAnoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilIdioma", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilIdioma
-		{
-			get
-			{
-				return this._FilIdioma;
-			}
-			set
-			{
-				if ((this._FilIdioma != value))
-				{
-					this.OnFilIdiomaChanging(value);
-					this.SendPropertyChanging();
-					this._FilIdioma = value;
-					this.SendPropertyChanged("FilIdioma");
-					this.OnFilIdiomaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilPais", DbType="VarChar(50) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string FilPais
-		{
-			get
-			{
-				return this._FilPais;
-			}
-			set
-			{
-				if ((this._FilPais != value))
-				{
-					this.OnFilPaisChanging(value);
-					this.SendPropertyChanging();
-					this._FilPais = value;
-					this.SendPropertyChanged("FilPais");
-					this.OnFilPaisChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FilCapa", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public byte[] FilCapa
-		{
-			get
-			{
-				return this._FilCapa;
-			}
-			set
-			{
-				if ((this._FilCapa != value))
-				{
-					this.OnFilCapaChanging(value);
-					this.SendPropertyChanging();
-					this._FilCapa = value;
-					this.SendPropertyChanged("FilCapa");
-					this.OnFilCapaChanged();
+					this._LiPais = value;
+					this.SendPropertyChanged("LiPais");
+					this.OnLiPaisChanged();
 				}
 			}
 		}

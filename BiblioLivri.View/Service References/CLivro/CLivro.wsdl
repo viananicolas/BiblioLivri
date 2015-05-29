@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:26772/CLivro.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:26772/CLivro.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:26772/CLivro.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model" />
-      <xsd:import schemaLocation="http://localhost:26772/CLivro.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICLivro_Incluir_InputMessage">

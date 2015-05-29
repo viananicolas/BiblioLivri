@@ -32,6 +32,12 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dtgEditoras = new System.Windows.Forms.DataGridView();
             this.btnOK = new System.Windows.Forms.Button();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,14 +60,14 @@
             // dtgEditoras
             // 
             this.dtgEditoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEditoras.Location = new System.Drawing.Point(16, 78);
+            this.dtgEditoras.Location = new System.Drawing.Point(16, 156);
             this.dtgEditoras.Name = "dtgEditoras";
             this.dtgEditoras.Size = new System.Drawing.Size(480, 120);
             this.dtgEditoras.TabIndex = 2;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(16, 202);
+            this.btnOK.Location = new System.Drawing.Point(12, 282);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 3;
@@ -69,11 +75,65 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(58, 78);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(438, 20);
+            this.txtCidade.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Cidade:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(58, 104);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(438, 20);
+            this.txtEmail.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Email:";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(58, 130);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(438, 20);
+            this.txtTelefone.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Telefone:";
+            // 
             // FrmEditora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 237);
+            this.ClientSize = new System.Drawing.Size(510, 314);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.dtgEditoras);
             this.Controls.Add(this.txtNome);
@@ -93,5 +153,11 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dtgEditoras;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.Label label4;
     }
 }

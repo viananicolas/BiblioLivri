@@ -23,10 +23,19 @@ namespace BiblioLivri.View.CEditora {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EdCidadeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EdEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EdNomeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_EditoraField;
+        private string EdTelefoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int id_editoraField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -35,6 +44,32 @@ namespace BiblioLivri.View.CEditora {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EdCidade {
+            get {
+                return this.EdCidadeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EdCidadeField, value) != true)) {
+                    this.EdCidadeField = value;
+                    this.RaisePropertyChanged("EdCidade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EdEmail {
+            get {
+                return this.EdEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EdEmailField, value) != true)) {
+                    this.EdEmailField = value;
+                    this.RaisePropertyChanged("EdEmail");
+                }
             }
         }
         
@@ -52,14 +87,27 @@ namespace BiblioLivri.View.CEditora {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Editora {
+        public string EdTelefone {
             get {
-                return this.id_EditoraField;
+                return this.EdTelefoneField;
             }
             set {
-                if ((this.id_EditoraField.Equals(value) != true)) {
-                    this.id_EditoraField = value;
-                    this.RaisePropertyChanged("id_Editora");
+                if ((object.ReferenceEquals(this.EdTelefoneField, value) != true)) {
+                    this.EdTelefoneField = value;
+                    this.RaisePropertyChanged("EdTelefone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id_editora {
+            get {
+                return this.id_editoraField;
+            }
+            set {
+                if ((this.id_editoraField.Equals(value) != true)) {
+                    this.id_editoraField = value;
+                    this.RaisePropertyChanged("id_editora");
                 }
             }
         }

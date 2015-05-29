@@ -11,8 +11,8 @@
 namespace BiblioLivri.View.CLivro {
     using System.Runtime.Serialization;
     using System;
-    using System.Data.Linq;
-
+    
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TBLivro", Namespace="http://schemas.datacontract.org/2004/07/BiblioLivri.Model")]
@@ -23,23 +23,19 @@ namespace BiblioLivri.View.CLivro {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LiAnoField;
+        private int ID_EditoraField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LiCDUField;
-
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        //private BiblioLivri.View.CLivro.Binary LiCapaField;
         private byte[] LiCapaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LiISBNField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LiIdiomaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LiNumPaginasField;
+        private string LiPaginaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LiPaisField;
@@ -48,19 +44,10 @@ namespace BiblioLivri.View.CLivro {
         private string LiTituloField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_AutorField;
+        private int id_autorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> id_CoAutorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_EditoraField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_GeneroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int id_LivroField;
+        private int id_generoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -73,14 +60,14 @@ namespace BiblioLivri.View.CLivro {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LiAno {
+        public int ID_Editora {
             get {
-                return this.LiAnoField;
+                return this.ID_EditoraField;
             }
             set {
-                if ((object.ReferenceEquals(this.LiAnoField, value) != true)) {
-                    this.LiAnoField = value;
-                    this.RaisePropertyChanged("LiAno");
+                if ((this.ID_EditoraField.Equals(value) != true)) {
+                    this.ID_EditoraField = value;
+                    this.RaisePropertyChanged("ID_Editora");
                 }
             }
         }
@@ -99,9 +86,7 @@ namespace BiblioLivri.View.CLivro {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        // public BiblioLivri.View.CLivro.Binary LiCapa {
-        public byte[] LiCapa
-        {
+        public byte[] LiCapa {
             get {
                 return this.LiCapaField;
             }
@@ -127,27 +112,14 @@ namespace BiblioLivri.View.CLivro {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LiIdioma {
+        public string LiPagina {
             get {
-                return this.LiIdiomaField;
+                return this.LiPaginaField;
             }
             set {
-                if ((object.ReferenceEquals(this.LiIdiomaField, value) != true)) {
-                    this.LiIdiomaField = value;
-                    this.RaisePropertyChanged("LiIdioma");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LiNumPaginas {
-            get {
-                return this.LiNumPaginasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LiNumPaginasField, value) != true)) {
-                    this.LiNumPaginasField = value;
-                    this.RaisePropertyChanged("LiNumPaginas");
+                if ((object.ReferenceEquals(this.LiPaginaField, value) != true)) {
+                    this.LiPaginaField = value;
+                    this.RaisePropertyChanged("LiPagina");
                 }
             }
         }
@@ -179,66 +151,27 @@ namespace BiblioLivri.View.CLivro {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Autor {
+        public int id_autor {
             get {
-                return this.id_AutorField;
+                return this.id_autorField;
             }
             set {
-                if ((this.id_AutorField.Equals(value) != true)) {
-                    this.id_AutorField = value;
-                    this.RaisePropertyChanged("id_Autor");
+                if ((this.id_autorField.Equals(value) != true)) {
+                    this.id_autorField = value;
+                    this.RaisePropertyChanged("id_autor");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> id_CoAutor {
+        public int id_genero {
             get {
-                return this.id_CoAutorField;
+                return this.id_generoField;
             }
             set {
-                if ((this.id_CoAutorField.Equals(value) != true)) {
-                    this.id_CoAutorField = value;
-                    this.RaisePropertyChanged("id_CoAutor");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Editora {
-            get {
-                return this.id_EditoraField;
-            }
-            set {
-                if ((this.id_EditoraField.Equals(value) != true)) {
-                    this.id_EditoraField = value;
-                    this.RaisePropertyChanged("id_Editora");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Genero {
-            get {
-                return this.id_GeneroField;
-            }
-            set {
-                if ((this.id_GeneroField.Equals(value) != true)) {
-                    this.id_GeneroField = value;
-                    this.RaisePropertyChanged("id_Genero");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id_Livro {
-            get {
-                return this.id_LivroField;
-            }
-            set {
-                if ((this.id_LivroField.Equals(value) != true)) {
-                    this.id_LivroField = value;
-                    this.RaisePropertyChanged("id_Livro");
+                if ((this.id_generoField.Equals(value) != true)) {
+                    this.id_generoField = value;
+                    this.RaisePropertyChanged("id_genero");
                 }
             }
         }
@@ -251,70 +184,6 @@ namespace BiblioLivri.View.CLivro {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Binary", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq")]
-    [System.SerializableAttribute()]
-    public partial class Binary : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] BytesField;
-       // private System.Data.Linq.Binary v;
-       // private byte[] imgbytesize;
-
-        /*public Binary(byte[] imgbytesize)
-        {
-            this.imgbytesize = imgbytesize;
-        }*/
-
-
-        /*public Binary(System.Data.Linq.Binary v)
-        {
-            this.v = v;
-        }*/
-
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Bytes {
-            get {
-                return this.BytesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BytesField, value) != true)) {
-                    this.BytesField = value;
-                    this.RaisePropertyChanged("Bytes");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-       /* public static implicit operator Binary(System.Data.Linq.Binary v)
-        {
-            CLivro.Binary a = new Binary(v);
-            return a;
-        }*/
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -340,10 +209,10 @@ namespace BiblioLivri.View.CLivro {
         System.Threading.Tasks.Task ExcluirAsync(BiblioLivri.View.CLivro.TBLivro oLivro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaPK", ReplyAction="http://tempuri.org/ICLivro/SelecionaPKResponse")]
-        BiblioLivri.View.CLivro.TBLivro SelecionaPK(int codigo);
+        BiblioLivri.View.CLivro.TBLivro SelecionaPK(string codigo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaPK", ReplyAction="http://tempuri.org/ICLivro/SelecionaPKResponse")]
-        System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro> SelecionaPKAsync(int codigo);
+        System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro> SelecionaPKAsync(string codigo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaTodos", ReplyAction="http://tempuri.org/ICLivro/SelecionaTodosResponse")]
         BiblioLivri.View.CLivro.TBLivro[] SelecionaTodos();
@@ -409,11 +278,11 @@ namespace BiblioLivri.View.CLivro {
             return base.Channel.ExcluirAsync(oLivro);
         }
         
-        public BiblioLivri.View.CLivro.TBLivro SelecionaPK(int codigo) {
+        public BiblioLivri.View.CLivro.TBLivro SelecionaPK(string codigo) {
             return base.Channel.SelecionaPK(codigo);
         }
         
-        public System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro> SelecionaPKAsync(int codigo) {
+        public System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro> SelecionaPKAsync(string codigo) {
             return base.Channel.SelecionaPKAsync(codigo);
         }
         

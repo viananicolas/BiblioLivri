@@ -33,6 +33,9 @@ namespace BiblioLivri.View
             CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
             CEditora.TBEditora oEditora = new CEditora.TBEditora();
             oEditora.EdNome = txtNome.Text;
+            oEditora.EdTelefone = txtTelefone.Text;
+            oEditora.EdEmail = txtEmail.Text;
+            oEditora.EdCidade = txtCidade.Text;
             oProxy.Incluir(oEditora);
             CarregaGrid();
         }

@@ -73,7 +73,7 @@ namespace BiblioLivri.Model
             {
                 try
                 {
-                    return (from p in odb.TBEditoras where p.id_Editora == codigo select p).FirstOrDefault();
+                    return (from p in odb.TBEditoras where p.id_editora == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }

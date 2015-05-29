@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="037aee89-9065-4575-8964-7fea8afa3c42" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CEmprestimo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CEmprestimo.disco" MetadataType="Disco" ID="b3be5cd1-057a-4142-a4f1-a4b89edf448b" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?disco" />
+    <MetadataFile FileName="CEmprestimo1.xsd" MetadataType="Schema" ID="70533ff5-37b0-41a8-947f-6000bd33365d" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?xsd=xsd1" />
+    <MetadataFile FileName="CEmprestimo.xsd" MetadataType="Schema" ID="f090dd25-1670-4214-b772-ebd5772dc1bb" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?xsd=xsd0" />
+    <MetadataFile FileName="CEmprestimo.wsdl" MetadataType="Wsdl" ID="76a3ffe8-6f7c-45f3-b27c-31ff68af23df" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?wsdl" />
+    <MetadataFile FileName="CEmprestimo3.xsd" MetadataType="Schema" ID="a207c4aa-ad9a-4a17-8d61-577914cb4970" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?xsd=xsd3" />
+    <MetadataFile FileName="CEmprestimo2.xsd" MetadataType="Schema" ID="8d531661-9c94-4c70-b32b-a6116b263040" SourceId="1" SourceUrl="http://localhost:26772/CEmprestimo.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

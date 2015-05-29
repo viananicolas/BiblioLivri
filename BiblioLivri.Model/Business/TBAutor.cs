@@ -73,7 +73,7 @@ namespace BiblioLivri.Model
             {
                 try
                 {
-                    return (from p in odb.TBAutors where p.id_Autor == codigo select p).FirstOrDefault();
+                    return (from p in odb.TBAutors where p.id_autor == codigo select p).FirstOrDefault();
                     /*TBCliente oRetorno = Elem.First() ?? null;
                     return oRetorno;*/
                 }
