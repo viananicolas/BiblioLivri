@@ -123,6 +123,12 @@ namespace BiblioLivri.View.CEmprestimo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/SelecionaTodos", ReplyAction="http://tempuri.org/ICEmprestimo/SelecionaTodosResponse")]
         System.Threading.Tasks.Task<BiblioLivri.View.CEmprestimo.TBEmprestimo[]> SelecionaTodosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterioResponse")]
+        BiblioLivri.View.CEmprestimo.TBEmprestimo[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterioResponse")]
+        System.Threading.Tasks.Task<BiblioLivri.View.CEmprestimo.TBEmprestimo[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -190,6 +196,14 @@ namespace BiblioLivri.View.CEmprestimo {
         
         public System.Threading.Tasks.Task<BiblioLivri.View.CEmprestimo.TBEmprestimo[]> SelecionaTodosAsync() {
             return base.Channel.SelecionaTodosAsync();
+        }
+        
+        public BiblioLivri.View.CEmprestimo.TBEmprestimo[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
+        
+        public System.Threading.Tasks.Task<BiblioLivri.View.CEmprestimo.TBEmprestimo[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterioAsync(Criterio, TipoPesquisa);
         }
     }
 }

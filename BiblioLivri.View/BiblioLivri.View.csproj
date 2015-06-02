@@ -67,6 +67,18 @@
     <Compile Include="FrmCopiaLivro.Designer.cs">
       <DependentUpon>FrmCopiaLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolucao.Designer.cs">
+      <DependentUpon>FrmDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoacao.Designer.cs">
+      <DependentUpon>FrmDoacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CDoacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CEditora\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,6 +142,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\CGenero\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CItemDoacao\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -147,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCopiaLivro.resx">
       <DependentUpon>FrmCopiaLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevolucao.resx">
+      <DependentUpon>FrmDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoacao.resx">
+      <DependentUpon>FrmDoacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditora.resx">
       <DependentUpon>FrmEditora.cs</DependentUpon>
@@ -220,6 +248,22 @@
     <None Include="Service References\CCopiaLivro\CCopiaLivro2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CDoacao\BiblioLivri.View.CDoacao.TBDoacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CDoacao\CDoacao.wsdl" />
+    <None Include="Service References\CDoacao\CDoacao.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CDoacao\CDoacao1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CDoacao\CDoacao2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CDoacao\CDoacao3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CEditora\BiblioLivri.View.CEditora.TBEditora.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -262,6 +306,19 @@
     <None Include="Service References\CGenero\CGenero2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CItemDoacao\BiblioLivri.View.CItemDoacao.TBItemDoacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CItemDoacao\CItemDoacao.wsdl" />
+    <None Include="Service References\CItemDoacao\CItemDoacao.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CItemDoacao\CItemDoacao1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CItemDoacao\CItemDoacao2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CItemEmprestimo\BiblioLivri.View.CItemEmprestimo.TBItemEmprestimo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -301,9 +358,11 @@
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CCliente\" />
     <WCFMetadataStorage Include="Service References\CCopiaLivro\" />
+    <WCFMetadataStorage Include="Service References\CDoacao\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
     <WCFMetadataStorage Include="Service References\CEmprestimo\" />
     <WCFMetadataStorage Include="Service References\CGenero\" />
+    <WCFMetadataStorage Include="Service References\CItemDoacao\" />
     <WCFMetadataStorage Include="Service References\CItemEmprestimo\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
@@ -356,6 +415,20 @@
     <Content Include="Information\ListaEstado.txt" />
     <Content Include="Information\ListaIdioma.txt" />
     <Content Include="Information\ListaPaises.txt" />
+    <None Include="Service References\CItemDoacao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CItemDoacao\configuration.svcinfo" />
+    <None Include="Service References\CItemDoacao\configuration91.svcinfo" />
+    <None Include="Service References\CItemDoacao\CItemDoacao.disco" />
+    <None Include="Service References\CDoacao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CDoacao\configuration.svcinfo" />
+    <None Include="Service References\CDoacao\configuration91.svcinfo" />
+    <None Include="Service References\CDoacao\CDoacao.disco" />
     <None Include="Service References\CCopiaLivro\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

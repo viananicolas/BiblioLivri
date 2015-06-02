@@ -107,6 +107,39 @@ namespace BiblioLivri.Model
                 }
             }
         }
+        public static List<TBLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {            /*Autor
+Titulo
+ISBN
+Gênero*/
+                    switch (TipoPesquisa)
+                    {
+                        case (0): return (from p in odb.TBLivros where p.id_autor == Convert.ToInt32(Criterio) select p).ToList();
+                        case (1): return (from p in odb.TBLivros where p.LiTitulo == Criterio select p).ToList();
+                        case (2): return (from p in odb.TBLivros where p.LiISBN == Criterio select p).ToList();
+                        case (3): return (from p in odb.TBLivros where p.id_genero == Convert.ToInt32(Criterio) select p).ToList();
+
+                        default:
+                            break;
+                    }
+                    var Elem = from p in odb.TBLivros select p;
+                    List<TBLivro> oRetorno = Elem.ToList();
+                    return oRetorno;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
+        }
         public static bool ValidaISBN(string ISBN)
         {
             using (DataContext odb = new DataContext())

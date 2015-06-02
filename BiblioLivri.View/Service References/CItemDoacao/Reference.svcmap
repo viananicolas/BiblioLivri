@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad913460-27ab-41c6-97b9-24d385dbd66d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CItemDoacao.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CItemDoacao.disco" MetadataType="Disco" ID="4809d876-dcf6-4e52-8535-c10a06e481ec" SourceId="1" SourceUrl="http://localhost:26772/CItemDoacao.svc?disco" />
+    <MetadataFile FileName="CItemDoacao.wsdl" MetadataType="Wsdl" ID="294bb6ec-ce72-4d40-a72c-9438999a9c3f" SourceId="1" SourceUrl="http://localhost:26772/CItemDoacao.svc?wsdl" />
+    <MetadataFile FileName="CItemDoacao.xsd" MetadataType="Schema" ID="1bf72cfc-9fde-4b62-af4f-c2aa2bc87a83" SourceId="1" SourceUrl="http://localhost:26772/CItemDoacao.svc?xsd=xsd2" />
+    <MetadataFile FileName="CItemDoacao1.xsd" MetadataType="Schema" ID="442742ed-2742-4a5c-b093-6d99f42771d9" SourceId="1" SourceUrl="http://localhost:26772/CItemDoacao.svc?xsd=xsd1" />
+    <MetadataFile FileName="CItemDoacao2.xsd" MetadataType="Schema" ID="b90ad29c-2a81-4b77-9531-818dce51bd50" SourceId="1" SourceUrl="http://localhost:26772/CItemDoacao.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

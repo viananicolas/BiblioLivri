@@ -262,5 +262,15 @@ namespace BiblioLivri.View
             }
         }
 
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            /*Autor
+Titulo
+ISBN
+Gênero*/
+            var oProxy = new CLivro.CLivroClient();
+            oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+
+        }
     }
 }

@@ -139,6 +139,12 @@ namespace BiblioLivri.View.CAutor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/SelecionaTodos", ReplyAction="http://tempuri.org/ICAutor/SelecionaTodosResponse")]
         System.Threading.Tasks.Task<BiblioLivri.View.CAutor.TBAutor[]> SelecionaTodosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICAutor/SelecionaTodosCriterioResponse")]
+        BiblioLivri.View.CAutor.TBAutor[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICAutor/SelecionaTodosCriterioResponse")]
+        System.Threading.Tasks.Task<BiblioLivri.View.CAutor.TBAutor[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -206,6 +212,14 @@ namespace BiblioLivri.View.CAutor {
         
         public System.Threading.Tasks.Task<BiblioLivri.View.CAutor.TBAutor[]> SelecionaTodosAsync() {
             return base.Channel.SelecionaTodosAsync();
+        }
+        
+        public BiblioLivri.View.CAutor.TBAutor[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
+        
+        public System.Threading.Tasks.Task<BiblioLivri.View.CAutor.TBAutor[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterioAsync(Criterio, TipoPesquisa);
         }
     }
 }

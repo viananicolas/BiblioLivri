@@ -21,5 +21,7 @@ namespace BiblioLivri.Control
         TBCopiaLivro SelecionaPK(int codigo);
         [OperationContract]
         List<TBCopiaLivro> SelecionaTodos();
+        [OperationContract]
+        List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
     }
 }

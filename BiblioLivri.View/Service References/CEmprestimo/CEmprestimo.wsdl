@@ -38,6 +38,12 @@
   <wsdl:message name="ICEmprestimo_SelecionaTodos_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelecionaTodosResponse" />
   </wsdl:message>
+  <wsdl:message name="ICEmprestimo_SelecionaTodosCriterio_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTodosCriterio" />
+  </wsdl:message>
+  <wsdl:message name="ICEmprestimo_SelecionaTodosCriterio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTodosCriterioResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICEmprestimo">
     <wsdl:operation name="Incluir">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/Incluir" message="tns:ICEmprestimo_Incluir_InputMessage" />
@@ -58,6 +64,10 @@
     <wsdl:operation name="SelecionaTodos">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/SelecionaTodos" message="tns:ICEmprestimo_SelecionaTodos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/SelecionaTodosResponse" message="tns:ICEmprestimo_SelecionaTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTodosCriterio">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterio" message="tns:ICEmprestimo_SelecionaTodosCriterio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterioResponse" message="tns:ICEmprestimo_SelecionaTodosCriterio_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICEmprestimo" type="tns:ICEmprestimo">
@@ -100,6 +110,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelecionaTodos">
       <soap:operation soapAction="http://tempuri.org/ICEmprestimo/SelecionaTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTodosCriterio">
+      <soap:operation soapAction="http://tempuri.org/ICEmprestimo/SelecionaTodosCriterio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

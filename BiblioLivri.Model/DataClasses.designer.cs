@@ -60,6 +60,9 @@ namespace BiblioLivri.Model
     partial void InsertTBLivro(TBLivro instance);
     partial void UpdateTBLivro(TBLivro instance);
     partial void DeleteTBLivro(TBLivro instance);
+    partial void InsertTBDevolucao(TBDevolucao instance);
+    partial void UpdateTBDevolucao(TBDevolucao instance);
+    partial void DeleteTBDevolucao(TBDevolucao instance);
     #endregion
 		
 		public DataContext() : 
@@ -169,6 +172,14 @@ namespace BiblioLivri.Model
 			get
 			{
 				return this.GetTable<TBLivro>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBDevolucao> TBDevolucaos
+		{
+			get
+			{
+				return this.GetTable<TBDevolucao>();
 			}
 		}
 	}
@@ -1728,6 +1739,92 @@ namespace BiblioLivri.Model
 					this._LiPais = value;
 					this.SendPropertyChanged("LiPais");
 					this.OnLiPaisChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBDevolucao")]
+	public partial class TBDevolucao : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _num_devolucao;
+		
+		private int _DevNumCopia;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onnum_devolucaoChanging(int value);
+    partial void Onnum_devolucaoChanged();
+    partial void OnDevNumCopiaChanging(int value);
+    partial void OnDevNumCopiaChanged();
+    #endregion
+		
+		public TBDevolucao()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_num_devolucao", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int num_devolucao
+		{
+			get
+			{
+				return this._num_devolucao;
+			}
+			set
+			{
+				if ((this._num_devolucao != value))
+				{
+					this.Onnum_devolucaoChanging(value);
+					this.SendPropertyChanging();
+					this._num_devolucao = value;
+					this.SendPropertyChanged("num_devolucao");
+					this.Onnum_devolucaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DevNumCopia", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int DevNumCopia
+		{
+			get
+			{
+				return this._DevNumCopia;
+			}
+			set
+			{
+				if ((this._DevNumCopia != value))
+				{
+					this.OnDevNumCopiaChanging(value);
+					this.SendPropertyChanging();
+					this._DevNumCopia = value;
+					this.SendPropertyChanged("DevNumCopia");
+					this.OnDevNumCopiaChanged();
 				}
 			}
 		}

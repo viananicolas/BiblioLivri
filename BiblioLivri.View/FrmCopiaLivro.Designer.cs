@@ -39,7 +39,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnInserir = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCopiaLivro)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbLivro
@@ -63,10 +70,13 @@
             // 
             // dtgCopiaLivro
             // 
+            this.dtgCopiaLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgCopiaLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCopiaLivro.Location = new System.Drawing.Point(12, 120);
+            this.dtgCopiaLivro.Location = new System.Drawing.Point(12, 46);
             this.dtgCopiaLivro.Name = "dtgCopiaLivro";
-            this.dtgCopiaLivro.Size = new System.Drawing.Size(593, 150);
+            this.dtgCopiaLivro.Size = new System.Drawing.Size(604, 178);
             this.dtgCopiaLivro.TabIndex = 2;
             // 
             // txtAno
@@ -139,11 +149,74 @@
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(this.btnAlterar);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtPesquisa);
+            this.groupBox1.Controls.Add(this.dtgCopiaLivro);
+            this.groupBox1.Location = new System.Drawing.Point(12, 122);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(622, 240);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cópias de livros:";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(538, 16);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 26;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(457, 16);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 25;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Pesquisar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Livro",
+            "Emprestado",
+            "Ano"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(97, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(115, 19);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(233, 20);
+            this.txtPesquisa.TabIndex = 22;
+            // 
             // FrmCopiaLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 278);
+            this.ClientSize = new System.Drawing.Size(646, 392);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -152,13 +225,14 @@
             this.Controls.Add(this.txtEdicao);
             this.Controls.Add(this.chkEmprestado);
             this.Controls.Add(this.txtAno);
-            this.Controls.Add(this.dtgCopiaLivro);
             this.Controls.Add(this.cmbIdioma);
             this.Controls.Add(this.cmbLivro);
             this.Name = "FrmCopiaLivro";
-            this.Text = "FrmCopiaLivro";
+            this.Text = "Cadastro de Cópias";
             this.Load += new System.EventHandler(this.FrmCopiaLivro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgCopiaLivro)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +251,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPesquisa;
     }
 }

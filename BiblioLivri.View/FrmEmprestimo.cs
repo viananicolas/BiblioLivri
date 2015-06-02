@@ -79,6 +79,7 @@ namespace BiblioLivri.View
         {
             var oProxy = new CEmprestimo.CEmprestimoClient();
             dtgEmprestimos.DataSource = oProxy.SelecionaTodos();
+            dtgEmprestimos.ClearSelection();
         }
 
         private void cmbLivros_SelectedValueChanged(object sender, EventArgs e)
@@ -141,8 +142,37 @@ namespace BiblioLivri.View
             {
                 oItemEmprestimo.ItemNumCopia = item.CoNumCopia;
                 ListaItens.Add(oItemEmprestimo);
+                var yProxy = new CCopiaLivro.CCopiaLivroClient();
+                item.CoEmprestado = true;
+                oProxyItemEmprestimo.Incluir(oItemEmprestimo);
+                yProxy.Alterar(item);
             }
-            oProxyItemEmprestimo.IncluirTodos(ListaItens.ToArray());   
+            //oProxyItemEmprestimo.IncluirTodos(ListaItens.ToArray());   
+        }
+
+        private void dtgEmprestimos_SelectionChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void dtgEmprestimos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
+            if (oItemEmprestimo != null)
+            {
+                var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
+                dtgItensEmprestimos.DataSource = oProxy.SelecionaTodosCriterio(oItemEmprestimo.EmpNumEmprestimo);
+            }
+        }
+
+        private void dtgEmprestimos_MouseClick(object sender, MouseEventArgs e)
+        {
+            var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
+            if (oItemEmprestimo != null)
+            {
+                var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
+                dtgItensEmprestimos.DataSource = oProxy.SelecionaTodosCriterio(oItemEmprestimo.EmpNumEmprestimo);
+            }
         }
     }
 }

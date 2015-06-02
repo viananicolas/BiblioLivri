@@ -37,7 +37,10 @@ namespace BiblioLivri.Control
         {
             return Model.TBLivro.SelecionaTodos();
         }
-
+        public List<TBLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            return Model.TBLivro.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
         public bool ValidaISBN(string ISBN)
         {
             return Model.TBLivro.ValidaISBN(ISBN);

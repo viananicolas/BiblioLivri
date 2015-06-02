@@ -22,5 +22,7 @@ namespace BiblioLivri.Control
         TBEditora SelecionaPK(int codigo);
         [OperationContract]
         List<TBEditora> SelecionaTodos();
+        [OperationContract]
+        List<TBEditora> SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
     }
 }

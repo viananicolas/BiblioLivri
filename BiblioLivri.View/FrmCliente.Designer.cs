@@ -40,23 +40,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.cmbPais = new System.Windows.Forms.ComboBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -65,8 +63,10 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.cmbCriterio = new System.Windows.Forms.ComboBox();
             this.txtCriterio = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -157,9 +157,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCPF);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txtCPF);
             this.groupBox1.Controls.Add(this.txtSobrenome);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtNome);
@@ -189,13 +189,6 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Nº Cartão";
             // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(75, 69);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(135, 20);
-            this.txtCPF.TabIndex = 5;
-            // 
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(75, 42);
@@ -221,7 +214,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 322);
+            this.btnSalvar.Location = new System.Drawing.Point(475, 200);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 10;
@@ -231,12 +224,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtCEP);
             this.groupBox2.Controls.Add(this.txtEndereco);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtComplemento);
-            this.groupBox2.Controls.Add(this.txtCEP);
             this.groupBox2.Controls.Add(this.cmbPais);
             this.groupBox2.Controls.Add(this.cmbEstado);
             this.groupBox2.Controls.Add(this.label9);
@@ -251,6 +244,22 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(261, 88);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(179, 20);
+            this.txtEndereco.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(181, 91);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Endereço:";
             // 
             // txtNumero
             // 
@@ -274,13 +283,6 @@
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(98, 20);
             this.txtComplemento.TabIndex = 10;
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(54, 62);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(121, 20);
-            this.txtCEP.TabIndex = 9;
             // 
             // cmbPais
             // 
@@ -309,13 +311,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtEmail);
             this.groupBox3.Controls.Add(this.txtTelefone);
             this.groupBox3.Controls.Add(this.txtCelular);
+            this.groupBox3.Controls.Add(this.txtEmail);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Location = new System.Drawing.Point(12, 232);
+            this.groupBox3.Location = new System.Drawing.Point(492, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(292, 84);
             this.groupBox3.TabIndex = 12;
@@ -328,20 +330,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(237, 20);
             this.txtEmail.TabIndex = 13;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(64, 35);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(121, 20);
-            this.txtTelefone.TabIndex = 12;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(54, 13);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(131, 20);
-            this.txtCelular.TabIndex = 11;
             // 
             // label11
             // 
@@ -363,7 +351,7 @@
             this.dtgClientes.Location = new System.Drawing.Point(6, 45);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgClientes.Size = new System.Drawing.Size(835, 248);
+            this.dtgClientes.Size = new System.Drawing.Size(835, 166);
             this.dtgClientes.TabIndex = 13;
             this.dtgClientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClientes_CellContentDoubleClick);
             // 
@@ -375,9 +363,9 @@
             this.groupBox4.Controls.Add(this.cmbCriterio);
             this.groupBox4.Controls.Add(this.txtCriterio);
             this.groupBox4.Controls.Add(this.dtgClientes);
-            this.groupBox4.Location = new System.Drawing.Point(12, 351);
+            this.groupBox4.Location = new System.Drawing.Point(12, 232);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(847, 299);
+            this.groupBox4.Size = new System.Drawing.Size(847, 217);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Todos os clientes:";
@@ -394,7 +382,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(685, 17);
+            this.btnAlterar.Location = new System.Drawing.Point(685, 16);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 18;
@@ -434,27 +422,47 @@
             this.txtCriterio.Size = new System.Drawing.Size(286, 20);
             this.txtCriterio.TabIndex = 15;
             // 
-            // txtEndereco
+            // txtCelular
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(261, 88);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(179, 20);
-            this.txtEndereco.TabIndex = 14;
+            this.txtCelular.Location = new System.Drawing.Point(64, 13);
+            this.txtCelular.Mask = "(99)99999-9999";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(100, 20);
+            this.txtCelular.TabIndex = 15;
+            this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // label14
+            // txtTelefone
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(181, 91);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Endereço:";
+            this.txtTelefone.Location = new System.Drawing.Point(64, 35);
+            this.txtTelefone.Mask = "(99)99999-9999";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefone.TabIndex = 16;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(75, 69);
+            this.txtCPF.Mask = "999-999-999-99";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(100, 20);
+            this.txtCPF.TabIndex = 8;
+            this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(54, 62);
+            this.txtCEP.Mask = "99999-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(100, 20);
+            this.txtCEP.TabIndex = 9;
+            this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 656);
+            this.ClientSize = new System.Drawing.Size(890, 462);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -490,20 +498,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.ComboBox cmbPais;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label12;
@@ -518,5 +522,9 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
     }
 }

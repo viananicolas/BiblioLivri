@@ -21,5 +21,7 @@ namespace BiblioLivri.Control
         TBEmprestimo SelecionaPK(int codigo);
         [OperationContract]
         List<TBEmprestimo> SelecionaTodos();
+        [OperationContract]
+        List<TBEmprestimo> SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
     }
 }

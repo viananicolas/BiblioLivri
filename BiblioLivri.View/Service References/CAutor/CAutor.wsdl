@@ -37,6 +37,12 @@
   <wsdl:message name="ICAutor_SelecionaTodos_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelecionaTodosResponse" />
   </wsdl:message>
+  <wsdl:message name="ICAutor_SelecionaTodosCriterio_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTodosCriterio" />
+  </wsdl:message>
+  <wsdl:message name="ICAutor_SelecionaTodosCriterio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTodosCriterioResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICAutor">
     <wsdl:operation name="Incluir">
       <wsdl:input wsaw:Action="http://tempuri.org/ICAutor/Incluir" message="tns:ICAutor_Incluir_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="SelecionaTodos">
       <wsdl:input wsaw:Action="http://tempuri.org/ICAutor/SelecionaTodos" message="tns:ICAutor_SelecionaTodos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICAutor/SelecionaTodosResponse" message="tns:ICAutor_SelecionaTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTodosCriterio">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICAutor/SelecionaTodosCriterio" message="tns:ICAutor_SelecionaTodosCriterio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICAutor/SelecionaTodosCriterioResponse" message="tns:ICAutor_SelecionaTodosCriterio_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICAutor" type="tns:ICAutor">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelecionaTodos">
       <soap:operation soapAction="http://tempuri.org/ICAutor/SelecionaTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTodosCriterio">
+      <soap:operation soapAction="http://tempuri.org/ICAutor/SelecionaTodosCriterio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

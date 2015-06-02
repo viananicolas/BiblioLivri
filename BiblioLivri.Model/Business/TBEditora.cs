@@ -105,5 +105,9 @@ namespace BiblioLivri.Model
                 }
             }
         }
+        public static List<TBEditora> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            return null;
+        }
     }
 }

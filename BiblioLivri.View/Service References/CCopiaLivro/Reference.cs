@@ -187,6 +187,12 @@ namespace BiblioLivri.View.CCopiaLivro {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICCopiaLivro/SelecionaTodos", ReplyAction="http://tempuri.org/ICCopiaLivro/SelecionaTodosResponse")]
         System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterioResponse")]
+        BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterioResponse")]
+        System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -254,6 +260,14 @@ namespace BiblioLivri.View.CCopiaLivro {
         
         public System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosAsync() {
             return base.Channel.SelecionaTodosAsync();
+        }
+        
+        public BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
+        
+        public System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterioAsync(Criterio, TipoPesquisa);
         }
     }
 }

@@ -220,6 +220,12 @@ namespace BiblioLivri.View.CLivro {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaTodos", ReplyAction="http://tempuri.org/ICLivro/SelecionaTodosResponse")]
         System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro[]> SelecionaTodosAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICLivro/SelecionaTodosCriterioResponse")]
+        BiblioLivri.View.CLivro.TBLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICLivro/SelecionaTodosCriterioResponse")]
+        System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/ValidaISBN", ReplyAction="http://tempuri.org/ICLivro/ValidaISBNResponse")]
         bool ValidaISBN(string ISBN);
         
@@ -292,6 +298,14 @@ namespace BiblioLivri.View.CLivro {
         
         public System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro[]> SelecionaTodosAsync() {
             return base.Channel.SelecionaTodosAsync();
+        }
+        
+        public BiblioLivri.View.CLivro.TBLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
+        
+        public System.Threading.Tasks.Task<BiblioLivri.View.CLivro.TBLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa) {
+            return base.Channel.SelecionaTodosCriterioAsync(Criterio, TipoPesquisa);
         }
         
         public bool ValidaISBN(string ISBN) {

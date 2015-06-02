@@ -36,5 +36,9 @@ namespace BiblioLivri.Control
         {
             return Model.TBAutor.SelecionaTodos();
         }
+        public List<TBAutor> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            return Model.TBAutor.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
     }
 }

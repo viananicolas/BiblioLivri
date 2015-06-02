@@ -23,6 +23,8 @@ namespace BiblioLivri.Control
         [OperationContract]
         List<TBLivro> SelecionaTodos();
         [OperationContract]
+        List<TBLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        [OperationContract]
         bool ValidaISBN(string ISBN);
     }
 }

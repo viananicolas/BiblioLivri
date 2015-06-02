@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="553b30b3-3c0a-40b1-a119-0bc9cd3ae141" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26772/CDoacao.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CDoacao.disco" MetadataType="Disco" ID="f2ce78bc-e049-4661-9826-aef0650693a8" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?disco" />
+    <MetadataFile FileName="CDoacao.xsd" MetadataType="Schema" ID="286b4502-c55e-4cb8-a5a2-c117887e0a36" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?xsd=xsd2" />
+    <MetadataFile FileName="CDoacao1.xsd" MetadataType="Schema" ID="bd345f69-84d3-43bf-a47a-c42620adca3a" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?xsd=xsd3" />
+    <MetadataFile FileName="CDoacao2.xsd" MetadataType="Schema" ID="9c2afc85-c666-4508-a21c-6afbc7b668d1" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?xsd=xsd1" />
+    <MetadataFile FileName="CDoacao.wsdl" MetadataType="Wsdl" ID="6323fc08-bb12-43d9-a51b-f24f8d9cb73f" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?wsdl" />
+    <MetadataFile FileName="CDoacao3.xsd" MetadataType="Schema" ID="8f92a701-07a0-4b2d-979e-9be35b7c2475" SourceId="1" SourceUrl="http://localhost:26772/CDoacao.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -62,5 +62,11 @@
         <elementListCompartment Id="2ec58989-993b-4ed7-b342-c206cc35042b" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="20e763dc-98a5-4dc2-ac8e-41404fe7d64b" absoluteBounds="8.375, 4.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataContext/TBDevolucao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8df68d71-8e8e-4b3e-b8a8-dd9a009ec68a" absoluteBounds="8.39, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

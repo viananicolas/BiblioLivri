@@ -90,4 +90,10 @@
       <Column Name="LiPais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
+  <Table Name="dbo.TBDevolucao" Member="TBDevolucaos">
+    <Type Name="TBDevolucao">
+      <Column Name="num_devolucao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DevNumCopia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
 </Database>

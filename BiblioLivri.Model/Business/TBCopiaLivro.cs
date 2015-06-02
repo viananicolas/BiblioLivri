@@ -107,5 +107,9 @@ namespace BiblioLivri.Model
                 }
             }
         }
+        public static List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            return null;
+        }
     }
 }

@@ -66,7 +66,9 @@ namespace BiblioLivri.View
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FrmDoacao frmdoacao = new FrmDoacao();
+            frmdoacao.MdiParent = this;
+            frmdoacao.Show();
         }
 
         private void cópiaDeLivroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,6 +76,13 @@ namespace BiblioLivri.View
             var frmcopialivro = new FrmCopiaLivro();
             frmcopialivro.MdiParent = this;
             frmcopialivro.Show();
+        }
+
+        private void devoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmdevolucao = new FrmDevolucao();
+            frmdevolucao.MdiParent = this;
+            frmdevolucao.Show();
         }
     }
 }

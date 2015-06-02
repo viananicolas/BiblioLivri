@@ -40,5 +40,10 @@ namespace BiblioLivri.Control
             return Model.TBEmprestimo.SelecionaTodos();
 
         }
+
+        public List<TBEmprestimo> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        {
+            return Model.TBEmprestimo.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        }
     }
 }
