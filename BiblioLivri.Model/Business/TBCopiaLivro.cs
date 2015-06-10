@@ -107,9 +107,23 @@ namespace BiblioLivri.Model
                 }
             }
         }
-        public static List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        public static List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio)
         {
-            return null;
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    return (from p in odb.TBCopiaLivros where p.CoISBN == Criterio select p).ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
         }
     }
 }

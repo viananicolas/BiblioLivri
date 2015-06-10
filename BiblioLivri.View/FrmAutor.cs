@@ -13,6 +13,7 @@ namespace BiblioLivri.View
 {
     public partial class FrmAutor : Form
     {
+        bool Incluir = true;
         public FrmAutor()
         {
             InitializeComponent();
@@ -20,19 +21,8 @@ namespace BiblioLivri.View
 
         private void FrmAutor_Load(object sender, EventArgs e)
         {
-            CarregaGrid();
             CarregaPaises();
 
-        }
-        private void CarregaGrid()
-        {
-            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-            oProxy.Open();
-            CAutor.TBAutor[] testes = oProxy.SelecionaTodos();
-            dtgAutores.DataSource = null;
-            dtgAutores.DataSource = testes;
-            dtgAutores.Refresh();
-            oProxy.Close();
         }
         private void CarregaPaises()
         {
@@ -44,20 +34,61 @@ namespace BiblioLivri.View
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-            CAutor.TBAutor oAutor = new CAutor.TBAutor();
-            oAutor.AuSobrenome = txtSobrenome.Text.ToUpper();
-            oAutor.AuNome = txtNome.Text;
-            oAutor.AuNacionalidade = cmbNacionalidade.SelectedItem.ToString();
-            oProxy.Incluir(oAutor);
+            if (Incluir)
+            {
+                CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+                CAutor.TBAutor oAutor = new CAutor.TBAutor();
+                oAutor.AuSobrenome = txtSobrenome.Text.ToUpper();
+                oAutor.AuNome = txtNome.Text;
+                oAutor.AuNacionalidade = cmbNacionalidade.SelectedItem.ToString();
+                oProxy.Incluir(oAutor);
+            }
+            else
+            {
+                CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+                CAutor.TBAutor oAutor = new CAutor.TBAutor();
+                oAutor.id_autor = Convert.ToInt32(txtID.Text);
+                oAutor.AuSobrenome = txtSobrenome.Text.ToUpper();
+                oAutor.AuNome = txtNome.Text;
+                oAutor.AuNacionalidade = cmbNacionalidade.SelectedItem.ToString();
+                oProxy.Alterar(oAutor);
+            }
             LimpaCampos();
-            CarregaGrid();
         }
         private void LimpaCampos()
         {
             txtSobrenome.Text = "";
             txtNome.Text = "";
             cmbNacionalidade.SelectedItem = null;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            Incluir = true;
+            LimpaCampos();
+
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            var oProxy = new CAutor.CAutorClient();
+            var oAutor = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
+            txtNome.Text = oAutor.AuNome;
+            txtSobrenome.Text = oAutor.AuSobrenome;
+            txtID.Enabled = false;
+            cmbNacionalidade.SelectedItem = oAutor.AuNacionalidade.ToString();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Incluir = false;
+            txtID.Enabled = true;
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtID.Enabled = true;
+            LimpaCampos();
         }
     }
 }

@@ -16,7 +16,6 @@ namespace BiblioLivri.View
         private int NumCartao=0;
         private List<CItemEmprestimo.TBItemEmprestimo> ListaItens = new List<CItemEmprestimo.TBItemEmprestimo>();
         private List<Tuple<int, string>> Testando = new List<Tuple<int, string>>();
-        private Tuple<int, string> Books;
         private List<CCopiaLivro.TBCopiaLivro> ListaCopiaLivro;
         private List<CCopiaLivro.TBCopiaLivro> LivrosEscolhidos = new List<CCopiaLivro.TBCopiaLivro>();
         
@@ -27,8 +26,7 @@ namespace BiblioLivri.View
 
         private void FrmEmprestimo_Load(object sender, EventArgs e)
         {
-            CarregaEmprestimos();
-            CarregaItensEmprestimos();
+            
             CarregaClientes();
             CarregaLivros();
             dtpDataDevolucao.Value = DateTime.Now.AddDays(7);
@@ -43,7 +41,7 @@ namespace BiblioLivri.View
             {
                 foreach (var item2 in ListaCopiaLivro)
                 {
-                    if (item.LiISBN == item2.CoISBN)
+                    if (item.LiISBN == item2.CoISBN && item2.CoEmprestado==false)
                     {
                         cmbLivros.Items.Add(item.LiTitulo);
                         Testando.Add(Tuple.Create(item2.CoNumCopia, item.LiTitulo));
@@ -64,7 +62,7 @@ namespace BiblioLivri.View
             }
         }
 
-        private void CarregaItensEmprestimos()
+        /*private void CarregaItensEmprestimos()
         {
             var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
             dtgItensEmprestimos.DataSource = oProxy.SelecionaTodos();
@@ -80,7 +78,7 @@ namespace BiblioLivri.View
             var oProxy = new CEmprestimo.CEmprestimoClient();
             dtgEmprestimos.DataSource = oProxy.SelecionaTodos();
             dtgEmprestimos.ClearSelection();
-        }
+        }*/
 
         private void cmbLivros_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -157,22 +155,22 @@ namespace BiblioLivri.View
 
         private void dtgEmprestimos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
+           /* var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
             if (oItemEmprestimo != null)
             {
                 var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
                 dtgItensEmprestimos.DataSource = oProxy.SelecionaTodosCriterio(oItemEmprestimo.EmpNumEmprestimo);
-            }
+            }*/
         }
 
         private void dtgEmprestimos_MouseClick(object sender, MouseEventArgs e)
         {
-            var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
+           /* var oItemEmprestimo = dtgEmprestimos.SelectedRows[0].DataBoundItem as CEmprestimo.TBEmprestimo;
             if (oItemEmprestimo != null)
             {
                 var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
                 dtgItensEmprestimos.DataSource = oProxy.SelecionaTodosCriterio(oItemEmprestimo.EmpNumEmprestimo);
-            }
+            }*/
         }
     }
 }

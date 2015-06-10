@@ -23,13 +23,6 @@ namespace BiblioLivri.View
         {
             CarregaLivros();
             CarregaIdiomas();
-            CarregaCopiaLivros();
-        }
-
-        private void CarregaCopiaLivros()
-        {
-            var oProxy = new CCopiaLivro.CCopiaLivroClient();
-            dtgCopiaLivro.DataSource = oProxy.SelecionaTodos();
         }
 
         private void CarregaLivros()
@@ -71,7 +64,7 @@ namespace BiblioLivri.View
             oCopiaLivro.DataAquisicao = DateTime.Now;
             oCopiaLivro.CoEmprestado = chkEmprestado.Checked;
             oProxy.IncluirAsync(oCopiaLivro);
-            CarregaCopiaLivros();
+          
         }
     }
 }

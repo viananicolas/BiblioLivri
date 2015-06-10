@@ -189,10 +189,10 @@ namespace BiblioLivri.View.CCopiaLivro {
         System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterioResponse")]
-        BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa);
+        BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterio", ReplyAction="http://tempuri.org/ICCopiaLivro/SelecionaTodosCriterioResponse")]
-        System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa);
+        System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -262,12 +262,12 @@ namespace BiblioLivri.View.CCopiaLivro {
             return base.Channel.SelecionaTodosAsync();
         }
         
-        public BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio, int TipoPesquisa) {
-            return base.Channel.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+        public BiblioLivri.View.CCopiaLivro.TBCopiaLivro[] SelecionaTodosCriterio(string Criterio) {
+            return base.Channel.SelecionaTodosCriterio(Criterio);
         }
         
-        public System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio, int TipoPesquisa) {
-            return base.Channel.SelecionaTodosCriterioAsync(Criterio, TipoPesquisa);
+        public System.Threading.Tasks.Task<BiblioLivri.View.CCopiaLivro.TBCopiaLivro[]> SelecionaTodosCriterioAsync(string Criterio) {
+            return base.Channel.SelecionaTodosCriterioAsync(Criterio);
         }
     }
 }

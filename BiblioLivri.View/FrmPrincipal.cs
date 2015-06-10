@@ -84,5 +84,54 @@ namespace BiblioLivri.View
             frmdevolucao.MdiParent = this;
             frmdevolucao.Show();
         }
+
+        private void eToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmconsultaautor = new FrmConsultaAutor();
+            frmconsultaautor.MdiParent = this;
+            frmconsultaautor.Show();
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmconsultaclientes = new FrmConsultaCliente();
+            frmconsultaclientes.MdiParent = this;
+            frmconsultaclientes.Show();
+        }
+
+        private void livrosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmconsultalivro = new FrmConsultaLivro();
+            frmconsultalivro.MdiParent = this;
+            frmconsultalivro.Show();
+        }
+
+        private void editorasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmconsultaeditora = new FrmConsultaEditora();
+            frmconsultaeditora.MdiParent = this;
+            frmconsultaeditora.Show();
+        }
+
+        private void gênerosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmconsultagenero = new FrmConsultaGenero();
+            frmconsultagenero.MdiParent = this;
+            frmconsultagenero.Show();
+        }
+
+        private void empréstimosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmconsultaemprestimo = new FrmConsultaEmprestimo();
+            frmconsultaemprestimo.MdiParent = this;
+            frmconsultaemprestimo.Show();
+        }
+
+        private void doaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmconsultadoacao = new FrmConsultaDoacao();
+            frmconsultadoacao.MdiParent = this;
+            frmconsultadoacao.Show();
+        }
     }
 }

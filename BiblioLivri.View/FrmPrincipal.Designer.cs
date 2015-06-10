@@ -44,6 +44,14 @@
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editorasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gênerosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empréstimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +59,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
-            this.movimentaçãoToolStripMenuItem});
+            this.movimentaçãoToolStripMenuItem,
+            this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(527, 24);
@@ -73,7 +82,7 @@
             this.pessoasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem});
             this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.pessoasToolStripMenuItem.Text = "Pessoas";
             // 
             // clientesToolStripMenuItem
@@ -89,7 +98,7 @@
             this.livrosToolStripMenuItem,
             this.cópiaDeLivroToolStripMenuItem});
             this.acervoToolStripMenuItem.Name = "acervoToolStripMenuItem";
-            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acervoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.acervoToolStripMenuItem.Text = "Acervo";
             // 
             // livrosToolStripMenuItem
@@ -113,7 +122,7 @@
             this.autorDiretorToolStripMenuItem,
             this.editorasToolStripMenuItem});
             this.outrosToolStripMenuItem.Name = "outrosToolStripMenuItem";
-            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.outrosToolStripMenuItem.Text = "Outros";
             // 
             // gênerosToolStripMenuItem
@@ -151,28 +160,91 @@
             // empréstimoToolStripMenuItem
             // 
             this.empréstimoToolStripMenuItem.Name = "empréstimoToolStripMenuItem";
-            this.empréstimoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empréstimoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.empréstimoToolStripMenuItem.Text = "Empréstimo";
             this.empréstimoToolStripMenuItem.Click += new System.EventHandler(this.empréstimoToolStripMenuItem_Click);
             // 
             // vendaToolStripMenuItem
             // 
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.vendaToolStripMenuItem.Text = "Doação";
             this.vendaToolStripMenuItem.Click += new System.EventHandler(this.vendaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(135, 6);
             // 
             // devoluçãoToolStripMenuItem
             // 
             this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.devoluçãoToolStripMenuItem.Text = "Devolução";
             this.devoluçãoToolStripMenuItem.Click += new System.EventHandler(this.devoluçãoToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem1,
+            this.livrosToolStripMenuItem1,
+            this.editorasToolStripMenuItem1,
+            this.gênerosToolStripMenuItem1,
+            this.eToolStripMenuItem,
+            this.empréstimosToolStripMenuItem,
+            this.doaçõesToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // clientesToolStripMenuItem1
+            // 
+            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
+            // 
+            // livrosToolStripMenuItem1
+            // 
+            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
+            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.livrosToolStripMenuItem1.Text = "Livros";
+            this.livrosToolStripMenuItem1.Click += new System.EventHandler(this.livrosToolStripMenuItem1_Click);
+            // 
+            // editorasToolStripMenuItem1
+            // 
+            this.editorasToolStripMenuItem1.Name = "editorasToolStripMenuItem1";
+            this.editorasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.editorasToolStripMenuItem1.Text = "Editoras";
+            this.editorasToolStripMenuItem1.Click += new System.EventHandler(this.editorasToolStripMenuItem1_Click);
+            // 
+            // gênerosToolStripMenuItem1
+            // 
+            this.gênerosToolStripMenuItem1.Name = "gênerosToolStripMenuItem1";
+            this.gênerosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.gênerosToolStripMenuItem1.Text = "Gêneros";
+            this.gênerosToolStripMenuItem1.Click += new System.EventHandler(this.gênerosToolStripMenuItem1_Click);
+            // 
+            // eToolStripMenuItem
+            // 
+            this.eToolStripMenuItem.Name = "eToolStripMenuItem";
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eToolStripMenuItem.Text = "Autores";
+            this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
+            // 
+            // empréstimosToolStripMenuItem
+            // 
+            this.empréstimosToolStripMenuItem.Name = "empréstimosToolStripMenuItem";
+            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empréstimosToolStripMenuItem.Text = "Empréstimos";
+            this.empréstimosToolStripMenuItem.Click += new System.EventHandler(this.empréstimosToolStripMenuItem_Click);
+            // 
+            // doaçõesToolStripMenuItem
+            // 
+            this.doaçõesToolStripMenuItem.Name = "doaçõesToolStripMenuItem";
+            this.doaçõesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.doaçõesToolStripMenuItem.Text = "Doações";
+            this.doaçõesToolStripMenuItem.Click += new System.EventHandler(this.doaçõesToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -210,6 +282,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem devoluçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cópiaDeLivroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem livrosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editorasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gênerosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empréstimosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doaçõesToolStripMenuItem;
     }
 }
 

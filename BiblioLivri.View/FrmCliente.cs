@@ -235,5 +235,25 @@ namespace BiblioLivri.View
                 }
             }
         }
-  }
+
+        private void cmbCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtCriterio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

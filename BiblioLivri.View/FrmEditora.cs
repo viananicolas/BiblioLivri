@@ -19,13 +19,7 @@ namespace BiblioLivri.View
 
         private void FrmEditora_Load(object sender, EventArgs e)
         {
-            CarregaGrid();
-        }
-
-        private void CarregaGrid()
-        {
-            CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
-            dtgEditoras.DataSource = oProxy.SelecionaTodos();
+           
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -37,7 +31,6 @@ namespace BiblioLivri.View
             oEditora.EdEmail = txtEmail.Text;
             oEditora.EdCidade = txtCidade.Text;
             oProxy.Incluir(oEditora);
-            CarregaGrid();
         }
     }
 }

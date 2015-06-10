@@ -32,7 +32,7 @@ namespace BiblioLivri.View
             CarregaEditora();
             CarregaPaises();
             //CarregaIdioma();
-            CarregaLivros();
+           
             CarregaGeneros();
         }
 
@@ -45,11 +45,7 @@ namespace BiblioLivri.View
             }
         }
 
-        private void CarregaLivros()
-        {
-            CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
-            dtgLivros.DataSource = oProxy.SelecionaTodos();
-        }
+        
 
         private void CarregaEditora()
         {
@@ -172,7 +168,6 @@ namespace BiblioLivri.View
 
                     }
                     oProxy.Incluir(oLivro);
-                    CarregaLivros();
                 }
 
             }
@@ -222,11 +217,11 @@ namespace BiblioLivri.View
             }
         }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
+     /*   private void btnAlterar_Click(object sender, EventArgs e)
         {
             Editar();
-        }
-        private void Editar()
+        }*/
+       /* private void Editar()
         {
             inserir = false;
             if (dtgLivros.SelectedRows.Count > 0)
@@ -243,9 +238,9 @@ namespace BiblioLivri.View
                 CarregaGeneros(id_genero);
                 cmbPais.SelectedItem = oLivro.LiPais;
             }
-        }
+        }*/
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+      /*  private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (dtgLivros.SelectedRows.Count > 0)
             {
@@ -260,17 +255,14 @@ namespace BiblioLivri.View
                     CarregaLivros();
                 }
             }
-        }
+        }*/
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+       /* private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            /*Autor
-Titulo
-ISBN
-Gênero*/
+
             var oProxy = new CLivro.CLivroClient();
             oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
 
-        }
+        }*/
     }
 }

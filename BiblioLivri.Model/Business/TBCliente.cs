@@ -38,9 +38,9 @@ namespace BiblioLivri.Model
                 try
                 {
                   odb.TBClientes.Attach(oCliente, true);
-                    #if DEBUG
+                   /* #if DEBUG
                     odb.Log = new System.IO.StreamWriter(@"D:\Faculdade\3º Ano\Desenvolvimento de Sistemas Desktop\2º BI\BiblioLivri\BiblioLivri.Model\Logs\linq-to-sql-update.log") { AutoFlush = true };
-#endif
+#endif*/
                     odb.SubmitChanges();
 
 
@@ -126,6 +126,7 @@ namespace BiblioLivri.Model
                         case (1): return (from p in odb.TBClientes where p.CliCidade == Criterio select p).ToList();
                         case (2): return (from p in odb.TBClientes where p.CliCPF == Criterio select p).ToList();
                         case (3): return (from p in odb.TBClientes where p.CliSobrenome == Criterio select p).ToList();
+                        case (4): return (from p in odb.TBClientes select p).ToList(); ;
                         default:  return (from p in odb.TBClientes select p).ToList(); ;
                     }
                 }

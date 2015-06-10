@@ -36,9 +36,9 @@ namespace BiblioLivri.Control
         {
             return Model.TBCopiaLivro.SelecionaTodos();
         }
-        public List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
+        public List<TBCopiaLivro> SelecionaTodosCriterio(string Criterio)
         {
-            return Model.TBCopiaLivro.SelecionaTodosCriterio(Criterio, TipoPesquisa);
+            return Model.TBCopiaLivro.SelecionaTodosCriterio(Criterio);
         }
     }
 }

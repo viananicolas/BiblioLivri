@@ -10,24 +10,27 @@ using System.Windows.Forms;
 
 namespace BiblioLivri.View
 {
-    public partial class FrmGenero : Form
+    public partial class FrmConsultaGenero : Form
     {
-        public FrmGenero()
+        public FrmConsultaGenero()
         {
             InitializeComponent();
         }
 
-        private void FrmGenero_Load(object sender, EventArgs e)
+        private void FrmConsultaGenero_Load(object sender, EventArgs e)
         {
-          
+            CarregaGeneros();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void CarregaGeneros()
         {
             CGenero.CGeneroClient oProxy = new CGenero.CGeneroClient();
-            CGenero.TBGenero oGenero = new CGenero.TBGenero();
-            oGenero.GeDescricao = txtDescricao.Text;
-            oProxy.Incluir(oGenero);
+            dtgGeneros.DataSource = oProxy.SelecionaTodos();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -61,6 +61,54 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaAutor.Designer.cs">
+      <DependentUpon>FrmConsultaAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaCliente.Designer.cs">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaDevolucao.Designer.cs">
+      <DependentUpon>FrmConsultaDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaDoacao.Designer.cs">
+      <DependentUpon>FrmConsultaDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaEditora.Designer.cs">
+      <DependentUpon>FrmConsultaEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaEmprestimo.Designer.cs">
+      <DependentUpon>FrmConsultaEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaGenero.Designer.cs">
+      <DependentUpon>FrmConsultaGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaLivro.Designer.cs">
+      <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCopiaLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +214,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaAutor.resx">
+      <DependentUpon>FrmConsultaAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaCliente.resx">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaDoacao.resx">
+      <DependentUpon>FrmConsultaDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaEditora.resx">
+      <DependentUpon>FrmConsultaEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaEmprestimo.resx">
+      <DependentUpon>FrmConsultaEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaGenero.resx">
+      <DependentUpon>FrmConsultaGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaLivro.resx">
+      <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCopiaLivro.resx">
       <DependentUpon>FrmCopiaLivro.cs</DependentUpon>
