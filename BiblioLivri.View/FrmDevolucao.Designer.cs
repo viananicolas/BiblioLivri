@@ -67,6 +67,7 @@
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnDevolver
             // 
@@ -76,6 +77,7 @@
             this.btnDevolver.TabIndex = 4;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = true;
+            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
             // FrmDevolucao
             // 

@@ -25,14 +25,7 @@ namespace BiblioLivri.View
           
             CarregaPaises();
             CarregaEstados();
-            CarregaGrid();
-            
-        }
-        private void CarregaGrid()
-        {
-            CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
-            dtgClientes.DataSource = oProxy.SelecionaTodos();
-
+           
         }
 
         private void CarregaEstados()
@@ -70,15 +63,15 @@ namespace BiblioLivri.View
                 oCliente.CliTelefone = txtTelefone.Text.Trim();
                 if (IsInsercao)
                 {
-                    if (oProxy.ValidaCPF(txtCPF.Text) == false)
-                    {
-                        MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                    }
-                    else
-                    {
+                    //if (oProxy.ValidaCPF(txtCPF.Text) == false)
+                    //{
+                    //    MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    //}
+                    //else
+                   // {
                         oProxy.Incluir(oCliente);
                         MessageBox.Show("Cliente inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                    }
+                    //}
                 }
                 else
                 {
@@ -88,7 +81,7 @@ namespace BiblioLivri.View
 
                 }
                 LimpaCampos();
-                CarregaGrid();
+               
 
             }
            
@@ -98,12 +91,11 @@ namespace BiblioLivri.View
             txtCelular.Text = "";
             txtCEP.Text = "";
             txtCidade.Text = "";
-            txtComplemento.Text = "";
             txtCPF.Text = "";
             txtEmail.Text = "";
             txtID.Text = "";
+            txtEndereco.Text = "";
             txtNome.Text = "";
-            txtNumero.Text = "";
             txtSobrenome.Text = "";
             txtTelefone.Text = "";
             cmbEstado.SelectedValue = null;
@@ -111,11 +103,12 @@ namespace BiblioLivri.View
         }
         public bool ValidaCampos()
         {
-           /*if (oProxy.ValidaCPF(txtCPF.Text)==false)
+            var oProxy = new CCliente.CClienteClient();
+           if (oProxy.ValidaCPF(txtCPF.Text)==false)
             {
                 MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
-            }*/
+            }
             
             if (txtCelular.Text=="")
             {
@@ -124,47 +117,37 @@ namespace BiblioLivri.View
             }
             if (txtCEP.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo CEP é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtCidade.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return false;
-            }
-            if (txtComplemento.Text == "")
-            {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo Cidade é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtCPF.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo CPF é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtEmail.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo Email é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtNome.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return false;
-            }
-            if (txtNumero.Text == "")
-            {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo Nome é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtSobrenome.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo Sobrenome é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
             if (txtTelefone.Text == "")
             {
-                MessageBox.Show("O Campo Celular é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("O Campo Telefone é de preenchimento obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 return false;
             }
 
@@ -173,32 +156,19 @@ namespace BiblioLivri.View
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-           
-            CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
-            oProxy.Open();
-            switch (cmbCriterio.SelectedIndex)
-            {
-                case (0): dtgClientes.DataSource = oProxy.SelecionaTodosConsulta(1, txtCriterio.Text); dtgClientes.Refresh(); break;
-                case (1): dtgClientes.DataSource = oProxy.SelecionaTodosConsulta(2, txtCriterio.Text); dtgClientes.Refresh(); break;
-                case (2): dtgClientes.DataSource = oProxy.SelecionaTodosConsulta(0, txtCriterio.Text); dtgClientes.Refresh(); break;
-                case (3): dtgClientes.DataSource = oProxy.SelecionaTodosConsulta(3, txtCriterio.Text); dtgClientes.Refresh(); break;
-                case (4): dtgClientes.DataSource = oProxy.SelecionaTodos(); dtgClientes.Refresh(); break;
-                default: MessageBox.Show("Selecione um critério de pesquisa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); break;
-                    
-            }
-            oProxy.Close();
+          
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Editar();
+            
         }
 
         private void dtgClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Editar();
+            
         }
-        private void Editar()
+       /* private void Editar()
         {
             IsInsercao = false;
             if (dtgClientes.SelectedRows.Count > 0)
@@ -217,23 +187,11 @@ namespace BiblioLivri.View
                 cmbEstado.SelectedItem = oCliente.CliEstado;
                 cmbPais.SelectedItem = oCliente.CliPais;
             }
-        }
+        }*/
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (dtgClientes.SelectedRows.Count > 0)
-            {
-                if (MessageBox.Show("Tem certeza?", "Confirmação", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.OK)
-                {
-                    CCliente.TBCliente oCliente = dtgClientes.SelectedRows[0].DataBoundItem as CCliente.TBCliente;
-                    CCliente.CClienteClient oProxy = new CCliente.CClienteClient();
-                    oProxy.Open();
-                    oProxy.Excluir(oCliente);
-                    MessageBox.Show("Cliente excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                    oProxy.Close();
-                    CarregaGrid();
-                }
-            }
+          
         }
 
         private void cmbCriterio_SelectedIndexChanged(object sender, EventArgs e)
@@ -254,6 +212,67 @@ namespace BiblioLivri.View
         private void txtCriterio_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IsInsercao = true;
+            HabilitaCampos();
+            txtID.Enabled = false;
+            LimpaCampos();
+        }
+
+        private void HabilitaCampos()
+        {
+            txtCelular.Enabled = true;
+            txtCEP.Enabled = true;
+            txtCidade.Enabled = true;
+            txtCPF.Enabled = true;
+            txtEmail.Enabled = true;
+            txtEndereco.Enabled = true;
+            txtNome.Enabled = true;
+            txtSobrenome.Enabled = true;
+            txtTelefone.Enabled = true;
+            cmbEstado.Enabled = true;
+            cmbPais.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IsInsercao = false;
+            txtID.Enabled = true;
+        }
+
+        private void txtID_Leave(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        private void Editar()
+        {
+            var oProxy = new CCliente.CClienteClient();
+            var oCliente = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
+            txtCelular.Text = oCliente.CliCelular;
+            txtCEP.Text = oCliente.CliCEP;
+            txtCidade.Text = oCliente.CliCidade;
+            txtCPF.Text = oCliente.CliCPF;
+            txtEmail.Text = oCliente.CliEmail;
+            txtNome.Text = oCliente.CliNome;
+            txtSobrenome.Text = oCliente.CliSobrenome;
+            txtTelefone.Text = oCliente.CliTelefone;
+            txtEndereco.Text = oCliente.CliEndereco;
+            cmbEstado.SelectedItem = oCliente.CliEstado;
+            cmbPais.SelectedItem = oCliente.CliPais;
+            HabilitaCampos();
+            txtID.Enabled = false;
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Editar();
+            }
         }
     }
 }

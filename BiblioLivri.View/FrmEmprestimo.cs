@@ -127,23 +127,30 @@ namespace BiblioLivri.View
 
         private void btnEmprestar_Click(object sender, EventArgs e)
         {
-            var oProxyEmprestimo = new CEmprestimo.CEmprestimoClient();
-            var oProxyItemEmprestimo = new CItemEmprestimo.CItemEmprestimoClient();
-            var oEmprestimo = new CEmprestimo.TBEmprestimo();
-            var oItemEmprestimo = new CItemEmprestimo.TBItemEmprestimo();
-            oEmprestimo.EmpDataDevolucao = dtpDataDevolucao.Value;
-            oEmprestimo.EmpNumCartao = NumCartao;
-            oItemEmprestimo.ItemDataEmprestimo = DateTime.Now;
-            var teste = oProxyEmprestimo.Incluir(oEmprestimo).ToList();
-            oItemEmprestimo.ItemNumEmprestimo = teste.LastOrDefault();
-            foreach (var item in LivrosEscolhidos)
+            if(cmbCliente.SelectedItem.ToString()!="")
             {
-                oItemEmprestimo.ItemNumCopia = item.CoNumCopia;
-                ListaItens.Add(oItemEmprestimo);
-                var yProxy = new CCopiaLivro.CCopiaLivroClient();
-                item.CoEmprestado = true;
-                oProxyItemEmprestimo.Incluir(oItemEmprestimo);
-                yProxy.Alterar(item);
+                var oProxyEmprestimo = new CEmprestimo.CEmprestimoClient();
+                var oProxyItemEmprestimo = new CItemEmprestimo.CItemEmprestimoClient();
+                var oEmprestimo = new CEmprestimo.TBEmprestimo();
+                var oItemEmprestimo = new CItemEmprestimo.TBItemEmprestimo();
+                oEmprestimo.EmpDataDevolucao = dtpDataDevolucao.Value;
+                oEmprestimo.EmpNumCartao = NumCartao;
+                oItemEmprestimo.ItemDataEmprestimo = DateTime.Now;
+                var teste = oProxyEmprestimo.Incluir(oEmprestimo).ToList();
+                oItemEmprestimo.ItemNumEmprestimo = teste.LastOrDefault();
+                foreach (var item in LivrosEscolhidos)
+                {
+                    oItemEmprestimo.ItemNumCopia = item.CoNumCopia;
+                    ListaItens.Add(oItemEmprestimo);
+                    var yProxy = new CCopiaLivro.CCopiaLivroClient();
+                    item.CoEmprestado = true;
+                    oProxyItemEmprestimo.Incluir(oItemEmprestimo);
+                    yProxy.Alterar(item);
+                }
+            }
+           else
+            {
+                MessageBox.Show("Por favor, selecione um cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
             //oProxyItemEmprestimo.IncluirTodos(ListaItens.ToArray());   
         }
