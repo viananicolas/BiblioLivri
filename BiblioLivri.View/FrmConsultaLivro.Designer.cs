@@ -35,6 +35,13 @@
             this.dtgLivros = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgCopiaLivro = new System.Windows.Forms.DataGridView();
+            this.LiTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LIISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LiCDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LiPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LiCapa = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLivros)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -62,7 +69,8 @@
             "Autor",
             "ISBN",
             "Gênero",
-            "Titulo"});
+            "Titulo",
+            "Todos"});
             this.cmbPesquisa.Location = new System.Drawing.Point(10, 22);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(97, 21);
@@ -83,6 +91,7 @@
             this.btnPesquisar.TabIndex = 44;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // dtgLivros
             // 
@@ -92,6 +101,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgLivros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LiTitulo,
+            this.LIISBN,
+            this.LiCDU,
+            this.LiPais,
+            this.id_Autor,
+            this.id_genero,
+            this.LiCapa});
             this.dtgLivros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgLivros.Location = new System.Drawing.Point(12, 54);
             this.dtgLivros.Name = "dtgLivros";
@@ -126,6 +143,57 @@
             this.dtgCopiaLivro.Size = new System.Drawing.Size(804, 174);
             this.dtgCopiaLivro.TabIndex = 4;
             // 
+            // LiTitulo
+            // 
+            this.LiTitulo.DataPropertyName = "LiTitulo";
+            this.LiTitulo.HeaderText = "Titulo";
+            this.LiTitulo.Name = "LiTitulo";
+            this.LiTitulo.ReadOnly = true;
+            // 
+            // LIISBN
+            // 
+            this.LIISBN.DataPropertyName = "LiISBN";
+            this.LIISBN.HeaderText = "ISBN";
+            this.LIISBN.Name = "LIISBN";
+            this.LIISBN.ReadOnly = true;
+            // 
+            // LiCDU
+            // 
+            this.LiCDU.DataPropertyName = "LiCDU";
+            this.LiCDU.HeaderText = "CDU";
+            this.LiCDU.Name = "LiCDU";
+            this.LiCDU.ReadOnly = true;
+            // 
+            // LiPais
+            // 
+            this.LiPais.DataPropertyName = "LiPais";
+            this.LiPais.HeaderText = "Pais";
+            this.LiPais.Name = "LiPais";
+            this.LiPais.ReadOnly = true;
+            // 
+            // id_Autor
+            // 
+            this.id_Autor.DataPropertyName = "id_Autor";
+            this.id_Autor.HeaderText = "ID Autor";
+            this.id_Autor.Name = "id_Autor";
+            this.id_Autor.ReadOnly = true;
+            // 
+            // id_genero
+            // 
+            this.id_genero.DataPropertyName = "id_genero";
+            this.id_genero.HeaderText = "ID Gênero";
+            this.id_genero.Name = "id_genero";
+            this.id_genero.ReadOnly = true;
+            // 
+            // LiCapa
+            // 
+            this.LiCapa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LiCapa.DataPropertyName = "LiCapa";
+            this.LiCapa.HeaderText = "Capa";
+            this.LiCapa.Name = "LiCapa";
+            this.LiCapa.ReadOnly = true;
+            this.LiCapa.Width = 38;
+            // 
             // FrmConsultaLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +202,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Name = "FrmConsultaLivro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de livros";
             this.Load += new System.EventHandler(this.FrmConsultaLivro_Load);
             this.groupBox3.ResumeLayout(false);
@@ -154,5 +223,12 @@
         private System.Windows.Forms.DataGridView dtgLivros;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dtgCopiaLivro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LiTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LIISBN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LiCDU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LiPais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_genero;
+        private System.Windows.Forms.DataGridViewImageColumn LiCapa;
     }
 }

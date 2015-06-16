@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPesquisa = new System.Windows.Forms.Button();
             this.dtgEditoras = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoras)).BeginInit();
@@ -41,7 +41,7 @@
             // 
             this.groupBox1.Controls.Add(this.cmbPesquisa);
             this.groupBox1.Controls.Add(this.txtPesquisa);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPesquisa);
             this.groupBox1.Controls.Add(this.dtgEditoras);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -56,7 +56,8 @@
             this.cmbPesquisa.FormattingEnabled = true;
             this.cmbPesquisa.Items.AddRange(new object[] {
             "Nome",
-            "Cidade"});
+            "Cidade",
+            "Todos"});
             this.cmbPesquisa.Location = new System.Drawing.Point(6, 19);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(97, 21);
@@ -69,15 +70,15 @@
             this.txtPesquisa.Size = new System.Drawing.Size(455, 20);
             this.txtPesquisa.TabIndex = 37;
             // 
-            // button1
+            // btnPesquisa
             // 
-            this.button1.Location = new System.Drawing.Point(570, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPesquisa.Location = new System.Drawing.Point(570, 17);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisa.TabIndex = 39;
+            this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtgEditoras
             // 
@@ -112,7 +113,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbPesquisa;
         private System.Windows.Forms.TextBox txtPesquisa;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.DataGridView dtgEditoras;
     }
 }

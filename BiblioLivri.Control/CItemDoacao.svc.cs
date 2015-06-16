@@ -14,27 +14,27 @@ namespace BiblioLivri.Control
     {
         public void Incluir(TBItemDoacao oDoacao)
         {
-            throw new NotImplementedException();
+            Model.TBItemDoacao.Incluir(oDoacao);
         }
 
         public void IncluirTodos(List<TBItemDoacao> oDoacao)
         {
-            throw new NotImplementedException();
+            Model.TBItemDoacao.IncluirTodos(oDoacao);
         }
 
         public TBItemDoacao SelecionaPK(int codigo)
         {
-            throw new NotImplementedException();
+            return Model.TBItemDoacao.SelecionaPK(codigo);
         }
 
         public List<TBItemDoacao> SelecionaTodos()
         {
-            throw new NotImplementedException();
+            return Model.TBItemDoacao.SelecionaTodos();
         }
 
         public List<TBItemDoacao> SelecionaTodosCriterio(int codigo)
         {
-            throw new NotImplementedException();
+            return Model.TBItemDoacao.SelecionaTodosCriterio(codigo);
         }
     }
 }

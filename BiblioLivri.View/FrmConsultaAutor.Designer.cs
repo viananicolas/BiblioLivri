@@ -68,7 +68,8 @@
             this.cmbPesquisa.Items.AddRange(new object[] {
             "Nome",
             "Sobrenome",
-            "Nacionalidade"});
+            "Nacionalidade",
+            "Todos"});
             this.cmbPesquisa.Location = new System.Drawing.Point(16, 19);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(97, 21);

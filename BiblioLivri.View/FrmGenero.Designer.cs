@@ -68,6 +68,7 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label1);
             this.Name = "FrmGenero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gêneros";
             this.Load += new System.EventHandler(this.FrmGenero_Load);
             this.ResumeLayout(false);

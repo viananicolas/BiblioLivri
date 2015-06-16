@@ -181,6 +181,7 @@
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "FrmAutor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Autores";
             this.Load += new System.EventHandler(this.FrmAutor_Load);
             this.groupBox1.ResumeLayout(false);

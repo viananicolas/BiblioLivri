@@ -53,5 +53,26 @@ namespace BiblioLivri.View
             }
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            if (cmbPesquisa.SelectedIndex==2)
+            {
+                CarregaEmprestimos();
+            }
+            else
+            {
+                if (txtPesquisa.Text!="")
+                {
+                    var oProxy = new CEmprestimo.CEmprestimoClient();
+                    dtgEmprestimos.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+                }
+            }
+        }
     }
 }

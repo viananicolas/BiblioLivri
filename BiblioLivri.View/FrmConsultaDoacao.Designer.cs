@@ -35,8 +35,8 @@
             this.dtgDoacoes = new System.Windows.Forms.DataGridView();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgItensDoados)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,14 +71,15 @@
             this.groupBox1.Controls.Add(this.dtgDoacoes);
             this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.txtPesquisa);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.btnPesquisar);
+            this.groupBox1.Controls.Add(this.cmbPesquisa);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(845, 192);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doações realizadas:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnExcluir
             // 
@@ -100,6 +101,9 @@
             this.dtgDoacoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDoacoes.Size = new System.Drawing.Size(829, 133);
             this.dtgDoacoes.TabIndex = 1;
+            this.dtgDoacoes.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgDoacoes_CellBeginEdit);
+            this.dtgDoacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDoacoes_CellContentClick);
+            this.dtgDoacoes.SelectionChanged += new System.EventHandler(this.dtgDoacoes_SelectionChanged);
             // 
             // btnAlterar
             // 
@@ -117,26 +121,28 @@
             this.txtPesquisa.Size = new System.Drawing.Size(233, 20);
             this.txtPesquisa.TabIndex = 27;
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.Location = new System.Drawing.Point(347, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Location = new System.Drawing.Point(347, 24);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 29;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // comboBox1
+            // cmbPesquisa
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPesquisa.FormattingEnabled = true;
+            this.cmbPesquisa.Items.AddRange(new object[] {
             "ID Cliente",
-            "ID Livro"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(97, 21);
-            this.comboBox1.TabIndex = 28;
+            "ID Livro",
+            "Todos"});
+            this.cmbPesquisa.Location = new System.Drawing.Point(5, 27);
+            this.cmbPesquisa.Name = "cmbPesquisa";
+            this.cmbPesquisa.Size = new System.Drawing.Size(97, 21);
+            this.cmbPesquisa.TabIndex = 28;
             // 
             // FrmConsultaDoacao
             // 
@@ -145,7 +151,10 @@
             this.ClientSize = new System.Drawing.Size(869, 376);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmConsultaDoacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Doações";
             this.Load += new System.EventHandler(this.FrmConsultaDoacao_Load);
             this.groupBox2.ResumeLayout(false);
@@ -166,7 +175,7 @@
         private System.Windows.Forms.DataGridView dtgDoacoes;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TextBox txtPesquisa;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.ComboBox cmbPesquisa;
     }
 }

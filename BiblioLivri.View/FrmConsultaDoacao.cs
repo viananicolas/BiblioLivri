@@ -19,24 +19,64 @@ namespace BiblioLivri.View
 
         private void FrmConsultaDoacao_Load(object sender, EventArgs e)
         {
-
+            CarregaDoacoes();
         }
         private void CarregaItensDoacao()
         {
             var oProxy = new CItemDoacao.CItemDoacaoClient();
             dtgItensDoados.DataSource = oProxy.SelecionaTodos();
         }
-        /*  private void CarregaItensDoacao(int codigo)
-          {
-              var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
-              dtgItensEmprestimos.DataSource = oProxy.SelecionaTodos();
-          }*/
+       
 
         private void CarregaDoacoes()
         {
             var oProxy = new CDoacao.CDoacaoClient();
             dtgDoacoes.DataSource = oProxy.SelecionaTodos();
             dtgDoacoes.ClearSelection();
+        }
+
+        private void dtgDoacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgDoacoes_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+
+        }
+
+        private void dtgDoacoes_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgDoacoes.SelectedRows.Count > 0)
+            {
+                var oItemDoacao = dtgDoacoes.SelectedRows[0].DataBoundItem as CDoacao.TBDoacao;
+                if (oItemDoacao != null)
+                {
+                    var oProxy = new CItemDoacao.CItemDoacaoClient();
+                    dtgItensDoados.DataSource = oProxy.SelecionaTodosCriterio(oItemDoacao.DoNumDoacao);
+                }
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (cmbPesquisa.SelectedIndex==3)
+            {
+                CarregaDoacoes();
+            }
+            else
+            {
+                if (txtPesquisa.Text!="")
+                {
+                    var oProxy = new CDoacao.CDoacaoClient();
+                    dtgDoacoes.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+                }
+            }
         }
     }
 }

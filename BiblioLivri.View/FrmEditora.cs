@@ -35,11 +35,13 @@ namespace BiblioLivri.View
             if (inserir)
             {
                 oProxy.Incluir(oEditora);
+                MessageBox.Show("Editora cadastrada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
             else
             {
                 oEditora.id_editora = Convert.ToInt32(txtID.Text);
                 oProxy.Alterar(oEditora);
+                MessageBox.Show("Editora alterada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
         }
 

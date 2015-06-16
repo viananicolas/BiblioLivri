@@ -108,7 +108,28 @@ namespace BiblioLivri.Model
         }
         public static List<TBEmprestimo> SelecionaTodosCriterio(string Criterio, int TipoPesquisa)
         {
-            return null;
+            using (DataContext odb = new DataContext())
+            {
+                try
+                {
+                    switch (TipoPesquisa)
+                    {
+                        case (0): return (from p in odb.TBEmprestimos where p.EmpNumCartao == Convert.ToInt32(Criterio) select p).ToList();
+                       // case (1): return (from p in odb.TBEditoras where p.EdCidade == Criterio select p).ToList();
+                        default:
+                            break;
+                    }
+                    return (from p in odb.TBEmprestimos select p).ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    odb.Dispose();
+                }
+            }
         }
     }
 }

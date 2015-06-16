@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 490);
+            this.ClientSize = new System.Drawing.Size(857, 135);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnDoar);
@@ -133,6 +133,7 @@
             this.Controls.Add(empISBNLabel);
             this.Controls.Add(empNumCartaoLabel);
             this.Name = "FrmDoacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doações";
             this.Load += new System.EventHandler(this.FrmDoacao_Load);
             this.groupBox3.ResumeLayout(false);

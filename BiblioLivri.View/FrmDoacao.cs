@@ -25,7 +25,8 @@ namespace BiblioLivri.View
 
         private void FrmDoacao_Load(object sender, EventArgs e)
         {
-
+            CarregaLivros();
+            CarregaClientes();
         }
         private void CarregaLivros()
         {
@@ -41,9 +42,7 @@ namespace BiblioLivri.View
                         cmbLivros.Items.Add(item.LiTitulo);
                         Testando.Add(Tuple.Create(item2.CoNumCopia, item.LiTitulo));
                     }
-
                 }
-
             }
         }
 
@@ -56,24 +55,6 @@ namespace BiblioLivri.View
                 cmbCliente.Items.Add(item.CliNumCartao + " - " + item.CliNome + " " + item.CliSobrenome);
             }
         }
-
-      /*  private void CarregaItensDoacao()
-        {
-            var oProxy = new CItemDoacao.CItemDoacaoClient();
-            dtgItensDoados.DataSource = oProxy.SelecionaTodos();
-        }*/
-      /*  private void CarregaItensDoacao(int codigo)
-        {
-            var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
-            dtgItensEmprestimos.DataSource = oProxy.SelecionaTodos();
-        }*/
-
-       /* private void CarregaDoacoes()
-        {
-            var oProxy = new CDoacao.CDoacaoClient();
-            dtgDoacoes.DataSource = oProxy.SelecionaTodos();
-            dtgDoacoes.ClearSelection();
-        }*/
 
         private void cmbLivros_SelectedValueChanged(object sender, EventArgs e)
         {

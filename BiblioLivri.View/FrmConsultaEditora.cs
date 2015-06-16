@@ -30,11 +30,19 @@ namespace BiblioLivri.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtPesquisa.Text != "")
+            if (cmbPesquisa.SelectedIndex == 2)
             {
-                var oProxy = new CEditora.CEditoraClient();
-                dtgEditoras.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+                CarregaGrid();
             }
+            else
+            {
+                if (txtPesquisa.Text != "")
+                {
+                    var oProxy = new CEditora.CEditoraClient();
+                    dtgEditoras.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+                }
+            }
+           
         }
     }
 }

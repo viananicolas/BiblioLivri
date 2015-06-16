@@ -41,8 +41,23 @@ namespace BiblioLivri.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var oProxy = new CAutor.CAutorClient();
-            dtgAutores.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+            if (cmbPesquisa.SelectedIndex==3)
+            {
+                CarregaGrid();
+            }
+            else
+            {
+                if(txtPesquisa.Text!="")
+                {
+                    var oProxy = new CAutor.CAutorClient();
+                    dtgAutores.DataSource = oProxy.SelecionaTodosCriterio(txtPesquisa.Text, cmbPesquisa.SelectedIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Informe um critério de pesquisa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
+            }
+           
         }
     }
 }

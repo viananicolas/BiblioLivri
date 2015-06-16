@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(447, 268);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmConsultaGenero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de gêneros";
             this.Load += new System.EventHandler(this.FrmConsultaGenero_Load);
             this.groupBox1.ResumeLayout(false);

@@ -151,6 +151,12 @@
     <Compile Include="FrmLivro.Designer.cs">
       <DependentUpon>FrmLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <EmbeddedResource Include="FrmLivro.resx">
       <DependentUpon>FrmLivro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +277,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -484,6 +494,27 @@
     <Content Include="Information\ListaEstado.txt" />
     <Content Include="Information\ListaIdioma.txt" />
     <Content Include="Information\ListaPaises.txt" />
+    <Content Include="Resources\acervo.png" />
+    <Content Include="Resources\consultaCliente.png" />
+    <Content Include="Resources\copiaLivro.png" />
+    <Content Include="Resources\copiaLivro1.png" />
+    <Content Include="Resources\doados.jpg" />
+    <Content Include="Resources\emprestimo.png" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\iCal.png" />
+    <Content Include="Resources\Information 2.png" />
+    <Content Include="Resources\Internet Settings.png" />
+    <Content Include="Resources\livros.jpg" />
+    <Content Include="Resources\livros.png" />
+    <Content Include="Resources\livros1.jpg" />
+    <Content Include="Resources\livros1.png" />
+    <Content Include="Resources\livros12ok.png" />
+    <Content Include="Resources\livros12ok1.png" />
+    <None Include="Resources\livros2.png" />
+    <Content Include="Resources\outros.png" />
+    <Content Include="Resources\pessoas.png" />
+    <Content Include="Resources\teste1.png" />
+    <None Include="Resources\addCliente.png" />
     <None Include="Service References\CItemDoacao\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
