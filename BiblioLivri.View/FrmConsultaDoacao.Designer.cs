@@ -30,10 +30,13 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgItensDoados = new System.Windows.Forms.DataGridView();
+            this.ItemNumDoacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemNumCopia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDataDoacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.dtgDoacoes = new System.Windows.Forms.DataGridView();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.DoNumDoacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoNumClienteDoador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
@@ -48,7 +51,7 @@
             this.groupBox2.Controls.Add(this.dtgItensDoados);
             this.groupBox2.Location = new System.Drawing.Point(12, 210);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(842, 159);
+            this.groupBox2.Size = new System.Drawing.Size(449, 159);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalhes da doação:";
@@ -58,61 +61,83 @@
             this.dtgItensDoados.AllowUserToAddRows = false;
             this.dtgItensDoados.AllowUserToDeleteRows = false;
             this.dtgItensDoados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgItensDoados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemNumDoacao,
+            this.ItemNumCopia,
+            this.ItemDataDoacao});
             this.dtgItensDoados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgItensDoados.Location = new System.Drawing.Point(6, 19);
             this.dtgItensDoados.Name = "dtgItensDoados";
             this.dtgItensDoados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgItensDoados.Size = new System.Drawing.Size(829, 134);
+            this.dtgItensDoados.Size = new System.Drawing.Size(436, 134);
             this.dtgItensDoados.TabIndex = 9;
+            // 
+            // ItemNumDoacao
+            // 
+            this.ItemNumDoacao.DataPropertyName = "ItemNumDoacao";
+            this.ItemNumDoacao.HeaderText = "Nº Doação";
+            this.ItemNumDoacao.Name = "ItemNumDoacao";
+            this.ItemNumDoacao.ReadOnly = true;
+            // 
+            // ItemNumCopia
+            // 
+            this.ItemNumCopia.DataPropertyName = "ItemNumCopia";
+            this.ItemNumCopia.HeaderText = "Nº Cópia";
+            this.ItemNumCopia.Name = "ItemNumCopia";
+            this.ItemNumCopia.ReadOnly = true;
+            // 
+            // ItemDataDoacao
+            // 
+            this.ItemDataDoacao.DataPropertyName = "ItemDataDoacao";
+            this.ItemDataDoacao.HeaderText = "Data da doação";
+            this.ItemDataDoacao.Name = "ItemDataDoacao";
+            this.ItemDataDoacao.ReadOnly = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.dtgDoacoes);
-            this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.txtPesquisa);
             this.groupBox1.Controls.Add(this.btnPesquisar);
             this.groupBox1.Controls.Add(this.cmbPesquisa);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(845, 192);
+            this.groupBox1.Size = new System.Drawing.Size(452, 192);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doações realizadas:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(753, 24);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 31;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // dtgDoacoes
             // 
             this.dtgDoacoes.AllowUserToAddRows = false;
             this.dtgDoacoes.AllowUserToDeleteRows = false;
             this.dtgDoacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDoacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DoNumDoacao,
+            this.DoNumClienteDoador});
             this.dtgDoacoes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgDoacoes.Location = new System.Drawing.Point(5, 53);
             this.dtgDoacoes.Name = "dtgDoacoes";
             this.dtgDoacoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDoacoes.Size = new System.Drawing.Size(829, 133);
+            this.dtgDoacoes.Size = new System.Drawing.Size(436, 133);
             this.dtgDoacoes.TabIndex = 1;
             this.dtgDoacoes.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgDoacoes_CellBeginEdit);
             this.dtgDoacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDoacoes_CellContentClick);
             this.dtgDoacoes.SelectionChanged += new System.EventHandler(this.dtgDoacoes_SelectionChanged);
             // 
-            // btnAlterar
+            // DoNumDoacao
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(672, 24);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 30;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.DoNumDoacao.DataPropertyName = "DoNumDoacao";
+            this.DoNumDoacao.HeaderText = "Nº Doação";
+            this.DoNumDoacao.Name = "DoNumDoacao";
+            this.DoNumDoacao.ReadOnly = true;
+            // 
+            // DoNumClienteDoador
+            // 
+            this.DoNumClienteDoador.DataPropertyName = "DoNumClienteDoador";
+            this.DoNumClienteDoador.HeaderText = "Nº Cartão Cliente Doador";
+            this.DoNumClienteDoador.Name = "DoNumClienteDoador";
+            this.DoNumClienteDoador.ReadOnly = true;
             // 
             // txtPesquisa
             // 
@@ -148,11 +173,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 376);
+            this.ClientSize = new System.Drawing.Size(472, 376);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmConsultaDoacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Doações";
@@ -171,11 +197,14 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dtgItensDoados;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridView dtgDoacoes;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.ComboBox cmbPesquisa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNumDoacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNumCopia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDataDoacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoNumDoacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoNumClienteDoador;
     }
 }

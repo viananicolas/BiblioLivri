@@ -28,6 +28,7 @@ namespace BiblioLivri.View
             CGenero.TBGenero oGenero = new CGenero.TBGenero();
             oGenero.GeDescricao = txtDescricao.Text;
             oProxy.Incluir(oGenero);
+            txtDescricao.Text = "";
         }
     }
 }

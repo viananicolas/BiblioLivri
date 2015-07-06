@@ -33,6 +33,11 @@
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.dtgEditoras = new System.Windows.Forms.DataGridView();
+            this.id_editora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EdNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EdCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EdEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EdTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoras)).BeginInit();
             this.SuspendLayout();
@@ -86,10 +91,52 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgEditoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEditoras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_editora,
+            this.EdNome,
+            this.EdCidade,
+            this.EdEmail,
+            this.EdTelefone});
             this.dtgEditoras.Location = new System.Drawing.Point(3, 45);
             this.dtgEditoras.Name = "dtgEditoras";
+            this.dtgEditoras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEditoras.Size = new System.Drawing.Size(642, 119);
             this.dtgEditoras.TabIndex = 2;
+            // 
+            // id_editora
+            // 
+            this.id_editora.DataPropertyName = "id_editora";
+            this.id_editora.HeaderText = "ID Editora";
+            this.id_editora.Name = "id_editora";
+            this.id_editora.ReadOnly = true;
+            // 
+            // EdNome
+            // 
+            this.EdNome.DataPropertyName = "EdNome";
+            this.EdNome.HeaderText = "Nome";
+            this.EdNome.Name = "EdNome";
+            this.EdNome.ReadOnly = true;
+            // 
+            // EdCidade
+            // 
+            this.EdCidade.DataPropertyName = "EdCidade";
+            this.EdCidade.HeaderText = "Cidade";
+            this.EdCidade.Name = "EdCidade";
+            this.EdCidade.ReadOnly = true;
+            // 
+            // EdEmail
+            // 
+            this.EdEmail.DataPropertyName = "EdEmail";
+            this.EdEmail.HeaderText = "Email";
+            this.EdEmail.Name = "EdEmail";
+            this.EdEmail.ReadOnly = true;
+            // 
+            // EdTelefone
+            // 
+            this.EdTelefone.DataPropertyName = "EdTelefone";
+            this.EdTelefone.HeaderText = "Telefone";
+            this.EdTelefone.Name = "EdTelefone";
+            this.EdTelefone.ReadOnly = true;
             // 
             // FrmConsultaEditora
             // 
@@ -97,6 +144,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 207);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "FrmConsultaEditora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Editoras";
@@ -115,5 +164,10 @@
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.DataGridView dtgEditoras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_editora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EdNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EdCidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EdEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EdTelefone;
     }
 }

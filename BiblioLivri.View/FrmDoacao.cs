@@ -115,6 +115,8 @@ namespace BiblioLivri.View
                 ListaItens.Add(oItemDoacao);
                 oProxyItemDoacao.Incluir(oItemDoacao);
             }
+            MessageBox.Show("Doações registradas com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
         }
     }
 }

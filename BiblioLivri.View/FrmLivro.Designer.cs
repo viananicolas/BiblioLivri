@@ -48,11 +48,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbAutor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCapa)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -125,6 +125,7 @@
             this.txtISBN.Size = new System.Drawing.Size(137, 20);
             this.txtISBN.TabIndex = 18;
             this.txtISBN.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtISBN.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtISBN_MaskInputRejected);
             this.txtISBN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtISBN_KeyDown);
             this.txtISBN.Leave += new System.EventHandler(this.txtISBN_Leave);
             // 
@@ -267,22 +268,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Autor:";
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.Location = new System.Drawing.Point(168, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalvar.Location = new System.Drawing.Point(168, 25);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 3;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnExcluir);
+            this.groupBox3.Controls.Add(this.btnAlterar);
+            this.groupBox3.Controls.Add(this.btnNovo);
+            this.groupBox3.Controls.Add(this.btnSalvar);
             this.groupBox3.Location = new System.Drawing.Point(23, 216);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(371, 54);
@@ -290,35 +291,35 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ações:";
             // 
-            // button4
+            // btnExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(255, 25);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnExcluir.Location = new System.Drawing.Point(255, 25);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 6;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnAlterar
             // 
-            this.button3.Location = new System.Drawing.Point(87, 25);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Alterar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAlterar.Location = new System.Drawing.Point(87, 25);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnNovo
             // 
-            this.button2.Location = new System.Drawing.Point(6, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Novo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnNovo.Location = new System.Drawing.Point(6, 25);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.TabIndex = 4;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmLivro
             // 
@@ -328,6 +329,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -354,7 +356,7 @@
         private System.Windows.Forms.ComboBox cmbAutor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCapa;
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.Label label11;
@@ -366,8 +368,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtISBN;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnNovo;
     }
 }

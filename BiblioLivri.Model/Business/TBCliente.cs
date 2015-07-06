@@ -122,11 +122,15 @@ namespace BiblioLivri.Model
                 {
                     switch (Criteria)
                     {
-                        case (0): return (from p in odb.TBClientes where p.CliNome == Criterio select p).ToList();
-                        case (1): return (from p in odb.TBClientes where p.CliCidade == Criterio select p).ToList();
-                        case (2): return (from p in odb.TBClientes where p.CliCPF == Criterio select p).ToList();
+                        /*Cidade
+CPF
+Nome
+Sobrenome
+Todos*/
+                        case (0): return (from p in odb.TBClientes where p.CliCidade == Criterio select p).ToList();
+                        case (1): return (from p in odb.TBClientes where p.CliCPF == Criterio select p).ToList();
+                        case (2): return (from p in odb.TBClientes where p.CliNome == Criterio select p).ToList();
                         case (3): return (from p in odb.TBClientes where p.CliSobrenome == Criterio select p).ToList();
-                        case (4): return (from p in odb.TBClientes select p).ToList(); ;
                         default:  return (from p in odb.TBClientes select p).ToList(); ;
                     }
                 }

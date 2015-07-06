@@ -30,13 +30,9 @@ namespace BiblioLivri.View
         }
         private void CarregaGrid()
         {
-            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-            oProxy.Open();
-            CAutor.TBAutor[] testes = oProxy.SelecionaTodos();
-            dtgAutores.DataSource = null;
-            dtgAutores.DataSource = testes;
-            dtgAutores.Refresh();
-            oProxy.Close();
+            dtgAutores.AutoGenerateColumns = false;
+            var oProxy = new CAutor.CAutorClient();
+            dtgAutores.DataSource = oProxy.SelecionaTodos();
         }
 
         private void button1_Click(object sender, EventArgs e)

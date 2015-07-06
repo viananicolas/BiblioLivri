@@ -115,11 +115,18 @@ namespace BiblioLivri.View
                 FileInfo imginfo = new FileInfo(filelocation);
                 var imgsize = imginfo.Length;
                 //  byte imgbytesize = Convert.ToInt32(imgsize);
-                imgbytesize = new byte[Convert.ToInt32(imgsize)];
-                FileStream fs = new FileStream(filelocation, FileMode.Open, FileAccess.Read, FileShare.Read);
-                var bytesread = fs.Read(imgbytesize, 0, Convert.ToInt32(imgsize));
-                fs.Close();
-                pbCapa.ImageLocation = filelocation;
+                if (imgsize>40960)
+                {
+                    MessageBox.Show("A imagem deve ser menor do que 40KB", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                }
+                else
+                {
+                    imgbytesize = new byte[Convert.ToInt32(imgsize)];
+                    FileStream fs = new FileStream(filelocation, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    var bytesread = fs.Read(imgbytesize, 0, Convert.ToInt32(imgsize));
+                    fs.Close();
+                    pbCapa.ImageLocation = filelocation;
+                }
             }
         }
         private void CarregaPaises()
@@ -147,29 +154,50 @@ namespace BiblioLivri.View
                     oLivro.LiTitulo = txtTitulo.Text;
                     if (inserir)
                     {
-                       /* if (oProxy.ValidaISBN(txtISBN.Text))
-                        {
-                            MessageBox.Show("ISBN já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                        }*/
-                       // else
-                       // {
                             oProxy.Incluir(oLivro);
                             MessageBox.Show("Livro inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
-                       // }
                     }
                     else
                     {
                         oLivro.LiISBN = txtISBN.Text;
                         oProxy.Alterar(oLivro);
                         MessageBox.Show("Livro alterado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-
                     }
                   
                 }
 
             }
+            LimpaCampos();
+            DesabilitaCampos();
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+        }
 
+        private void DesabilitaCampos()
+        {
+            txtCDU.Enabled = false;
+            txtISBN.Enabled = false;
+            txtNumPaginas.Enabled = false;
+            txtTitulo.Enabled = false;
+            btnCapa.Enabled = false;
+            cmbAutor.Enabled = false;
+            cmbEditora.Enabled = false;
+            cmbGenero.Enabled = false;
+            cmbPais.Enabled = false;
+        }
+
+        private void LimpaCampos()
+        {
+            txtCDU.Text = "";
+            txtISBN.Text = "";
+            txtNumPaginas.Text = "";
+            txtTitulo.Text = "";
+            btnCapa.Image = null;
+            cmbAutor.SelectedText = "";
+            cmbEditora.SelectedText = "";
+            cmbGenero.SelectedText = "";
+            cmbPais.SelectedText = "";
         }
 
         private bool ValidaCampos()
@@ -225,12 +253,13 @@ namespace BiblioLivri.View
         {
             inserir = true;
             HabilitaCampos();
+            LimpaCampos();
+            btnNovo.Enabled = false;
         }
 
         private void HabilitaCampos()
         {
             txtCDU.Enabled = true;
-            // txtID.Enabled = true;
             txtISBN.Enabled = true;
             txtNumPaginas.Enabled = true;
             txtTitulo.Enabled = true;
@@ -245,6 +274,8 @@ namespace BiblioLivri.View
         {
             inserir = false;
             txtISBN.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnNovo.Enabled = false;
         }
 
         private void txtID_KeyDown(object sender, KeyEventArgs e)
@@ -264,30 +295,45 @@ namespace BiblioLivri.View
            
             using (var oProxy = new CLivro.CLivroClient())
             {
-                var oLivro = oProxy.SelecionaPK(txtISBN.Text);
-                txtCDU.Text = oLivro.LiCDU;
-                txtNumPaginas.Text = oLivro.LiPagina;
-                txtTitulo.Text = oLivro.LiTitulo;
-                var aProxy = new CAutor.CAutorClient();
-                var oAutor = aProxy.SelecionaPK(oLivro.id_autor);
-                var bProxy = new CEditora.CEditoraClient();
-                var oEditora = bProxy.SelecionaPK(oLivro.ID_Editora);
-                cmbAutor.Items.Clear();
-                cmbEditora.Items.Clear();
-                cmbGenero.Items.Clear();
-                CarregaAutores(oLivro.id_autor);
-                CarregaEditora(oLivro.ID_Editora);
-                CarregaGeneros(oLivro.id_genero);
-                cmbPais.SelectedItem = oLivro.LiPais;
-                imgbytesize = oLivro.LiCapa;
-                string strfn = Convert.ToString(DateTime.Now.ToFileTime());
-                FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
-                fs.Write(imgbytesize, 0, imgbytesize.Length);
-                fs.Flush();
-                fs.Close();
-                pbCapa.Image = Image.FromFile(strfn);
-                HabilitaCampos();
-                txtISBN.Enabled = false;
+                    if (txtISBN.Text != "")
+                    {
+                      var oLivro = oProxy.SelecionaPK(txtISBN.Text);
+                       if (oLivro!=null)
+                        {
+                            txtCDU.Text = oLivro.LiCDU;
+                            txtNumPaginas.Text = oLivro.LiPagina;
+                            txtTitulo.Text = oLivro.LiTitulo;
+                            var aProxy = new CAutor.CAutorClient();
+                            var oAutor = aProxy.SelecionaPK(oLivro.id_autor);
+                            var bProxy = new CEditora.CEditoraClient();
+                            var oEditora = bProxy.SelecionaPK(oLivro.ID_Editora);
+                            cmbAutor.Items.Clear();
+                            cmbEditora.Items.Clear();
+                            cmbGenero.Items.Clear();
+                            CarregaAutores(oLivro.id_autor);
+                            CarregaEditora(oLivro.ID_Editora);
+                            CarregaGeneros(oLivro.id_genero);
+                            cmbPais.SelectedItem = oLivro.LiPais;
+                            imgbytesize = oLivro.LiCapa;
+                            string strfn = Convert.ToString(DateTime.Now.ToFileTime());
+                            FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
+                            fs.Write(imgbytesize, 0, imgbytesize.Length);
+                            fs.Flush();
+                            fs.Close();
+                            pbCapa.Image = Image.FromFile(strfn);
+                            HabilitaCampos();
+                            txtISBN.Enabled = false;
+                        }
+                       else
+                        {
+                            MessageBox.Show("ISBN não consta no acervo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Informe um valor de ISBN", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    }
+
                 }
         }
 
@@ -313,5 +359,9 @@ namespace BiblioLivri.View
             Editar();
         }
 
+        private void txtISBN_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

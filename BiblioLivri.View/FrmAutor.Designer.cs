@@ -68,6 +68,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(54, 20);
             this.txtID.TabIndex = 7;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             this.txtID.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label4
@@ -91,6 +92,7 @@
             // cmbNacionalidade
             // 
             this.cmbNacionalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNacionalidade.Enabled = false;
             this.cmbNacionalidade.FormattingEnabled = true;
             this.cmbNacionalidade.Location = new System.Drawing.Point(93, 101);
             this.cmbNacionalidade.Name = "cmbNacionalidade";
@@ -99,6 +101,7 @@
             // 
             // txtSobrenome
             // 
+            this.txtSobrenome.Enabled = false;
             this.txtSobrenome.Location = new System.Drawing.Point(81, 75);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(298, 20);
@@ -115,6 +118,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(55, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(324, 20);
@@ -179,6 +183,7 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmAutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

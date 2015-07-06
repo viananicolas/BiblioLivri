@@ -56,7 +56,7 @@
             // empISBNLabel
             // 
             empISBNLabel.AutoSize = true;
-            empISBNLabel.Location = new System.Drawing.Point(335, 12);
+            empISBNLabel.Location = new System.Drawing.Point(13, 42);
             empISBNLabel.Name = "empISBNLabel";
             empISBNLabel.Size = new System.Drawing.Size(33, 13);
             empISBNLabel.TabIndex = 4;
@@ -65,7 +65,7 @@
             // empDataDevolucaoLabel
             // 
             empDataDevolucaoLabel.AutoSize = true;
-            empDataDevolucaoLabel.Location = new System.Drawing.Point(7, 39);
+            empDataDevolucaoLabel.Location = new System.Drawing.Point(363, 13);
             empDataDevolucaoLabel.Name = "empDataDevolucaoLabel";
             empDataDevolucaoLabel.Size = new System.Drawing.Size(112, 13);
             empDataDevolucaoLabel.TabIndex = 6;
@@ -73,7 +73,7 @@
             // 
             // dtpDataDevolucao
             // 
-            this.dtpDataDevolucao.Location = new System.Drawing.Point(125, 35);
+            this.dtpDataDevolucao.Location = new System.Drawing.Point(477, 7);
             this.dtpDataDevolucao.Name = "dtpDataDevolucao";
             this.dtpDataDevolucao.Size = new System.Drawing.Size(250, 20);
             this.dtpDataDevolucao.TabIndex = 7;
@@ -84,7 +84,7 @@
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(52, 9);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(277, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(291, 21);
             this.cmbCliente.TabIndex = 8;
             this.cmbCliente.SelectedValueChanged += new System.EventHandler(this.cmbCliente_SelectedValueChanged);
             // 
@@ -92,7 +92,7 @@
             // 
             this.cmbLivros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLivros.FormattingEnabled = true;
-            this.cmbLivros.Location = new System.Drawing.Point(374, 9);
+            this.cmbLivros.Location = new System.Drawing.Point(52, 39);
             this.cmbLivros.Name = "cmbLivros";
             this.cmbLivros.Size = new System.Drawing.Size(291, 21);
             this.cmbLivros.TabIndex = 9;
@@ -100,17 +100,17 @@
             // 
             // btnEmprestar
             // 
-            this.btnEmprestar.Location = new System.Drawing.Point(382, 37);
+            this.btnEmprestar.Location = new System.Drawing.Point(16, 150);
             this.btnEmprestar.Name = "btnEmprestar";
             this.btnEmprestar.Size = new System.Drawing.Size(75, 23);
             this.btnEmprestar.TabIndex = 12;
-            this.btnEmprestar.Text = "Emprestar:";
+            this.btnEmprestar.Text = "Emprestar";
             this.btnEmprestar.UseVisualStyleBackColor = true;
             this.btnEmprestar.Click += new System.EventHandler(this.btnEmprestar_Click);
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(671, 7);
+            this.btnInserir.Location = new System.Drawing.Point(349, 37);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 13;
@@ -126,15 +126,15 @@
             this.lsBLivrosSelecionados.FormattingEnabled = true;
             this.lsBLivrosSelecionados.Location = new System.Drawing.Point(6, 19);
             this.lsBLivrosSelecionados.Name = "lsBLivrosSelecionados";
-            this.lsBLivrosSelecionados.Size = new System.Drawing.Size(354, 43);
+            this.lsBLivrosSelecionados.Size = new System.Drawing.Size(400, 43);
             this.lsBLivrosSelecionados.TabIndex = 14;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lsBLivrosSelecionados);
-            this.groupBox3.Location = new System.Drawing.Point(475, 39);
+            this.groupBox3.Location = new System.Drawing.Point(12, 66);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(366, 78);
+            this.groupBox3.Size = new System.Drawing.Size(412, 78);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Livros selecionados:";
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 129);
+            this.ClientSize = new System.Drawing.Size(739, 180);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnEmprestar);
@@ -153,6 +153,8 @@
             this.Controls.Add(this.dtpDataDevolucao);
             this.Controls.Add(empISBNLabel);
             this.Controls.Add(empNumCartaoLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmEmprestimo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Realizar empréstimo";

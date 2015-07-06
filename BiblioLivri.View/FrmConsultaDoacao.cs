@@ -23,6 +23,7 @@ namespace BiblioLivri.View
         }
         private void CarregaItensDoacao()
         {
+            dtgItensDoados.AutoGenerateColumns = false;
             var oProxy = new CItemDoacao.CItemDoacaoClient();
             dtgItensDoados.DataSource = oProxy.SelecionaTodos();
         }
@@ -30,6 +31,7 @@ namespace BiblioLivri.View
 
         private void CarregaDoacoes()
         {
+            dtgDoacoes.AutoGenerateColumns = false;
             var oProxy = new CDoacao.CDoacaoClient();
             dtgDoacoes.DataSource = oProxy.SelecionaTodos();
             dtgDoacoes.ClearSelection();

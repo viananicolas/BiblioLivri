@@ -42,6 +42,8 @@ namespace BiblioLivri.View
                 oAutor.AuNome = txtNome.Text;
                 oAutor.AuNacionalidade = cmbNacionalidade.SelectedItem.ToString();
                 oProxy.Incluir(oAutor);
+                MessageBox.Show("Autor inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
             }
             else
             {
@@ -52,9 +54,21 @@ namespace BiblioLivri.View
                 oAutor.AuNome = txtNome.Text;
                 oAutor.AuNacionalidade = cmbNacionalidade.SelectedItem.ToString();
                 oProxy.Alterar(oAutor);
+                MessageBox.Show("Autor alterado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
             }
             LimpaCampos();
+            DesabilitaCampos();
+            btnNovo.Enabled = true;
         }
+
+        private void DesabilitaCampos()
+        {
+            txtNome.Enabled = false;
+            txtSobrenome.Enabled = false;
+            cmbNacionalidade.Enabled = false;
+        }
+
         private void LimpaCampos()
         {
             txtSobrenome.Text = "";
@@ -66,7 +80,15 @@ namespace BiblioLivri.View
         {
             Incluir = true;
             LimpaCampos();
+            HabilitaCampos();
+            btnNovo.Enabled = false;
+        }
 
+        private void HabilitaCampos()
+        {
+            txtNome.Enabled = true;
+            txtSobrenome.Enabled = true;
+            cmbNacionalidade.Enabled = true;
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
@@ -89,6 +111,11 @@ namespace BiblioLivri.View
         {
             txtID.Enabled = true;
             LimpaCampos();
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

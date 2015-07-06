@@ -79,12 +79,16 @@ namespace BiblioLivri.View
             {
                 oCopiaLivro.DataAquisicao = DateTime.Now;
                 oProxy.IncluirAsync(oCopiaLivro);
+                MessageBox.Show("Cópia do livro "+cmbLivro.SelectedItem.ToString()+" inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
             }
-           
+
             else
             {
                 oCopiaLivro.CoNumCopia = Convert.ToInt32(txtNumCopia.Text);
                 oProxy.Alterar(oCopiaLivro);
+                MessageBox.Show("Cópia do livro " + cmbLivro.SelectedItem.ToString() + " alterada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
             }
             LimpaCampos();
         }
@@ -131,24 +135,38 @@ namespace BiblioLivri.View
             txtAno.Text = "";
             txtEdicao.Text = "";
             txtNumCopia.Text = "";
-            cmbIdioma.SelectedItem = "";
-            cmbLivro.SelectedItem = "";
+            cmbIdioma.SelectedText= "";
+            cmbLivro.SelectedText = "";
             chkEmprestado.Checked = false;
         }
         private void Editar()
         {
-            
-            var oProxy = new CCopiaLivro.CCopiaLivroClient();
-            var oCopiaLivro = oProxy.SelecionaPK(Convert.ToInt32(txtNumCopia.Text));
-            txtAno.Text = oCopiaLivro.CoAno;
-            txtEdicao.Text = oCopiaLivro.CoEdicao;
-            cmbIdioma.SelectedItem = oCopiaLivro.CoIdioma;
-            cmbLivro.Items.Clear();
-            CarregaLivros(oCopiaLivro.CoISBN);
-            ISBN = oCopiaLivro.CoISBN;
-            chkEmprestado.Checked = oCopiaLivro.CoEmprestado;
-            HabilitaCampos();
-            txtNumCopia.Enabled = false;
+            if (txtNumCopia.Text!="")
+            {
+                var oProxy = new CCopiaLivro.CCopiaLivroClient();
+                var oCopiaLivro = oProxy.SelecionaPK(Convert.ToInt32(txtNumCopia.Text));
+                if (oCopiaLivro != null)
+                {
+                    txtAno.Text = oCopiaLivro.CoAno;
+                    txtEdicao.Text = oCopiaLivro.CoEdicao;
+                    cmbIdioma.SelectedItem = oCopiaLivro.CoIdioma;
+                    cmbLivro.Items.Clear();
+                    CarregaLivros(oCopiaLivro.CoISBN);
+                    ISBN = oCopiaLivro.CoISBN;
+                    chkEmprestado.Checked = oCopiaLivro.CoEmprestado;
+                    HabilitaCampos();
+                    txtNumCopia.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Cópia não consta no acervo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Informe um número de cópia", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)

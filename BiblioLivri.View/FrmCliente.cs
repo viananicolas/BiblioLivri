@@ -63,28 +63,28 @@ namespace BiblioLivri.View
                 oCliente.CliTelefone = txtTelefone.Text.Trim();
                 if (IsInsercao)
                 {
-                    //if (oProxy.ValidaCPF(txtCPF.Text) == false)
-                    //{
-                    //    MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                    //}
-                    //else
-                   // {
+                    if (oProxy.ValidaCPF(txtCPF.Text) == false)
+                    {
+                        MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    }
+                    else
+                    {
                         oProxy.Incluir(oCliente);
                         MessageBox.Show("Cliente inserido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                    //}
+                        LimpaCampos();
+                        btnNovo.Enabled = true;
+                    }
                 }
                 else
                 {
                     oCliente.CliNumCartao = Convert.ToInt32(txtID.Text);
                     oProxy.Alterar(oCliente);
                     MessageBox.Show("Cliente alterado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-
+                    LimpaCampos();
+                    btnAlterar.Enabled = true;
+                    btnNovo.Enabled = true;
                 }
-                LimpaCampos();
-               
-
             }
-           
         }
         public void LimpaCampos()
         {
@@ -98,17 +98,11 @@ namespace BiblioLivri.View
             txtNome.Text = "";
             txtSobrenome.Text = "";
             txtTelefone.Text = "";
-            cmbEstado.SelectedValue = null;
-            cmbPais.SelectedValue = null;   
+            cmbEstado.SelectedItem = null;
+            cmbPais.SelectedItem = null;   
         }
         public bool ValidaCampos()
         {
-            var oProxy = new CCliente.CClienteClient();
-           if (oProxy.ValidaCPF(txtCPF.Text)==false)
-            {
-                MessageBox.Show("CPF já consta no Banco de Dados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return false;
-            }
             
             if (txtCelular.Text=="")
             {
@@ -168,26 +162,6 @@ namespace BiblioLivri.View
         {
             
         }
-       /* private void Editar()
-        {
-            IsInsercao = false;
-            if (dtgClientes.SelectedRows.Count > 0)
-            {
-                CCliente.TBCliente oCliente = dtgClientes.SelectedRows[0].DataBoundItem as CCliente.TBCliente;
-                txtCelular.Text = oCliente.CliCelular;
-
-                txtID.Text = oCliente.CliNumCartao.ToString();
-                txtCEP.Text = oCliente.CliCEP;
-                txtCidade.Text = oCliente.CliCidade;
-                txtCPF.Text = oCliente.CliCPF;
-                txtEmail.Text = oCliente.CliEmail;
-                txtNome.Text = oCliente.CliNome;
-                txtSobrenome.Text = oCliente.CliSobrenome;
-                txtTelefone.Text = oCliente.CliTelefone;
-                cmbEstado.SelectedItem = oCliente.CliEstado;
-                cmbPais.SelectedItem = oCliente.CliPais;
-            }
-        }*/
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -220,6 +194,7 @@ namespace BiblioLivri.View
             HabilitaCampos();
             txtID.Enabled = false;
             LimpaCampos();
+            btnNovo.Enabled = false;
         }
 
         private void HabilitaCampos()
@@ -241,6 +216,8 @@ namespace BiblioLivri.View
         {
             IsInsercao = false;
             txtID.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnNovo.Enabled = false;
         }
 
         private void txtID_Leave(object sender, EventArgs e)
@@ -251,20 +228,47 @@ namespace BiblioLivri.View
         private void Editar()
         {
             var oProxy = new CCliente.CClienteClient();
-            var oCliente = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
-            txtCelular.Text = oCliente.CliCelular;
-            txtCEP.Text = oCliente.CliCEP;
-            txtCidade.Text = oCliente.CliCidade;
-            txtCPF.Text = oCliente.CliCPF;
-            txtEmail.Text = oCliente.CliEmail;
-            txtNome.Text = oCliente.CliNome;
-            txtSobrenome.Text = oCliente.CliSobrenome;
-            txtTelefone.Text = oCliente.CliTelefone;
-            txtEndereco.Text = oCliente.CliEndereco;
-            cmbEstado.SelectedItem = oCliente.CliEstado;
-            cmbPais.SelectedItem = oCliente.CliPais;
-            HabilitaCampos();
-            txtID.Enabled = false;
+            CCliente.TBCliente oCliente = new CCliente.TBCliente();
+            if (txtID.Text!="")
+            {
+                int cartao;
+                if (int.TryParse(txtID.Text, out cartao))
+                {
+                    oCliente = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
+                    if (oCliente != null)
+                    {
+                        txtCelular.Text = oCliente.CliCelular;
+                        txtCEP.Text = oCliente.CliCEP;
+                        txtCidade.Text = oCliente.CliCidade;
+                        txtCPF.Text = oCliente.CliCPF;
+                        txtEmail.Text = oCliente.CliEmail;
+                        txtNome.Text = oCliente.CliNome;
+                        txtSobrenome.Text = oCliente.CliSobrenome;
+                        txtTelefone.Text = oCliente.CliTelefone;
+                        txtEndereco.Text = oCliente.CliEndereco;
+                        cmbEstado.SelectedItem = oCliente.CliEstado;
+                        cmbPais.SelectedItem = oCliente.CliPais;
+                        HabilitaCampos();
+                        txtID.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Número do cartão não existe", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Caracteres inválidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+
+            }
+            else
+            {
+                    MessageBox.Show("Informe um número de cartão", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+            }
+            //      var oCliente = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
+
         }
 
         private void txtID_KeyDown(object sender, KeyEventArgs e)

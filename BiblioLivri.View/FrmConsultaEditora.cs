@@ -24,6 +24,7 @@ namespace BiblioLivri.View
 
         private void CarregaGrid()
         {
+            dtgEditoras.AutoGenerateColumns = false;
             CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
             dtgEditoras.DataSource = oProxy.SelecionaTodos();
         }

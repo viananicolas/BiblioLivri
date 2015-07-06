@@ -29,12 +29,14 @@ namespace BiblioLivri.View
         }
         private void CarregaItensEmprestimos(int codigo)
         {
+            dtgItensEmprestimos.AutoGenerateColumns = false;
             var oProxy = new CItemEmprestimo.CItemEmprestimoClient();
             dtgItensEmprestimos.DataSource = oProxy.SelecionaTodos();
         }
 
         private void CarregaEmprestimos()
         {
+            dtgEmprestimos.AutoGenerateColumns = false;
             var oProxy = new CEmprestimo.CEmprestimoClient();
             dtgEmprestimos.DataSource = oProxy.SelecionaTodos();
             dtgEmprestimos.ClearSelection();

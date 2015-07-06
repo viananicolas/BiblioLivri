@@ -30,8 +30,14 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgItensEmprestimos = new System.Windows.Forms.DataGridView();
+            this.ItemNumEmprestimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemNumCopia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDataEmprestimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgEmprestimos = new System.Windows.Forms.DataGridView();
+            this.EmpNumEmprestimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpNumCartao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpDataDevolucao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
@@ -56,12 +62,37 @@
             this.dtgItensEmprestimos.AllowUserToAddRows = false;
             this.dtgItensEmprestimos.AllowUserToDeleteRows = false;
             this.dtgItensEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgItensEmprestimos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemNumEmprestimo,
+            this.ItemNumCopia,
+            this.ItemDataEmprestimo});
             this.dtgItensEmprestimos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgItensEmprestimos.Location = new System.Drawing.Point(6, 19);
             this.dtgItensEmprestimos.Name = "dtgItensEmprestimos";
             this.dtgItensEmprestimos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgItensEmprestimos.Size = new System.Drawing.Size(829, 142);
             this.dtgItensEmprestimos.TabIndex = 9;
+            // 
+            // ItemNumEmprestimo
+            // 
+            this.ItemNumEmprestimo.DataPropertyName = "ItemNumEmprestimo";
+            this.ItemNumEmprestimo.HeaderText = "Nº Empréstimo";
+            this.ItemNumEmprestimo.Name = "ItemNumEmprestimo";
+            this.ItemNumEmprestimo.ReadOnly = true;
+            // 
+            // ItemNumCopia
+            // 
+            this.ItemNumCopia.DataPropertyName = "ItemNumCopia";
+            this.ItemNumCopia.HeaderText = "Nº Cópia";
+            this.ItemNumCopia.Name = "ItemNumCopia";
+            this.ItemNumCopia.ReadOnly = true;
+            // 
+            // ItemDataEmprestimo
+            // 
+            this.ItemDataEmprestimo.DataPropertyName = "ItemDataEmprestimo";
+            this.ItemDataEmprestimo.HeaderText = "Data de empréstimo";
+            this.ItemDataEmprestimo.Name = "ItemDataEmprestimo";
+            this.ItemDataEmprestimo.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -82,6 +113,10 @@
             this.dtgEmprestimos.AllowUserToAddRows = false;
             this.dtgEmprestimos.AllowUserToDeleteRows = false;
             this.dtgEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmprestimos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmpNumEmprestimo,
+            this.EmpNumCartao,
+            this.EmpDataDevolucao});
             this.dtgEmprestimos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgEmprestimos.Location = new System.Drawing.Point(5, 49);
             this.dtgEmprestimos.Name = "dtgEmprestimos";
@@ -89,6 +124,27 @@
             this.dtgEmprestimos.Size = new System.Drawing.Size(829, 137);
             this.dtgEmprestimos.TabIndex = 1;
             this.dtgEmprestimos.SelectionChanged += new System.EventHandler(this.dtgEmprestimos_SelectionChanged);
+            // 
+            // EmpNumEmprestimo
+            // 
+            this.EmpNumEmprestimo.DataPropertyName = "EmpNumEmprestimo";
+            this.EmpNumEmprestimo.HeaderText = "Nº Empréstimo";
+            this.EmpNumEmprestimo.Name = "EmpNumEmprestimo";
+            this.EmpNumEmprestimo.ReadOnly = true;
+            // 
+            // EmpNumCartao
+            // 
+            this.EmpNumCartao.DataPropertyName = "EmpNumCartao";
+            this.EmpNumCartao.HeaderText = "Nº Cartão Cliente";
+            this.EmpNumCartao.Name = "EmpNumCartao";
+            this.EmpNumCartao.ReadOnly = true;
+            // 
+            // EmpDataDevolucao
+            // 
+            this.EmpDataDevolucao.DataPropertyName = "EmpDataDevolucao";
+            this.EmpDataDevolucao.HeaderText = "Data de devolução";
+            this.EmpDataDevolucao.Name = "EmpDataDevolucao";
+            this.EmpDataDevolucao.ReadOnly = true;
             // 
             // cmbPesquisa
             // 
@@ -127,6 +183,8 @@
             this.ClientSize = new System.Drawing.Size(863, 384);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmConsultaEmprestimo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Empréstimos";
@@ -149,5 +207,11 @@
         private System.Windows.Forms.ComboBox cmbPesquisa;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNumEmprestimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNumCopia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemDataEmprestimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpNumEmprestimo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpNumCartao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpDataDevolucao;
     }
 }

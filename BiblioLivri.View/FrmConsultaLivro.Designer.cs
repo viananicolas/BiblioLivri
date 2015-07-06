@@ -35,13 +35,18 @@
             this.dtgLivros = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgCopiaLivro = new System.Windows.Forms.DataGridView();
+            this.CoEdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoEmprestado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.CoNumCopia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoIdioma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataAquisicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LiTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LIISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LiCDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LiPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LiCapa = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLivros)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -107,8 +112,7 @@
             this.LiCDU,
             this.LiPais,
             this.id_Autor,
-            this.id_genero,
-            this.LiCapa});
+            this.id_genero});
             this.dtgLivros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgLivros.Location = new System.Drawing.Point(12, 54);
             this.dtgLivros.Name = "dtgLivros";
@@ -136,12 +140,62 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgCopiaLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCopiaLivro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CoEdicao,
+            this.CoAno,
+            this.CoEmprestado,
+            this.CoNumCopia,
+            this.CoIdioma,
+            this.DataAquisicao});
             this.dtgCopiaLivro.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtgCopiaLivro.Location = new System.Drawing.Point(12, 19);
             this.dtgCopiaLivro.Name = "dtgCopiaLivro";
             this.dtgCopiaLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgCopiaLivro.Size = new System.Drawing.Size(804, 174);
             this.dtgCopiaLivro.TabIndex = 4;
+            // 
+            // CoEdicao
+            // 
+            this.CoEdicao.DataPropertyName = "CoEdicao";
+            this.CoEdicao.HeaderText = "Edição";
+            this.CoEdicao.Name = "CoEdicao";
+            this.CoEdicao.ReadOnly = true;
+            // 
+            // CoAno
+            // 
+            this.CoAno.DataPropertyName = "CoAno";
+            this.CoAno.HeaderText = "Ano";
+            this.CoAno.Name = "CoAno";
+            this.CoAno.ReadOnly = true;
+            // 
+            // CoEmprestado
+            // 
+            this.CoEmprestado.DataPropertyName = "CoEmprestado";
+            this.CoEmprestado.HeaderText = "Emprestado";
+            this.CoEmprestado.Name = "CoEmprestado";
+            this.CoEmprestado.ReadOnly = true;
+            // 
+            // CoNumCopia
+            // 
+            this.CoNumCopia.DataPropertyName = "CoNumCopia";
+            this.CoNumCopia.HeaderText = "Nº Cópia";
+            this.CoNumCopia.Name = "CoNumCopia";
+            this.CoNumCopia.ReadOnly = true;
+            // 
+            // CoIdioma
+            // 
+            this.CoIdioma.DataPropertyName = "CoIdioma";
+            this.CoIdioma.HeaderText = "Idioma";
+            this.CoIdioma.Name = "CoIdioma";
+            this.CoIdioma.ReadOnly = true;
+            // 
+            // DataAquisicao
+            // 
+            this.DataAquisicao.DataPropertyName = "DataAquisicao";
+            this.DataAquisicao.HeaderText = "Data de Aquisição";
+            this.DataAquisicao.Name = "DataAquisicao";
+            this.DataAquisicao.ReadOnly = true;
+            this.DataAquisicao.Width = 120;
             // 
             // LiTitulo
             // 
@@ -185,22 +239,15 @@
             this.id_genero.Name = "id_genero";
             this.id_genero.ReadOnly = true;
             // 
-            // LiCapa
-            // 
-            this.LiCapa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.LiCapa.DataPropertyName = "LiCapa";
-            this.LiCapa.HeaderText = "Capa";
-            this.LiCapa.Name = "LiCapa";
-            this.LiCapa.ReadOnly = true;
-            this.LiCapa.Width = 38;
-            // 
             // FrmConsultaLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 446);
+            this.ClientSize = new System.Drawing.Size(841, 446);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmConsultaLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de livros";
@@ -223,12 +270,17 @@
         private System.Windows.Forms.DataGridView dtgLivros;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dtgCopiaLivro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoEdicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoAno;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn CoEmprestado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoNumCopia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoIdioma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataAquisicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn LiTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn LIISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn LiCDU;
         private System.Windows.Forms.DataGridViewTextBoxColumn LiPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_genero;
-        private System.Windows.Forms.DataGridViewImageColumn LiCapa;
     }
 }

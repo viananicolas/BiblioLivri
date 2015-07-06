@@ -147,12 +147,25 @@ namespace BiblioLivri.View
                     oProxyItemEmprestimo.Incluir(oItemEmprestimo);
                     yProxy.Alterar(item);
                 }
+                MessageBox.Show("Empréstimo realizado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("A data de devolução do(s) livro(s) é: " + DateTime.Now.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
             }
-           else
+            else
             {
                 MessageBox.Show("Por favor, selecione um cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
             //oProxyItemEmprestimo.IncluirTodos(ListaItens.ToArray());   
+            LimpaCampos();
+        }
+
+        private void LimpaCampos()
+        {
+            cmbCliente.Items.Clear();
+            cmbLivros.Items.Clear();
+            CarregaClientes();
+            CarregaLivros();
+            lsBLivrosSelecionados.Items.Clear();
         }
 
         private void dtgEmprestimos_SelectionChanged(object sender, EventArgs e)

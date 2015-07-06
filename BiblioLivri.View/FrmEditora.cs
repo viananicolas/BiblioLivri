@@ -43,6 +43,9 @@ namespace BiblioLivri.View
                 oProxy.Alterar(oEditora);
                 MessageBox.Show("Editora alterada com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
+            LimpaCampos();
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -61,6 +64,7 @@ namespace BiblioLivri.View
             inserir = true;
             LimpaCampos();
             HabilitaCampos();
+            btnNovo.Enabled = false;
         }
 
         private void HabilitaCampos()
@@ -85,6 +89,8 @@ namespace BiblioLivri.View
         {
             txtID.Enabled = true;
             inserir = false;
+            btnAlterar.Enabled = false;
+            btnNovo.Enabled = false;
         }
 
         private void txtID_KeyDown(object sender, KeyEventArgs e)
@@ -97,14 +103,30 @@ namespace BiblioLivri.View
 
         private void Editar()
         {
-            var oProxy = new CEditora.CEditoraClient();
-            var oEditora = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
-            txtCidade.Text = oEditora.EdCidade;
-            txtEmail.Text = oEditora.EdEmail;
-            txtNome.Text = oEditora.EdNome;
-            txtTelefone.Text = oEditora.EdTelefone;
-            HabilitaCampos();
-            txtID.Enabled = false;
+            if (txtID.Text!="")
+            {
+                var oProxy = new CEditora.CEditoraClient();
+                var oEditora = oProxy.SelecionaPK(Convert.ToInt32(txtID.Text));
+                if (oEditora!=null)
+                {
+                    txtCidade.Text = oEditora.EdCidade;
+                    txtEmail.Text = oEditora.EdEmail;
+                    txtNome.Text = oEditora.EdNome;
+                    txtTelefone.Text = oEditora.EdTelefone;
+                    HabilitaCampos();
+                    txtID.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Editora não cadastrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Informe um número de ID", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
+
         }
 
         private void txtID_Leave(object sender, EventArgs e)

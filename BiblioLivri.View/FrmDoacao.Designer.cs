@@ -44,7 +44,7 @@
             // empISBNLabel
             // 
             empISBNLabel.AutoSize = true;
-            empISBNLabel.Location = new System.Drawing.Point(340, 15);
+            empISBNLabel.Location = new System.Drawing.Point(18, 42);
             empISBNLabel.Name = "empISBNLabel";
             empISBNLabel.Size = new System.Drawing.Size(33, 13);
             empISBNLabel.TabIndex = 17;
@@ -62,9 +62,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lsBLivrosSelecionados);
-            this.groupBox3.Location = new System.Drawing.Point(480, 42);
+            this.groupBox3.Location = new System.Drawing.Point(21, 66);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(366, 78);
+            this.groupBox3.Size = new System.Drawing.Size(408, 78);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Livros selecionados:";
@@ -77,12 +77,12 @@
             this.lsBLivrosSelecionados.FormattingEnabled = true;
             this.lsBLivrosSelecionados.Location = new System.Drawing.Point(6, 19);
             this.lsBLivrosSelecionados.Name = "lsBLivrosSelecionados";
-            this.lsBLivrosSelecionados.Size = new System.Drawing.Size(354, 56);
+            this.lsBLivrosSelecionados.Size = new System.Drawing.Size(396, 56);
             this.lsBLivrosSelecionados.TabIndex = 14;
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(676, 10);
+            this.btnInserir.Location = new System.Drawing.Point(354, 37);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 25;
@@ -92,11 +92,11 @@
             // 
             // btnDoar
             // 
-            this.btnDoar.Location = new System.Drawing.Point(387, 40);
+            this.btnDoar.Location = new System.Drawing.Point(21, 150);
             this.btnDoar.Name = "btnDoar";
             this.btnDoar.Size = new System.Drawing.Size(75, 23);
             this.btnDoar.TabIndex = 24;
-            this.btnDoar.Text = "Doar:";
+            this.btnDoar.Text = "Doar";
             this.btnDoar.UseVisualStyleBackColor = true;
             this.btnDoar.Click += new System.EventHandler(this.btnDoar_Click);
             // 
@@ -104,7 +104,7 @@
             // 
             this.cmbLivros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLivros.FormattingEnabled = true;
-            this.cmbLivros.Location = new System.Drawing.Point(379, 12);
+            this.cmbLivros.Location = new System.Drawing.Point(57, 39);
             this.cmbLivros.Name = "cmbLivros";
             this.cmbLivros.Size = new System.Drawing.Size(291, 21);
             this.cmbLivros.TabIndex = 21;
@@ -116,7 +116,7 @@
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(57, 12);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(277, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(291, 21);
             this.cmbCliente.TabIndex = 20;
             this.cmbCliente.SelectedValueChanged += new System.EventHandler(this.cmbCliente_SelectedValueChanged);
             // 
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 135);
+            this.ClientSize = new System.Drawing.Size(451, 181);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnDoar);
@@ -132,6 +132,8 @@
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(empISBNLabel);
             this.Controls.Add(empNumCartaoLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmDoacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doações";

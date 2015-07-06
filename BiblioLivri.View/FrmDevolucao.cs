@@ -46,6 +46,17 @@ namespace BiblioLivri.View
                 }
             }
             MessageBox.Show("Os livros foram devolvidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            lstLivros.Items.Clear();
+            txtCopiaLivro.Text = "";
+        }
+
+        private void FrmDevolucao_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

@@ -24,6 +24,10 @@ namespace BiblioLivri.View
                 this.DialogResult = DialogResult.OK;
                 this.Hide();  
             }
+            else
+            {
+                MessageBox.Show("Usuário ou senha incorretos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)

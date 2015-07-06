@@ -30,6 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgGeneros = new System.Windows.Forms.DataGridView();
+            this.id_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GeDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgGeneros)).BeginInit();
             this.SuspendLayout();
@@ -53,10 +55,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGeneros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_genero,
+            this.GeDescricao});
             this.dtgGeneros.Location = new System.Drawing.Point(6, 19);
             this.dtgGeneros.Name = "dtgGeneros";
             this.dtgGeneros.Size = new System.Drawing.Size(411, 225);
             this.dtgGeneros.TabIndex = 6;
+            // 
+            // id_genero
+            // 
+            this.id_genero.DataPropertyName = "id_genero";
+            this.id_genero.HeaderText = "ID Gênero";
+            this.id_genero.Name = "id_genero";
+            this.id_genero.ReadOnly = true;
+            // 
+            // GeDescricao
+            // 
+            this.GeDescricao.DataPropertyName = "GeDescricao";
+            this.GeDescricao.HeaderText = "Descrição";
+            this.GeDescricao.Name = "GeDescricao";
+            this.GeDescricao.ReadOnly = true;
+            this.GeDescricao.Width = 160;
             // 
             // FrmConsultaGenero
             // 
@@ -64,6 +84,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 268);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "FrmConsultaGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de gêneros";
@@ -78,5 +100,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dtgGeneros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GeDescricao;
     }
 }

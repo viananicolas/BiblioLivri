@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=Notenick;Initial Catalog=BiblioLivri;Integrated Security=True" SettingsObjectName="BiblioLivri.Model.Properties.Settings" SettingsPropertyName="BiblioLivriConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TBAutor" Member="TBAutors">
     <Type Name="TBAutor">
-      <Column Name="id_autor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_autor" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuSobrenome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="AuNacionalidade" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />

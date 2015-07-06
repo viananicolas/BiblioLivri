@@ -73,12 +73,6 @@
     <Compile Include="FrmConsultaCliente.Designer.cs">
       <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultaDevolucao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsultaDevolucao.Designer.cs">
-      <DependentUpon>FrmConsultaDevolucao.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConsultaDoacao.cs">
       <SubType>Form</SubType>
     </Compile>
